@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\EAGLE\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\EAGLE\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_FlashOrder.-1427659267.00" t="ExcludeRecursive" />
+    <e p="C:\Users\EAGLE\RiderProjects\FlashOrder" t="IncludeFlat">
+      <e p="FlashOrder" t="IncludeRecursive">
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Controllers" t="Include">
+          <e p="RecipeController.cs" t="Include" />
+          <e p="WeatherForecastController.cs" t="Include" />
+        </e>
+        <e p="Data" t="Include">
+          <e p="DatabaseContext.cs" t="Include" />
+          <e p="Image.cs" t="Include" />
+          <e p="Ingredient.cs" t="Include" />
+          <e p="Item.cs" t="Include" />
+          <e p="recipe.cs" t="Include" />
+        </e>
+        <e p="DTOs" t="Include" />
+        <e p="FlashOrder.csproj" t="IncludeRecursive" />
+        <e p="IRepository" t="Include">
+          <e p="IGenericRepository.cs" t="Include" />
+          <e p="IUnitOfWork.cs" t="Include" />
+        </e>
+        <e p="Migrations" t="Include">
+          <e p="20210727155425_RecipesAdded.cs" t="Include" />
+          <e p="20210727155425_RecipesAdded.Designer.cs" t="Include" />
+          <e p="20210727160308_ItemsAdded.cs" t="Include" />
+          <e p="20210727160308_ItemsAdded.Designer.cs" t="Include" />
+          <e p="DatabaseContextModelSnapshot.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="net5.0" t="Include">
+              <e p="FlashOrder.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="Repository" t="Include">
+          <e p="GenericRepository.cs" t="Include" />
+          <e p="UnitOfWork.cs" t="Include" />
+        </e>
+        <e p="ServiceExtensions.cs" t="Include" />
+        <e p="Startup.cs" t="Include" />
+        <e p="WeatherForecast.cs" t="Include" />
+      </e>
+      <e p="FlashOrder.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
