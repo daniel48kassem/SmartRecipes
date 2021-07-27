@@ -1,4 +1,6 @@
-﻿namespace FlashOrder.Data
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace FlashOrder.Data
 {
     public class Ingredient
     {
@@ -8,6 +10,7 @@
         
         public double Price { get; set; }
         
+        [ForeignKey(nameof(Recipe))]
         public int RecipeId { get; set; }
         public Recipe Recipe { get; set; }
     }

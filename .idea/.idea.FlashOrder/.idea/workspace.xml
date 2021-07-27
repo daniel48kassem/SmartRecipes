@@ -5,27 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f789b059-6e4e-4152-a1e5-962adab9c142" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlashOrder.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlashOrder/Controllers/RecipeController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlashOrder/Controllers/WeatherForecastController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlashOrder/Data/DatabaseContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlashOrder/Data/Image.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlashOrder/Data/Ingredient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlashOrder/Data/Item.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlashOrder/Data/Recipe.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlashOrder/FlashOrder.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlashOrder/IRepository/IGenericRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlashOrder/IRepository/IUnitOfWork.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlashOrder/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlashOrder/Properties/launchSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlashOrder/Repository/GenericRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlashOrder/Repository/UnitOfWork.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlashOrder/ServiceExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlashOrder/Startup.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlashOrder/WeatherForecast.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlashOrder/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlashOrder/appsettings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FlashOrder/Configurations/MapperInitializer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FlashOrder/DTOs/RecipeDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FlashOrder/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FlashOrder/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FlashOrder/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FlashOrder/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FlashOrder/Controllers/RecipeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FlashOrder/Controllers/RecipeController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FlashOrder/Data/Ingredient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FlashOrder/Data/Ingredient.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FlashOrder/FlashOrder.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/FlashOrder/FlashOrder.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,13 +42,15 @@
       <option value="$PROJECT_DIR$/RightRecipe/Data/DatabaseContext.cs" />
       <option value="$PROJECT_DIR$/RightRecipe/Data/Ingredient.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/Startup.cs" />
-      <option value="$PROJECT_DIR$/FlashOrder/Data/Ingredient.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/Data/Item.cs" />
-      <option value="$PROJECT_DIR$/FlashOrder/Controllers/RecipeController.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/IRepository/IGenericRepository.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/IRepository/IUnitOfWork.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/Repository/GenericRepository.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/Repository/UnitOfWork.cs" />
+      <option value="$PROJECT_DIR$/FlashOrder/DTOs/RecipeDTO.cs" />
+      <option value="$PROJECT_DIR$/FlashOrder/Controllers/RecipeController.cs" />
+      <option value="$PROJECT_DIR$/FlashOrder/Data/Ingredient.cs" />
+      <option value="$PROJECT_DIR$/FlashOrder/Configurations/MapperInitializer.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1vfWuTxGRnxNIs4XXA7SAgbj397" />
@@ -121,7 +109,8 @@
       <updated>1626953860008</updated>
       <workItem from="1626953888983" duration="3764000" />
       <workItem from="1627388571925" duration="788000" />
-      <workItem from="1627397939210" duration="4514000" />
+      <workItem from="1627397939210" duration="4619000" />
+      <workItem from="1627406797209" duration="2442000" />
     </task>
     <servers />
   </component>

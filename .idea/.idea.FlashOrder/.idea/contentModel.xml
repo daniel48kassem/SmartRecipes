@@ -8,6 +8,9 @@
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
+        <e p="Configurations" t="Include">
+          <e p="MapperInitializer.cs" t="Include" />
+        </e>
         <e p="Controllers" t="Include">
           <e p="RecipeController.cs" t="Include" />
           <e p="WeatherForecastController.cs" t="Include" />
@@ -19,7 +22,9 @@
           <e p="Item.cs" t="Include" />
           <e p="recipe.cs" t="Include" />
         </e>
-        <e p="DTOs" t="Include" />
+        <e p="DTOs" t="Include">
+          <e p="RecipeDTO.cs" t="Include" />
+        </e>
         <e p="FlashOrder.csproj" t="IncludeRecursive" />
         <e p="IRepository" t="Include">
           <e p="IGenericRepository.cs" t="Include" />
