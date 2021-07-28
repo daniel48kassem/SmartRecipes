@@ -4,7 +4,8 @@ using FlashOrder.Data;
 
 namespace FlashOrder.DTOs
 {
-    public class CreateRecipeDTO
+    
+    public class GeneralRecipeDTO
     {
         [Required]        
         public string Title { get; set; }
@@ -14,12 +15,14 @@ namespace FlashOrder.DTOs
         
         [Required] 
         public string Description { get; set; }
-        
+    }
+    public class CreateRecipeDTO:GeneralRecipeDTO
+    {
         [Required] 
         public virtual IList<CreateIngredientDTO> Ingredients { get; set; }
     }
 
-    public class RecipeDTO : CreateRecipeDTO
+    public class RecipeDTO : GeneralRecipeDTO
     {
             public int Id { get; set; }
             public IList<IngredientDTO> Ingredients { get; set; }

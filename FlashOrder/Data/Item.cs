@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.Reflection.Metadata;
+using FlashOrder.Middlewares;
 
 namespace FlashOrder.Data
 {
@@ -9,7 +10,10 @@ namespace FlashOrder.Data
         public string Name { get; set; }
         public double Price { get; set; }
 
-        public Image Thumbnail { get; set; }
+        public string ImagePath { get; set; }
+        
+
+        // public Image Image { get; set; }
         
         // [ForeignKey(nameof(Ingredient))]
         // public int IngredientId { get; set; }

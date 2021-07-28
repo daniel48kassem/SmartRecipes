@@ -16,6 +16,7 @@ namespace FlashOrder.Configurations
             
             CreateMap<Item,ItemDTO>().ReverseMap();
             CreateMap<Item,CreateItemDTO>().ReverseMap();
+            CreateMap<Item,GetItemDTO>().ReverseMap();
             
             CreateMap<Image,ImageDTO>().ReverseMap();
             CreateMap<Image,CreateImageDTO>().ReverseMap();

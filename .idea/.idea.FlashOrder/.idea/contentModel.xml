@@ -12,9 +12,11 @@
           <e p="Entities" t="Include">
             <e p="ItemConfiguration.cs" t="Include" />
           </e>
+          <e p="HttpContextExtensions.cs" t="Include" />
           <e p="MapperInitializer.cs" t="Include" />
         </e>
         <e p="Controllers" t="Include">
+          <e p="ItemController.cs" t="Include" />
           <e p="RecipeController.cs" t="Include" />
           <e p="WeatherForecastController.cs" t="Include" />
         </e>
@@ -30,6 +32,7 @@
           <e p="IngredientDTO.cs" t="Include" />
           <e p="ItemDTO.cs" t="Include" />
           <e p="RecipeDTO.cs" t="Include" />
+          <e p="UploadedFileDTO.cs" t="Include" />
         </e>
         <e p="FlashOrder.csproj" t="IncludeRecursive" />
         <e p="IRepository" t="Include">
@@ -39,11 +42,18 @@
         <e p="Logs" t="Include">
           <e p="log20210728.txt" t="Include" />
         </e>
+        <e p="Middlewares" t="Include">
+          <e p="MyHttpContext.cs" t="Include" />
+        </e>
         <e p="Migrations" t="Include">
           <e p="20210728104812_Setup.cs" t="Include" />
           <e p="20210728104812_Setup.Designer.cs" t="Include" />
           <e p="20210728112635_AddedTitle.cs" t="Include" />
           <e p="20210728112635_AddedTitle.Designer.cs" t="Include" />
+          <e p="20210728124000_ChangesImage.cs" t="Include" />
+          <e p="20210728124000_ChangesImage.Designer.cs" t="Include" />
+          <e p="20210728161703_ChangesItem.cs" t="Include" />
+          <e p="20210728161703_ChangesItem.Designer.cs" t="Include" />
           <e p="DatabaseContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
@@ -61,9 +71,22 @@
           <e p="GenericRepository.cs" t="Include" />
           <e p="UnitOfWork.cs" t="Include" />
         </e>
+        <e p="Resources" t="Include">
+          <e p="Images" t="Include">
+            <e p="147298.jpg" t="Include" />
+            <e p="508255.jpg" t="Include" />
+            <e p="beer-toast.jpg" t="Include" />
+            <e p="burning_universe-1280x800.jpg" t="Include" />
+          </e>
+        </e>
         <e p="ServiceExtensions.cs" t="Include" />
         <e p="Startup.cs" t="Include" />
         <e p="WeatherForecast.cs" t="Include" />
+        <e p="wwwroot" t="Include">
+          <e p="Images" t="Include">
+            <e p="burning_universe-1280x800.jpg" t="Include" />
+          </e>
+        </e>
       </e>
       <e p="FlashOrder.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />

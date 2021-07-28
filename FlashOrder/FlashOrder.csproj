@@ -21,6 +21,8 @@
 
     <ItemGroup>
       <Folder Include="Migrations" />
+      <Folder Include="Resources\Images" />
+      <Folder Include="wwwroot\images" />
     </ItemGroup>
 
 </Project>
