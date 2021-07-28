@@ -6,6 +6,9 @@ namespace FlashOrder.DTOs
 {
     public class CreateRecipeDTO
     {
+        [Required]        
+        public string Title { get; set; }
+
         [Required] 
         public int ChefId { get; set; }
         
@@ -13,7 +16,7 @@ namespace FlashOrder.DTOs
         public string Description { get; set; }
         
         [Required] 
-        public IList<CreateIngredientDTO> Ingredients { get; set; }
+        public virtual IList<CreateIngredientDTO> Ingredients { get; set; }
     }
 
     public class RecipeDTO : CreateRecipeDTO

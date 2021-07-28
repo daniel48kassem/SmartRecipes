@@ -10,6 +10,7 @@ namespace FlashOrder.Repository
         private readonly DatabaseContext _context;
         private IGenericRepository<Item> _items;
         private IGenericRepository<Recipe> _recipes;
+        private IGenericRepository<Ingredient> _ingredient;
         
         public UnitOfWork(DatabaseContext context)
         {
@@ -18,6 +19,7 @@ namespace FlashOrder.Repository
 
         public IGenericRepository<Recipe> Recipes => _recipes ??= new GenericRepository<Recipe>(_context);
         public IGenericRepository<Item> Items=>_items ??= new GenericRepository<Item>(_context);
+        public IGenericRepository<Ingredient> Ingredients=> _ingredient??= new GenericRepository<Ingredient>(_context);
         
         public async Task save()
         {

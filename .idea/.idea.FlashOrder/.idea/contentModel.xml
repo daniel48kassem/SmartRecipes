@@ -42,6 +42,8 @@
         <e p="Migrations" t="Include">
           <e p="20210728104812_Setup.cs" t="Include" />
           <e p="20210728104812_Setup.Designer.cs" t="Include" />
+          <e p="20210728112635_AddedTitle.cs" t="Include" />
+          <e p="20210728112635_AddedTitle.Designer.cs" t="Include" />
           <e p="DatabaseContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
