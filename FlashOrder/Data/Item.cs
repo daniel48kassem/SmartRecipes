@@ -1,4 +1,5 @@
-﻿using System.Reflection.Metadata;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.Reflection.Metadata;
 
 namespace FlashOrder.Data
 {
@@ -6,10 +7,13 @@ namespace FlashOrder.Data
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public double Price { get; set; }
+
         public Image Thumbnail { get; set; }
         
-        public int IngredientId { get; set; }
-        public Ingredient Ingredient { get; set; }
+        // [ForeignKey(nameof(Ingredient))]
+        // public int IngredientId { get; set; }
+        // public Ingredient Ingredient { get; set; }
 
     }
 }

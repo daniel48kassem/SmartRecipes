@@ -9,6 +9,16 @@ namespace FlashOrder.Configurations
         public MapperInitializer()
         {
             CreateMap<Recipe,RecipeDTO>().ReverseMap();
+            CreateMap<Recipe,CreateRecipeDTO>().ReverseMap();
+            
+            CreateMap<Ingredient,IngredientDTO>().ReverseMap();
+            CreateMap<Ingredient,CreateIngredientDTO>().ReverseMap();
+            
+            CreateMap<Item,ItemDTO>().ReverseMap();
+            CreateMap<Item,CreateItemDTO>().ReverseMap();
+            
+            CreateMap<Image,ImageDTO>().ReverseMap();
+            CreateMap<Image,CreateImageDTO>().ReverseMap();
         }
     }
 }

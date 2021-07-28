@@ -9,6 +9,9 @@
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Configurations" t="Include">
+          <e p="Entities" t="Include">
+            <e p="ItemConfiguration.cs" t="Include" />
+          </e>
           <e p="MapperInitializer.cs" t="Include" />
         </e>
         <e p="Controllers" t="Include">
@@ -23,6 +26,9 @@
           <e p="recipe.cs" t="Include" />
         </e>
         <e p="DTOs" t="Include">
+          <e p="ImageDTO.cs" t="Include" />
+          <e p="IngredientDTO.cs" t="Include" />
+          <e p="ItemDTO.cs" t="Include" />
           <e p="RecipeDTO.cs" t="Include" />
         </e>
         <e p="FlashOrder.csproj" t="IncludeRecursive" />
@@ -30,11 +36,12 @@
           <e p="IGenericRepository.cs" t="Include" />
           <e p="IUnitOfWork.cs" t="Include" />
         </e>
+        <e p="Logs" t="Include">
+          <e p="log20210728.txt" t="Include" />
+        </e>
         <e p="Migrations" t="Include">
-          <e p="20210727155425_RecipesAdded.cs" t="Include" />
-          <e p="20210727155425_RecipesAdded.Designer.cs" t="Include" />
-          <e p="20210727160308_ItemsAdded.cs" t="Include" />
-          <e p="20210727160308_ItemsAdded.Designer.cs" t="Include" />
+          <e p="20210728104812_Setup.cs" t="Include" />
+          <e p="20210728104812_Setup.Designer.cs" t="Include" />
           <e p="DatabaseContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">

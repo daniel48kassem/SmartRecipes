@@ -6,12 +6,15 @@ namespace FlashOrder.Data
     {
         public int Id { get; set; }
         
-        public Item Item { get; set; }
         
-        public double Price { get; set; }
+        public double Qty { get; set; }
         
         [ForeignKey(nameof(Recipe))]
         public int RecipeId { get; set; }
         public Recipe Recipe { get; set; }
+
+        [ForeignKey(nameof(Item))]
+        public int ItemId { get; set; }
+        public Item Item { get; set; }
     }
 }

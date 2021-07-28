@@ -44,7 +44,10 @@ namespace FlashOrder.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<double>("Price")
+                    b.Property<int>("ItemId")
+                        .HasColumnType("int");
+
+                    b.Property<double>("Qty")
                         .HasColumnType("float");
 
                     b.Property<int>("RecipeId")
@@ -52,8 +55,9 @@ namespace FlashOrder.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("RecipeId")
-                        .IsUnique();
+                    b.HasIndex("ItemId");
+
+                    b.HasIndex("RecipeId");
 
                     b.ToTable("Ingredients");
                 });
@@ -65,23 +69,34 @@ namespace FlashOrder.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("IngredientId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("Price")
+                        .HasColumnType("float");
 
                     b.Property<int?>("ThumbnailId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("IngredientId")
-                        .IsUnique();
-
                     b.HasIndex("ThumbnailId");
 
                     b.ToTable("Items");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "Egg",
+                            Price = 300.0
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "Olive Oil",
+                            Price = 8000.0
+                        });
                 });
 
             modelBuilder.Entity("FlashOrder.Data.Recipe", b =>
@@ -104,35 +119,30 @@ namespace FlashOrder.Migrations
 
             modelBuilder.Entity("FlashOrder.Data.Ingredient", b =>
                 {
-                    b.HasOne("FlashOrder.Data.Recipe", "Recipe")
-                        .WithOne("Ingredients")
-                        .HasForeignKey("FlashOrder.Data.Ingredient", "RecipeId")
+                    b.HasOne("FlashOrder.Data.Item", "Item")
+                        .WithMany()
+                        .HasForeignKey("ItemId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.HasOne("FlashOrder.Data.Recipe", "Recipe")
+                        .WithMany("Ingredients")
+                        .HasForeignKey("RecipeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Item");
 
                     b.Navigation("Recipe");
                 });
 
             modelBuilder.Entity("FlashOrder.Data.Item", b =>
                 {
-                    b.HasOne("FlashOrder.Data.Ingredient", "Ingredient")
-                        .WithOne("Item")
-                        .HasForeignKey("FlashOrder.Data.Item", "IngredientId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("FlashOrder.Data.Image", "Thumbnail")
                         .WithMany()
                         .HasForeignKey("ThumbnailId");
 
-                    b.Navigation("Ingredient");
-
                     b.Navigation("Thumbnail");
-                });
-
-            modelBuilder.Entity("FlashOrder.Data.Ingredient", b =>
-                {
-                    b.Navigation("Item");
                 });
 
             modelBuilder.Entity("FlashOrder.Data.Recipe", b =>

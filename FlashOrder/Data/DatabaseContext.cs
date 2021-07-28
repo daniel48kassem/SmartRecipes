@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using FlashOrder.Configurations.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace FlashOrder.Data
 {
@@ -12,9 +13,7 @@ namespace FlashOrder.Data
         {
             base.OnModelCreating(builder);
 
-            // builder.ApplyConfiguration(new CountryConfiguration());
-            // builder.ApplyConfiguration(new HotelConfiguration());
-            // builder.ApplyConfiguration(new RoleConfiguration());
+            builder.ApplyConfiguration(new ItemConfiguration());
         }
         
         

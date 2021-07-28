@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace FlashOrder.Migrations
 {
-    public partial class RecipesAdded : Migration
+    public partial class Setup : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -42,6 +42,7 @@ namespace FlashOrder.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Price = table.Column<double>(type: "float", nullable: false),
                     ThumbnailId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
@@ -61,9 +62,9 @@ namespace FlashOrder.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    ItemId = table.Column<int>(type: "int", nullable: true),
-                    Price = table.Column<double>(type: "float", nullable: false),
-                    RecipeId = table.Column<int>(type: "int", nullable: false)
+                    Qty = table.Column<double>(type: "float", nullable: false),
+                    RecipeId = table.Column<int>(type: "int", nullable: false),
+                    ItemId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -73,7 +74,7 @@ namespace FlashOrder.Migrations
                         column: x => x.ItemId,
                         principalTable: "Items",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Ingredients_Recipes_RecipeId",
                         column: x => x.RecipeId,
@@ -81,6 +82,16 @@ namespace FlashOrder.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
+
+            migrationBuilder.InsertData(
+                table: "Items",
+                columns: new[] { "Id", "Name", "Price", "ThumbnailId" },
+                values: new object[] { 1, "Egg", 300.0, null });
+
+            migrationBuilder.InsertData(
+                table: "Items",
+                columns: new[] { "Id", "Name", "Price", "ThumbnailId" },
+                values: new object[] { 2, "Olive Oil", 8000.0, null });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Ingredients_ItemId",
@@ -90,8 +101,7 @@ namespace FlashOrder.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_Ingredients_RecipeId",
                 table: "Ingredients",
-                column: "RecipeId",
-                unique: true);
+                column: "RecipeId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Items_ThumbnailId",

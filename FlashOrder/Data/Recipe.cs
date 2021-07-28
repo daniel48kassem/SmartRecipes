@@ -1,4 +1,6 @@
-﻿namespace FlashOrder.Data
+﻿using System.Collections.Generic;
+
+namespace FlashOrder.Data
 {
     public class Recipe
     {
@@ -6,6 +8,6 @@
         public int ChefId { get; set; }
         public string Description { get; set; }
         
-        public Ingredient Ingredients { get; set; }
+        public virtual IList<Ingredient> Ingredients { get; set; }
     }
 }
