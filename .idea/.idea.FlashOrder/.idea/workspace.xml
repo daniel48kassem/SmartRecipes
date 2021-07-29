@@ -5,22 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f789b059-6e4e-4152-a1e5-962adab9c142" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/FlashOrder/Configurations/HttpContextExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlashOrder/Controllers/ItemController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlashOrder/DTOs/UploadedFileDTO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlashOrder/Middlewares/MyHttpContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FlashOrder/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FlashOrder/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FlashOrder/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FlashOrder/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FlashOrder/Configurations/MapperInitializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FlashOrder/Configurations/MapperInitializer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FlashOrder/DTOs/ImageDTO.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FlashOrder/Controllers/ItemController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FlashOrder/Controllers/ItemController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FlashOrder/DTOs/ItemDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FlashOrder/DTOs/ItemDTO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FlashOrder/DTOs/RecipeDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FlashOrder/DTOs/RecipeDTO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FlashOrder/Data/Image.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FlashOrder/Data/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FlashOrder/Data/Item.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FlashOrder/FlashOrder.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/FlashOrder/FlashOrder.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FlashOrder/Logs/log20210728.txt" beforeDir="false" afterPath="$PROJECT_DIR$/FlashOrder/Logs/log20210728.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FlashOrder/Migrations/DatabaseContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FlashOrder/Migrations/DatabaseContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FlashOrder/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FlashOrder/Startup.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,9 +55,9 @@
       <option value="$PROJECT_DIR$/FlashOrder/Data/Item.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/DTOs/ItemDTOExtension.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/Logs/log20210728.txt" />
-      <option value="$PROJECT_DIR$/FlashOrder/Controllers/ItemController.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/Configurations/MapperInitializer.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/DTOs/ItemDTO.cs" />
+      <option value="$PROJECT_DIR$/FlashOrder/Controllers/ItemController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1vfWuTxGRnxNIs4XXA7SAgbj397" />
@@ -135,7 +122,9 @@
       <workItem from="1627406797209" duration="15221000" />
       <workItem from="1627472838222" duration="2386000" />
       <workItem from="1627475302384" duration="140000" />
-      <workItem from="1627475501592" duration="13011000" />
+      <workItem from="1627475501592" duration="13175000" />
+      <workItem from="1627515038860" duration="300000" />
+      <workItem from="1627550504239" duration="666000" />
     </task>
     <servers />
   </component>

@@ -121,5 +121,51 @@ namespace FlashOrder.Controllers
                 return StatusCode(500, "Internal Server Error");
             }
         }
+
+        [HttpPut("{id:int}", Name = "UpdateItem")]
+        public async Task<IActionResult> UpdateItem(int id,[FromForm] UpdateItemDTO itemDTO)
+        {
+            if (id<1||!ModelState.IsValid)
+            {
+                _logger.LogError($"invalid post attempt{nameof(GetItem)}");
+                return BadRequest("your data is invalid");
+            }
+            
+            try
+            {
+                var item=await _unitOfWork.Items.Get(q=>q.Id==id);
+
+                if (item == null)
+                {
+                    _logger.LogError($"invalid Update attempt in {nameof(UpdateItem)}");
+                    return BadRequest("Submitted Data s not valid");
+                }
+                
+                //updating image data
+                var file = itemDTO.ImageFile;
+                var path=await  SaveFile(file);
+                
+                item.ImagePath = path;
+
+                //(source,out object)
+                _mapper.Map(itemDTO,item);
+                _unitOfWork.Items.Update(item);
+                await _unitOfWork.save();
+                
+                return NoContent();
+            }
+        
+            catch (Exception e)
+            {
+                _logger.LogError(e, $"something went wrong in {nameof(UpdateItem)}");
+                return StatusCode(500, "Internal Server Error");
+            }
+        }
+
+        // [HttpDelete("{id:int}", Name = "DeleteItem")]
+        // public async Task<IActionResult> DeleteItem(int id)
+        // {
+        //     
+        // }
     }
 }

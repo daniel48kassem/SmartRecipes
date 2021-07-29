@@ -34,4 +34,9 @@ namespace FlashOrder.DTOs
     {
         public new string ImagePath => Path.Combine(MyHttpContext.AppBaseUrl ,base.ImagePath);
     }
+
+    public class UpdateItemDTO : CreateItemDTO
+    {
+        
+    }
 }
