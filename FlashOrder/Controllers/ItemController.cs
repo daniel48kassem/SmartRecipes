@@ -8,6 +8,7 @@ using AutoMapper;
 using FlashOrder.Data;
 using FlashOrder.DTOs;
 using FlashOrder.IRepository;
+using FlashOrder.Utils;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -22,40 +23,16 @@ namespace FlashOrder.Controllers
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
         private readonly ILogger<ItemController> _logger;
+        private readonly MyUtils _myUtils;
         
-        public ItemController(ILogger<ItemController> logger, IMapper mapper, IUnitOfWork unitOfWork)
+        public ItemController(ILogger<ItemController> logger, IMapper mapper, IUnitOfWork unitOfWork,MyUtils utils)
         {
             _logger = logger;
             _unitOfWork = unitOfWork;
             _mapper = mapper;
+            _myUtils = _myUtils;
         }
         
-       
-        private async Task<string> SaveFile(IFormFile file)
-        {
-            var folderName = Path.Combine("wwwroot", "images");
-            var pathToSave = Path.Combine(Directory.GetCurrentDirectory(), folderName);
-            var fileName = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
-            
-            var returnPath = Path.Combine(folderName, fileName).Remove(0,8);;
-            
-            var fullPath = Path.Combine(pathToSave, fileName);
-            
-            
-            try
-            {
-              await  using (var stream = new FileStream(fullPath, FileMode.Create))
-                {
-                    await file.CopyToAsync(stream);
-                }            
-            }
-            catch (Exception e)
-            {
-                _logger.LogError(e, $"something went wrong in {nameof(SaveFile)}");
-            }
-        
-            return returnPath;
-        }
         
         [HttpPost]
         public async Task<IActionResult> CreateItem([FromForm] CreateItemDTO itemDTO)
@@ -69,7 +46,7 @@ namespace FlashOrder.Controllers
             try
             {
                 var file = itemDTO.ImageFile;
-                var path=await  SaveFile(file);
+                var path=await  _myUtils.SaveFileToPublicFolder(file,"");
                 
                 var item = _mapper.Map<Item>(itemDTO);
                 item.ImagePath = path;
@@ -127,14 +104,18 @@ namespace FlashOrder.Controllers
                     _logger.LogError($"invalid Update attempt in {nameof(UpdateItem)}");
                     return BadRequest("Submitted Data s not valid");
                 }
-                
-                //updating image data
-                var file = itemDTO.ImageFile;
-                var path=await  SaveFile(file);
-                
-                item.ImagePath = path;
 
-                //(source,out object)
+                //checking if we are updating item image or not
+                var file = itemDTO.ImageFile;
+
+                //updating image data
+                if (file != null)
+                {
+                    var path=await  _myUtils.SaveFileToPublicFolder(file,"");
+                    item.ImagePath = path;
+                }
+                
+                //mapping (source,out object)
                 _mapper.Map(itemDTO,item);
                 _unitOfWork.Items.Update(item);
                 await _unitOfWork.save();

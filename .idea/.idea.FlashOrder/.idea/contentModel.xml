@@ -94,6 +94,9 @@
         </e>
         <e p="ServiceExtensions.cs" t="Include" />
         <e p="Startup.cs" t="Include" />
+        <e p="Utils" t="Include">
+          <e p="MyUtils.cs" t="Include" />
+        </e>
         <e p="WeatherForecast.cs" t="Include" />
         <e p="wwwroot" t="Include">
           <e p="Images" t="Include">

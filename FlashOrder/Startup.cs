@@ -7,6 +7,7 @@ using FlashOrder.Configurations;
 using FlashOrder.Data;
 using FlashOrder.IRepository;
 using FlashOrder.Repository;
+using FlashOrder.Utils;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;

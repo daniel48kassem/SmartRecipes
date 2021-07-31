@@ -32,21 +32,9 @@ namespace FlashOrder.Controllers
         {
             try
             {
-                // var model = business.GetProducts(searchModel);
-                //
-                // var recipes = await _unitOfWork.Recipes.Filter();
-
                 var recipes=await _unitOfWork.Recipes.GetAllWithFilters(null
                     ,null,new List<string> {"Ingredients.Item"},recipeParameters);
 
-                // var q = await _unitOfWork.Recipes.GetAllWith(q => q.Title.Contains(searchString)
-                //     , null, new List<string> {"Ingredients.Item"});
-                //
-                // var q2 = QuerySpecificationExtensions.Specify(q,
-                //     new RecipeContainsIngredients(new List<string>() {"Caviar"}));
-
-                // var recipes = await q2.AsNoTracking().ToListAsync();
-                
                 var results = _mapper.Map<List<RecipeDTO>>(recipes);
                 return Ok(results);
             }
