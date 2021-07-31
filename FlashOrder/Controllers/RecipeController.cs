@@ -27,6 +27,7 @@ namespace FlashOrder.Controllers
             _mapper = mapper;
         }
 
+        
         [HttpGet]
         public async Task<IActionResult> GetRecipes([FromQuery]RecipeParameters recipeParameters)
         {

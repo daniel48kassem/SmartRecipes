@@ -14,5 +14,6 @@ namespace FlashOrder.DTOs
         public int RecipeId { get; set; }
         public RecipeDTO Recipe { get; set; }
         public ItemDTO Item { get; set; }
+        public double Cost() => this.Qty * this.Item.Price;
     }
 }

@@ -10,5 +10,16 @@ namespace FlashOrder.Data
         public string Description { get; set; }
         
         public virtual IList<Ingredient> Ingredients { get; set; }
+
+        public double CalculateCost()
+        {
+            var cost = 0.0;
+            foreach (var ingredient in this.Ingredients)
+            {
+                cost += ingredient.Cost();
+            }
+            return cost;
+        }
+        
     }
 }

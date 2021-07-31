@@ -15,5 +15,8 @@ namespace FlashOrder.Data
         [ForeignKey(nameof(Item))]
         public int ItemId { get; set; }
         public Item Item { get; set; }
+
+
+        public double Cost() => this.Qty * this.Item.Price;
     }
 }

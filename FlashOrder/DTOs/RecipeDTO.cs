@@ -26,5 +26,7 @@ namespace FlashOrder.DTOs
     {
             public int Id { get; set; }
             public IList<IngredientDTO> Ingredients { get; set; }
+
+            public double Cost { get; set; }
     }
 }

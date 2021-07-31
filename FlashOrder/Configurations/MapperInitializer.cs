@@ -10,7 +10,8 @@ namespace FlashOrder.Configurations
         {
             CreateMap<Recipe,RecipeDTO>().ReverseMap();
             CreateMap<Recipe,CreateRecipeDTO>().ReverseMap();
-            
+            CreateMap<Recipe, RecipeDTO>().AfterMap((s,d)=>d.Cost=s.CalculateCost());
+
             CreateMap<Ingredient,IngredientDTO>().ReverseMap();
             CreateMap<Ingredient,CreateIngredientDTO>().ReverseMap();
             
