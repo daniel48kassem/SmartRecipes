@@ -47,8 +47,8 @@ namespace FlashOrder.Repository
             //here we ask him for not tracking the object status
             return await query.AsNoTracking().ToListAsync();
         }
-
         
+
         //The expression can be a lambda expression 
         public async Task<T> Get(Expression<Func<T, bool>> expression, List<string> includes=null)
         {
@@ -90,5 +90,44 @@ namespace FlashOrder.Repository
             _db.Attach(entity);
             _context.Entry(entity).State = EntityState.Modified;
         }
+
+        // public async Task<IList> GetAllWithFilters(
+        //     Expression<Func<T, bool>> expression = null,
+        //     Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null,
+        //     List<string> includes = null,
+        //     IList<BaseSpecification<T>> specifications = null
+        // )
+        // {
+        //     IQueryable<T> query=_db;
+        //
+        //     if (specifications != null)
+        //     {
+        //         foreach (var specificationProperty in specifications)
+        //         {
+        //             query = query.Specify(new RecipeContainsIngredients(new List<string>(){"Caviar"}));
+        //         }
+        //     }
+        //     
+        //     if (expression!=null)
+        //     {
+        //         query=query.Where(expression);
+        //     }
+        //     
+        //     if (includes!=null)
+        //     {
+        //         foreach (var includeProperty in includes)
+        //         {
+        //             query = query.Include(includeProperty);
+        //         }
+        //     }
+        //
+        //     if (orderBy!=null)
+        //     {
+        //         query = orderBy(query);
+        //     }
+        //
+        //     //here we ask him for not tracking the object status
+        //     return await query.AsNoTracking().ToListAsync();
+        // }
     }
 }

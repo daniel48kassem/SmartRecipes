@@ -6,7 +6,8 @@ namespace FlashOrder.IRepository
 {
     public interface IUnitOfWork:IDisposable
     {
-        IGenericRepository<Recipe> Recipes { get; }
+        // IGenericRepository<Recipe> Recipes { get; }
+        IRecipeRepository Recipes { get; }
         IGenericRepository<Item> Items { get; }
         Task save();
     }

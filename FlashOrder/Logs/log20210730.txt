@@ -1,0 +1,370 @@
+2021-07-30 13:45:50.387 -04:00 [INF] Now listening on: https://localhost:5001
+2021-07-30 13:45:50.430 -04:00 [INF] Now listening on: http://localhost:5000
+2021-07-30 13:45:50.430 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-07-30 13:45:50.430 -04:00 [INF] Hosting environment: Development
+2021-07-30 13:45:50.430 -04:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-07-30 13:45:51.414 -04:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-07-30 13:45:51.585 -04:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 174.1981ms
+2021-07-30 13:45:52.053 -04:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-07-30 13:45:52.290 -04:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 236.7199ms
+2021-07-30 13:45:55.690 -04:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Recipe?Title=c - -
+2021-07-30 13:45:55.750 -04:00 [INF] Executing endpoint 'FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder)'
+2021-07-30 13:45:55.823 -04:00 [INF] Route matched with {action = "GetRecipes", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRecipes(FlashOrder.RecipeParameters) on controller FlashOrder.Controllers.RecipeController (FlashOrder).
+2021-07-30 13:45:57.057 -04:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-07-30 13:45:58.195 -04:00 [INF] Executed DbCommand (52ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ChefId], [r].[Description], [r].[Title], [t].[Id], [t].[ItemId], [t].[Qty], [t].[RecipeId], [t].[Id0], [t].[ImagePath], [t].[Name], [t].[Price]
+FROM [Recipes] AS [r]
+LEFT JOIN (
+    SELECT [i].[Id], [i].[ItemId], [i].[Qty], [i].[RecipeId], [i0].[Id] AS [Id0], [i0].[ImagePath], [i0].[Name], [i0].[Price]
+    FROM [Ingredients] AS [i]
+    INNER JOIN [Items] AS [i0] ON [i].[ItemId] = [i0].[Id]
+) AS [t] ON [r].[Id] = [t].[RecipeId]
+ORDER BY [r].[Id], [t].[Id], [t].[Id0]
+2021-07-30 13:45:58.323 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[FlashOrder.DTOs.RecipeDTO, FlashOrder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-07-30 13:45:58.515 -04:00 [INF] Executed action FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder) in 2679.6909ms
+2021-07-30 13:45:58.516 -04:00 [INF] Executed endpoint 'FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder)'
+2021-07-30 13:45:58.524 -04:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Recipe?Title=c - - - 200 366 application/json;+charset=utf-8 2834.2618ms
+2021-07-30 13:48:45.091 -04:00 [INF] Now listening on: https://localhost:5001
+2021-07-30 13:48:45.171 -04:00 [INF] Now listening on: http://localhost:5000
+2021-07-30 13:48:45.172 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-07-30 13:48:45.172 -04:00 [INF] Hosting environment: Development
+2021-07-30 13:48:45.172 -04:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-07-30 13:48:45.790 -04:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-07-30 13:48:45.939 -04:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 151.8576ms
+2021-07-30 13:48:46.377 -04:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-07-30 13:48:46.542 -04:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 164.7978ms
+2021-07-30 13:50:14.036 -04:00 [INF] Now listening on: https://localhost:5001
+2021-07-30 13:50:14.094 -04:00 [INF] Now listening on: http://localhost:5000
+2021-07-30 13:50:14.095 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-07-30 13:50:14.095 -04:00 [INF] Hosting environment: Development
+2021-07-30 13:50:14.095 -04:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-07-30 13:50:14.904 -04:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-07-30 13:50:15.055 -04:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 157.7464ms
+2021-07-30 13:50:16.535 -04:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Recipe?Title=c - -
+2021-07-30 13:50:16.600 -04:00 [INF] Executing endpoint 'FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder)'
+2021-07-30 13:50:16.669 -04:00 [INF] Route matched with {action = "GetRecipes", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRecipes(FlashOrder.RecipeParameters) on controller FlashOrder.Controllers.RecipeController (FlashOrder).
+2021-07-30 13:50:18.038 -04:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-07-30 13:50:19.106 -04:00 [INF] Executed DbCommand (53ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ChefId], [r].[Description], [r].[Title], [t].[Id], [t].[ItemId], [t].[Qty], [t].[RecipeId], [t].[Id0], [t].[ImagePath], [t].[Name], [t].[Price]
+FROM [Recipes] AS [r]
+LEFT JOIN (
+    SELECT [i].[Id], [i].[ItemId], [i].[Qty], [i].[RecipeId], [i0].[Id] AS [Id0], [i0].[ImagePath], [i0].[Name], [i0].[Price]
+    FROM [Ingredients] AS [i]
+    INNER JOIN [Items] AS [i0] ON [i].[ItemId] = [i0].[Id]
+) AS [t] ON [r].[Id] = [t].[RecipeId]
+ORDER BY [r].[Id], [t].[Id], [t].[Id0]
+2021-07-30 13:50:19.237 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[FlashOrder.DTOs.RecipeDTO, FlashOrder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-07-30 13:50:19.449 -04:00 [INF] Executed action FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder) in 2766.1222ms
+2021-07-30 13:50:19.450 -04:00 [INF] Executed endpoint 'FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder)'
+2021-07-30 13:50:19.462 -04:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Recipe?Title=c - - - 200 366 application/json;+charset=utf-8 2926.5111ms
+2021-07-30 13:51:50.502 -04:00 [INF] Now listening on: https://localhost:5001
+2021-07-30 13:51:50.547 -04:00 [INF] Now listening on: http://localhost:5000
+2021-07-30 13:51:50.547 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-07-30 13:51:50.547 -04:00 [INF] Hosting environment: Development
+2021-07-30 13:51:50.547 -04:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-07-30 13:51:51.573 -04:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-07-30 13:51:51.756 -04:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 191.8755ms
+2021-07-30 13:51:52.285 -04:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-07-30 13:51:52.473 -04:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 187.9514ms
+2021-07-30 13:51:54.841 -04:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Recipe?Title=c - -
+2021-07-30 13:51:54.913 -04:00 [INF] Executing endpoint 'FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder)'
+2021-07-30 13:51:54.978 -04:00 [INF] Route matched with {action = "GetRecipes", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRecipes(FlashOrder.RecipeParameters) on controller FlashOrder.Controllers.RecipeController (FlashOrder).
+2021-07-30 13:51:56.403 -04:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-07-30 13:51:57.443 -04:00 [INF] Executed DbCommand (54ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ChefId], [r].[Description], [r].[Title], [t].[Id], [t].[ItemId], [t].[Qty], [t].[RecipeId], [t].[Id0], [t].[ImagePath], [t].[Name], [t].[Price]
+FROM [Recipes] AS [r]
+LEFT JOIN (
+    SELECT [i].[Id], [i].[ItemId], [i].[Qty], [i].[RecipeId], [i0].[Id] AS [Id0], [i0].[ImagePath], [i0].[Name], [i0].[Price]
+    FROM [Ingredients] AS [i]
+    INNER JOIN [Items] AS [i0] ON [i].[ItemId] = [i0].[Id]
+) AS [t] ON [r].[Id] = [t].[RecipeId]
+ORDER BY [r].[Id], [t].[Id], [t].[Id0]
+2021-07-30 13:51:57.576 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[FlashOrder.DTOs.RecipeDTO, FlashOrder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-07-30 13:51:57.790 -04:00 [INF] Executed action FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder) in 2795.1613ms
+2021-07-30 13:51:57.791 -04:00 [INF] Executed endpoint 'FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder)'
+2021-07-30 13:51:57.803 -04:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Recipe?Title=c - - - 200 366 application/json;+charset=utf-8 2962.2482ms
+2021-07-30 13:52:04.345 -04:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Recipe?Title=uuiui - -
+2021-07-30 13:52:04.349 -04:00 [INF] Executing endpoint 'FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder)'
+2021-07-30 13:52:04.350 -04:00 [INF] Route matched with {action = "GetRecipes", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRecipes(FlashOrder.RecipeParameters) on controller FlashOrder.Controllers.RecipeController (FlashOrder).
+2021-07-30 13:52:04.405 -04:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-07-30 13:52:04.412 -04:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ChefId], [r].[Description], [r].[Title], [t].[Id], [t].[ItemId], [t].[Qty], [t].[RecipeId], [t].[Id0], [t].[ImagePath], [t].[Name], [t].[Price]
+FROM [Recipes] AS [r]
+LEFT JOIN (
+    SELECT [i].[Id], [i].[ItemId], [i].[Qty], [i].[RecipeId], [i0].[Id] AS [Id0], [i0].[ImagePath], [i0].[Name], [i0].[Price]
+    FROM [Ingredients] AS [i]
+    INNER JOIN [Items] AS [i0] ON [i].[ItemId] = [i0].[Id]
+) AS [t] ON [r].[Id] = [t].[RecipeId]
+ORDER BY [r].[Id], [t].[Id], [t].[Id0]
+2021-07-30 13:52:04.413 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[FlashOrder.DTOs.RecipeDTO, FlashOrder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-07-30 13:52:04.414 -04:00 [INF] Executed action FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder) in 63.9729ms
+2021-07-30 13:52:04.415 -04:00 [INF] Executed endpoint 'FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder)'
+2021-07-30 13:52:04.419 -04:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Recipe?Title=uuiui - - - 200 366 application/json;+charset=utf-8 71.2235ms
+2021-07-30 13:52:05.857 -04:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Recipe?Title=uuiui - -
+2021-07-30 13:52:05.857 -04:00 [INF] Executing endpoint 'FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder)'
+2021-07-30 13:52:05.858 -04:00 [INF] Route matched with {action = "GetRecipes", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRecipes(FlashOrder.RecipeParameters) on controller FlashOrder.Controllers.RecipeController (FlashOrder).
+2021-07-30 13:52:05.875 -04:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-07-30 13:52:05.877 -04:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ChefId], [r].[Description], [r].[Title], [t].[Id], [t].[ItemId], [t].[Qty], [t].[RecipeId], [t].[Id0], [t].[ImagePath], [t].[Name], [t].[Price]
+FROM [Recipes] AS [r]
+LEFT JOIN (
+    SELECT [i].[Id], [i].[ItemId], [i].[Qty], [i].[RecipeId], [i0].[Id] AS [Id0], [i0].[ImagePath], [i0].[Name], [i0].[Price]
+    FROM [Ingredients] AS [i]
+    INNER JOIN [Items] AS [i0] ON [i].[ItemId] = [i0].[Id]
+) AS [t] ON [r].[Id] = [t].[RecipeId]
+ORDER BY [r].[Id], [t].[Id], [t].[Id0]
+2021-07-30 13:52:05.877 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[FlashOrder.DTOs.RecipeDTO, FlashOrder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-07-30 13:52:05.877 -04:00 [INF] Executed action FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder) in 19.6531ms
+2021-07-30 13:52:05.877 -04:00 [INF] Executed endpoint 'FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder)'
+2021-07-30 13:52:05.878 -04:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Recipe?Title=uuiui - - - 200 366 application/json;+charset=utf-8 21.0972ms
+2021-07-30 13:52:06.552 -04:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Recipe?Title=uuiui - -
+2021-07-30 13:52:06.552 -04:00 [INF] Executing endpoint 'FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder)'
+2021-07-30 13:52:06.552 -04:00 [INF] Route matched with {action = "GetRecipes", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRecipes(FlashOrder.RecipeParameters) on controller FlashOrder.Controllers.RecipeController (FlashOrder).
+2021-07-30 13:52:06.553 -04:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-07-30 13:52:06.555 -04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ChefId], [r].[Description], [r].[Title], [t].[Id], [t].[ItemId], [t].[Qty], [t].[RecipeId], [t].[Id0], [t].[ImagePath], [t].[Name], [t].[Price]
+FROM [Recipes] AS [r]
+LEFT JOIN (
+    SELECT [i].[Id], [i].[ItemId], [i].[Qty], [i].[RecipeId], [i0].[Id] AS [Id0], [i0].[ImagePath], [i0].[Name], [i0].[Price]
+    FROM [Ingredients] AS [i]
+    INNER JOIN [Items] AS [i0] ON [i].[ItemId] = [i0].[Id]
+) AS [t] ON [r].[Id] = [t].[RecipeId]
+ORDER BY [r].[Id], [t].[Id], [t].[Id0]
+2021-07-30 13:52:06.555 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[FlashOrder.DTOs.RecipeDTO, FlashOrder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-07-30 13:52:06.556 -04:00 [INF] Executed action FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder) in 3.2419ms
+2021-07-30 13:52:06.556 -04:00 [INF] Executed endpoint 'FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder)'
+2021-07-30 13:52:06.556 -04:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Recipe?Title=uuiui - - - 200 366 application/json;+charset=utf-8 4.1181ms
+2021-07-30 13:52:07.664 -04:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Recipe?Title=uuiui - -
+2021-07-30 13:52:07.664 -04:00 [INF] Executing endpoint 'FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder)'
+2021-07-30 13:52:07.664 -04:00 [INF] Route matched with {action = "GetRecipes", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRecipes(FlashOrder.RecipeParameters) on controller FlashOrder.Controllers.RecipeController (FlashOrder).
+2021-07-30 13:52:07.665 -04:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-07-30 13:52:07.668 -04:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ChefId], [r].[Description], [r].[Title], [t].[Id], [t].[ItemId], [t].[Qty], [t].[RecipeId], [t].[Id0], [t].[ImagePath], [t].[Name], [t].[Price]
+FROM [Recipes] AS [r]
+LEFT JOIN (
+    SELECT [i].[Id], [i].[ItemId], [i].[Qty], [i].[RecipeId], [i0].[Id] AS [Id0], [i0].[ImagePath], [i0].[Name], [i0].[Price]
+    FROM [Ingredients] AS [i]
+    INNER JOIN [Items] AS [i0] ON [i].[ItemId] = [i0].[Id]
+) AS [t] ON [r].[Id] = [t].[RecipeId]
+ORDER BY [r].[Id], [t].[Id], [t].[Id0]
+2021-07-30 13:52:07.670 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[FlashOrder.DTOs.RecipeDTO, FlashOrder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-07-30 13:52:07.671 -04:00 [INF] Executed action FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder) in 6.3642ms
+2021-07-30 13:52:07.671 -04:00 [INF] Executed endpoint 'FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder)'
+2021-07-30 13:52:07.671 -04:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Recipe?Title=uuiui - - - 200 366 application/json;+charset=utf-8 7.5719ms
+2021-07-30 13:53:41.425 -04:00 [INF] Now listening on: https://localhost:5001
+2021-07-30 13:53:41.482 -04:00 [INF] Now listening on: http://localhost:5000
+2021-07-30 13:53:41.482 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-07-30 13:53:41.482 -04:00 [INF] Hosting environment: Development
+2021-07-30 13:53:41.483 -04:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-07-30 13:53:41.646 -04:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Recipe?Title=uuiui - -
+2021-07-30 13:53:41.734 -04:00 [INF] Executing endpoint 'FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder)'
+2021-07-30 13:53:41.813 -04:00 [INF] Route matched with {action = "GetRecipes", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRecipes(FlashOrder.RecipeParameters) on controller FlashOrder.Controllers.RecipeController (FlashOrder).
+2021-07-30 13:53:42.157 -04:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-07-30 13:53:42.403 -04:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 229.6646ms
+2021-07-30 13:53:42.936 -04:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-07-30 13:53:43.432 -04:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 496.2280ms
+2021-07-30 13:53:44.714 -04:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-07-30 13:53:45.837 -04:00 [INF] Executed DbCommand (61ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ChefId], [r].[Description], [r].[Title], [t].[Id], [t].[ItemId], [t].[Qty], [t].[RecipeId], [t].[Id0], [t].[ImagePath], [t].[Name], [t].[Price]
+FROM [Recipes] AS [r]
+LEFT JOIN (
+    SELECT [i].[Id], [i].[ItemId], [i].[Qty], [i].[RecipeId], [i0].[Id] AS [Id0], [i0].[ImagePath], [i0].[Name], [i0].[Price]
+    FROM [Ingredients] AS [i]
+    INNER JOIN [Items] AS [i0] ON [i].[ItemId] = [i0].[Id]
+) AS [t] ON [r].[Id] = [t].[RecipeId]
+ORDER BY [r].[Id], [t].[Id], [t].[Id0]
+2021-07-30 13:53:45.970 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[FlashOrder.DTOs.RecipeDTO, FlashOrder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-07-30 13:53:46.167 -04:00 [INF] Executed action FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder) in 4340.3444ms
+2021-07-30 13:53:46.168 -04:00 [INF] Executed endpoint 'FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder)'
+2021-07-30 13:53:46.184 -04:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Recipe?Title=uuiui - - - 200 366 application/json;+charset=utf-8 4544.5812ms
+2021-07-30 13:54:59.939 -04:00 [INF] Now listening on: https://localhost:5001
+2021-07-30 13:54:59.985 -04:00 [INF] Now listening on: http://localhost:5000
+2021-07-30 13:54:59.985 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-07-30 13:54:59.985 -04:00 [INF] Hosting environment: Development
+2021-07-30 13:54:59.985 -04:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-07-30 13:55:00.971 -04:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-07-30 13:55:01.134 -04:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 173.0230ms
+2021-07-30 13:55:01.558 -04:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-07-30 13:55:01.729 -04:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 171.0086ms
+2021-07-30 13:55:06.115 -04:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Recipe?Title=uuiui - -
+2021-07-30 13:55:06.176 -04:00 [INF] Executing endpoint 'FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder)'
+2021-07-30 13:55:06.233 -04:00 [INF] Route matched with {action = "GetRecipes", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRecipes(FlashOrder.RecipeParameters) on controller FlashOrder.Controllers.RecipeController (FlashOrder).
+2021-07-30 13:55:07.615 -04:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-07-30 13:55:08.722 -04:00 [INF] Executed DbCommand (92ms) [Parameters=[@__filters_Title_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ChefId], [r].[Description], [r].[Title], [t].[Id], [t].[ItemId], [t].[Qty], [t].[RecipeId], [t].[Id0], [t].[ImagePath], [t].[Name], [t].[Price]
+FROM [Recipes] AS [r]
+LEFT JOIN (
+    SELECT [i].[Id], [i].[ItemId], [i].[Qty], [i].[RecipeId], [i0].[Id] AS [Id0], [i0].[ImagePath], [i0].[Name], [i0].[Price]
+    FROM [Ingredients] AS [i]
+    INNER JOIN [Items] AS [i0] ON [i].[ItemId] = [i0].[Id]
+) AS [t] ON [r].[Id] = [t].[RecipeId]
+WHERE [r].[Title] = @__filters_Title_0
+ORDER BY [r].[Id], [t].[Id], [t].[Id0]
+2021-07-30 13:55:08.804 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[FlashOrder.DTOs.RecipeDTO, FlashOrder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-07-30 13:55:08.948 -04:00 [INF] Executed action FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder) in 2708.0351ms
+2021-07-30 13:55:08.949 -04:00 [INF] Executed endpoint 'FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder)'
+2021-07-30 13:55:08.961 -04:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Recipe?Title=uuiui - - - 200 2 application/json;+charset=utf-8 2845.4167ms
+2021-07-30 13:55:35.043 -04:00 [INF] Now listening on: https://localhost:5001
+2021-07-30 13:55:35.088 -04:00 [INF] Now listening on: http://localhost:5000
+2021-07-30 13:55:35.088 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-07-30 13:55:35.088 -04:00 [INF] Hosting environment: Development
+2021-07-30 13:55:35.088 -04:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-07-30 13:55:35.646 -04:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-07-30 13:55:35.811 -04:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 168.1647ms
+2021-07-30 13:55:37.710 -04:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Recipe?Title=uuiui - -
+2021-07-30 13:55:37.765 -04:00 [INF] Executing endpoint 'FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder)'
+2021-07-30 13:55:37.827 -04:00 [INF] Route matched with {action = "GetRecipes", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRecipes(FlashOrder.RecipeParameters) on controller FlashOrder.Controllers.RecipeController (FlashOrder).
+2021-07-30 13:55:39.260 -04:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-07-30 13:55:39.284 -04:00 [ERR] something went wrong in GetRecipes
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FlashOrder.Repository.RecipeRepository.GetAllWithFilters(Expression`1 expression, Func`2 orderBy, List`1 includes, RecipeParameters filters) in C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder\Repository\RecipeRepository.cs:line 87
+   at FlashOrder.Controllers.RecipeController.GetRecipes(RecipeParameters recipeParameters) in C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder\Controllers\RecipeController.cs:line 39
+2021-07-30 13:55:39.329 -04:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-07-30 13:55:39.348 -04:00 [INF] Executed action FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder) in 1502.5665ms
+2021-07-30 13:55:39.355 -04:00 [INF] Executed endpoint 'FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder)'
+2021-07-30 13:55:39.364 -04:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Recipe?Title=uuiui - - - 500 - text/plain;+charset=utf-8 1654.2346ms
+2021-07-30 13:56:49.753 -04:00 [INF] Now listening on: https://localhost:5001
+2021-07-30 13:56:49.796 -04:00 [INF] Now listening on: http://localhost:5000
+2021-07-30 13:56:49.797 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-07-30 13:56:49.797 -04:00 [INF] Hosting environment: Development
+2021-07-30 13:56:49.797 -04:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-07-30 13:56:50.730 -04:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-07-30 13:56:50.969 -04:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 257.4782ms
+2021-07-30 13:56:51.389 -04:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-07-30 13:56:51.572 -04:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 183.2036ms
+2021-07-30 13:56:54.814 -04:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Recipe?Title=c - -
+2021-07-30 13:56:54.870 -04:00 [INF] Executing endpoint 'FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder)'
+2021-07-30 13:56:54.932 -04:00 [INF] Route matched with {action = "GetRecipes", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRecipes(FlashOrder.RecipeParameters) on controller FlashOrder.Controllers.RecipeController (FlashOrder).
+2021-07-30 13:56:56.207 -04:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-07-30 13:56:57.331 -04:00 [INF] Executed DbCommand (92ms) [Parameters=[@__filters_Title_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ChefId], [r].[Description], [r].[Title], [t].[Id], [t].[ItemId], [t].[Qty], [t].[RecipeId], [t].[Id0], [t].[ImagePath], [t].[Name], [t].[Price]
+FROM [Recipes] AS [r]
+LEFT JOIN (
+    SELECT [i].[Id], [i].[ItemId], [i].[Qty], [i].[RecipeId], [i0].[Id] AS [Id0], [i0].[ImagePath], [i0].[Name], [i0].[Price]
+    FROM [Ingredients] AS [i]
+    INNER JOIN [Items] AS [i0] ON [i].[ItemId] = [i0].[Id]
+) AS [t] ON [r].[Id] = [t].[RecipeId]
+WHERE (@__filters_Title_0 LIKE N'') OR (CHARINDEX(@__filters_Title_0, [r].[Title]) > 0)
+ORDER BY [r].[Id], [t].[Id], [t].[Id0]
+2021-07-30 13:56:57.465 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[FlashOrder.DTOs.RecipeDTO, FlashOrder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-07-30 13:56:57.658 -04:00 [INF] Executed action FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder) in 2713.4149ms
+2021-07-30 13:56:57.663 -04:00 [INF] Executed endpoint 'FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder)'
+2021-07-30 13:56:57.671 -04:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Recipe?Title=c - - - 200 180 application/json;+charset=utf-8 2857.0923ms
+2021-07-30 13:57:04.238 -04:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Recipe?Title=s - -
+2021-07-30 13:57:04.242 -04:00 [INF] Executing endpoint 'FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder)'
+2021-07-30 13:57:04.242 -04:00 [INF] Route matched with {action = "GetRecipes", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRecipes(FlashOrder.RecipeParameters) on controller FlashOrder.Controllers.RecipeController (FlashOrder).
+2021-07-30 13:57:04.300 -04:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-07-30 13:57:04.309 -04:00 [INF] Executed DbCommand (3ms) [Parameters=[@__filters_Title_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ChefId], [r].[Description], [r].[Title], [t].[Id], [t].[ItemId], [t].[Qty], [t].[RecipeId], [t].[Id0], [t].[ImagePath], [t].[Name], [t].[Price]
+FROM [Recipes] AS [r]
+LEFT JOIN (
+    SELECT [i].[Id], [i].[ItemId], [i].[Qty], [i].[RecipeId], [i0].[Id] AS [Id0], [i0].[ImagePath], [i0].[Name], [i0].[Price]
+    FROM [Ingredients] AS [i]
+    INNER JOIN [Items] AS [i0] ON [i].[ItemId] = [i0].[Id]
+) AS [t] ON [r].[Id] = [t].[RecipeId]
+WHERE (@__filters_Title_0 LIKE N'') OR (CHARINDEX(@__filters_Title_0, [r].[Title]) > 0)
+ORDER BY [r].[Id], [t].[Id], [t].[Id0]
+2021-07-30 13:57:04.312 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[FlashOrder.DTOs.RecipeDTO, FlashOrder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-07-30 13:57:04.313 -04:00 [INF] Executed action FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder) in 70.2575ms
+2021-07-30 13:57:04.313 -04:00 [INF] Executed endpoint 'FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder)'
+2021-07-30 13:57:04.314 -04:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Recipe?Title=s - - - 200 187 application/json;+charset=utf-8 75.3527ms
+2021-07-30 13:57:14.240 -04:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Recipe - -
+2021-07-30 13:57:14.240 -04:00 [INF] Executing endpoint 'FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder)'
+2021-07-30 13:57:14.241 -04:00 [INF] Route matched with {action = "GetRecipes", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRecipes(FlashOrder.RecipeParameters) on controller FlashOrder.Controllers.RecipeController (FlashOrder).
+2021-07-30 13:57:14.265 -04:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-07-30 13:57:14.285 -04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ChefId], [r].[Description], [r].[Title], [t].[Id], [t].[ItemId], [t].[Qty], [t].[RecipeId], [t].[Id0], [t].[ImagePath], [t].[Name], [t].[Price]
+FROM [Recipes] AS [r]
+LEFT JOIN (
+    SELECT [i].[Id], [i].[ItemId], [i].[Qty], [i].[RecipeId], [i0].[Id] AS [Id0], [i0].[ImagePath], [i0].[Name], [i0].[Price]
+    FROM [Ingredients] AS [i]
+    INNER JOIN [Items] AS [i0] ON [i].[ItemId] = [i0].[Id]
+) AS [t] ON [r].[Id] = [t].[RecipeId]
+ORDER BY [r].[Id], [t].[Id], [t].[Id0]
+2021-07-30 13:57:14.286 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[FlashOrder.DTOs.RecipeDTO, FlashOrder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-07-30 13:57:14.287 -04:00 [INF] Executed action FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder) in 46.1418ms
+2021-07-30 13:57:14.287 -04:00 [INF] Executed endpoint 'FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder)'
+2021-07-30 13:57:14.287 -04:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Recipe - - - 200 366 application/json;+charset=utf-8 47.6520ms
+2021-07-30 13:57:36.219 -04:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Recipe?Ingredients=Egg - -
+2021-07-30 13:57:36.220 -04:00 [INF] Executing endpoint 'FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder)'
+2021-07-30 13:57:36.220 -04:00 [INF] Route matched with {action = "GetRecipes", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRecipes(FlashOrder.RecipeParameters) on controller FlashOrder.Controllers.RecipeController (FlashOrder).
+2021-07-30 13:57:36.222 -04:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-07-30 13:57:36.347 -04:00 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ChefId], [r].[Description], [r].[Title], [t].[Id], [t].[ItemId], [t].[Qty], [t].[RecipeId], [t].[Id0], [t].[ImagePath], [t].[Name], [t].[Price]
+FROM [Recipes] AS [r]
+LEFT JOIN (
+    SELECT [i].[Id], [i].[ItemId], [i].[Qty], [i].[RecipeId], [i0].[Id] AS [Id0], [i0].[ImagePath], [i0].[Name], [i0].[Price]
+    FROM [Ingredients] AS [i]
+    INNER JOIN [Items] AS [i0] ON [i].[ItemId] = [i0].[Id]
+) AS [t] ON [r].[Id] = [t].[RecipeId]
+WHERE EXISTS (
+    SELECT 1
+    FROM [Ingredients] AS [i1]
+    INNER JOIN [Items] AS [i2] ON [i1].[ItemId] = [i2].[Id]
+    WHERE ([r].[Id] = [i1].[RecipeId]) AND ([i2].[Name] = N'Egg'))
+ORDER BY [r].[Id], [t].[Id], [t].[Id0]
+2021-07-30 13:57:36.347 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[FlashOrder.DTOs.RecipeDTO, FlashOrder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-07-30 13:57:36.347 -04:00 [INF] Executed action FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder) in 127.3503ms
+2021-07-30 13:57:36.347 -04:00 [INF] Executed endpoint 'FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder)'
+2021-07-30 13:57:36.348 -04:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Recipe?Ingredients=Egg - - - 200 180 application/json;+charset=utf-8 128.4056ms
+2021-07-30 13:57:44.488 -04:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Recipe?Ingredients=Olive - -
+2021-07-30 13:57:44.488 -04:00 [INF] Executing endpoint 'FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder)'
+2021-07-30 13:57:44.488 -04:00 [INF] Route matched with {action = "GetRecipes", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRecipes(FlashOrder.RecipeParameters) on controller FlashOrder.Controllers.RecipeController (FlashOrder).
+2021-07-30 13:57:44.489 -04:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-07-30 13:57:44.516 -04:00 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ChefId], [r].[Description], [r].[Title], [t].[Id], [t].[ItemId], [t].[Qty], [t].[RecipeId], [t].[Id0], [t].[ImagePath], [t].[Name], [t].[Price]
+FROM [Recipes] AS [r]
+LEFT JOIN (
+    SELECT [i].[Id], [i].[ItemId], [i].[Qty], [i].[RecipeId], [i0].[Id] AS [Id0], [i0].[ImagePath], [i0].[Name], [i0].[Price]
+    FROM [Ingredients] AS [i]
+    INNER JOIN [Items] AS [i0] ON [i].[ItemId] = [i0].[Id]
+) AS [t] ON [r].[Id] = [t].[RecipeId]
+WHERE EXISTS (
+    SELECT 1
+    FROM [Ingredients] AS [i1]
+    INNER JOIN [Items] AS [i2] ON [i1].[ItemId] = [i2].[Id]
+    WHERE ([r].[Id] = [i1].[RecipeId]) AND ([i2].[Name] = N'Olive'))
+ORDER BY [r].[Id], [t].[Id], [t].[Id0]
+2021-07-30 13:57:44.516 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[FlashOrder.DTOs.RecipeDTO, FlashOrder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-07-30 13:57:44.517 -04:00 [INF] Executed action FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder) in 28.6362ms
+2021-07-30 13:57:44.517 -04:00 [INF] Executed endpoint 'FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder)'
+2021-07-30 13:57:44.517 -04:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Recipe?Ingredients=Olive - - - 200 2 application/json;+charset=utf-8 29.6334ms
+2021-07-30 13:57:55.131 -04:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Recipe - -
+2021-07-30 13:57:55.131 -04:00 [INF] Executing endpoint 'FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder)'
+2021-07-30 13:57:55.131 -04:00 [INF] Route matched with {action = "GetRecipes", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRecipes(FlashOrder.RecipeParameters) on controller FlashOrder.Controllers.RecipeController (FlashOrder).
+2021-07-30 13:57:55.132 -04:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-07-30 13:57:55.139 -04:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ChefId], [r].[Description], [r].[Title], [t].[Id], [t].[ItemId], [t].[Qty], [t].[RecipeId], [t].[Id0], [t].[ImagePath], [t].[Name], [t].[Price]
+FROM [Recipes] AS [r]
+LEFT JOIN (
+    SELECT [i].[Id], [i].[ItemId], [i].[Qty], [i].[RecipeId], [i0].[Id] AS [Id0], [i0].[ImagePath], [i0].[Name], [i0].[Price]
+    FROM [Ingredients] AS [i]
+    INNER JOIN [Items] AS [i0] ON [i].[ItemId] = [i0].[Id]
+) AS [t] ON [r].[Id] = [t].[RecipeId]
+ORDER BY [r].[Id], [t].[Id], [t].[Id0]
+2021-07-30 13:57:55.140 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[FlashOrder.DTOs.RecipeDTO, FlashOrder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-07-30 13:57:55.141 -04:00 [INF] Executed action FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder) in 9.7358ms
+2021-07-30 13:57:55.141 -04:00 [INF] Executed endpoint 'FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder)'
+2021-07-30 13:57:55.141 -04:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Recipe - - - 200 366 application/json;+charset=utf-8 10.6047ms
+2021-07-30 13:58:08.793 -04:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Recipe?Ingredients=Olive%20Oil - -
+2021-07-30 13:58:08.793 -04:00 [INF] Executing endpoint 'FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder)'
+2021-07-30 13:58:08.793 -04:00 [INF] Route matched with {action = "GetRecipes", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRecipes(FlashOrder.RecipeParameters) on controller FlashOrder.Controllers.RecipeController (FlashOrder).
+2021-07-30 13:58:08.795 -04:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-07-30 13:58:08.811 -04:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ChefId], [r].[Description], [r].[Title], [t].[Id], [t].[ItemId], [t].[Qty], [t].[RecipeId], [t].[Id0], [t].[ImagePath], [t].[Name], [t].[Price]
+FROM [Recipes] AS [r]
+LEFT JOIN (
+    SELECT [i].[Id], [i].[ItemId], [i].[Qty], [i].[RecipeId], [i0].[Id] AS [Id0], [i0].[ImagePath], [i0].[Name], [i0].[Price]
+    FROM [Ingredients] AS [i]
+    INNER JOIN [Items] AS [i0] ON [i].[ItemId] = [i0].[Id]
+) AS [t] ON [r].[Id] = [t].[RecipeId]
+WHERE EXISTS (
+    SELECT 1
+    FROM [Ingredients] AS [i1]
+    INNER JOIN [Items] AS [i2] ON [i1].[ItemId] = [i2].[Id]
+    WHERE ([r].[Id] = [i1].[RecipeId]) AND ([i2].[Name] = N'Olive Oil'))
+ORDER BY [r].[Id], [t].[Id], [t].[Id0]
+2021-07-30 13:58:08.812 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[FlashOrder.DTOs.RecipeDTO, FlashOrder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-07-30 13:58:08.812 -04:00 [INF] Executed action FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder) in 18.4194ms
+2021-07-30 13:58:08.812 -04:00 [INF] Executed endpoint 'FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder)'
+2021-07-30 13:58:08.812 -04:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Recipe?Ingredients=Olive%20Oil - - - 200 187 application/json;+charset=utf-8 19.5148ms

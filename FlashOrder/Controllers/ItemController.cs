@@ -22,28 +22,15 @@ namespace FlashOrder.Controllers
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
         private readonly ILogger<ItemController> _logger;
-        private readonly HttpContext _currentContext;
         
-        public ItemController(ILogger<ItemController> logger, IMapper mapper, IUnitOfWork unitOfWork,IHttpContextAccessor httpContextAccessor)
+        public ItemController(ILogger<ItemController> logger, IMapper mapper, IUnitOfWork unitOfWork)
         {
             _logger = logger;
             _unitOfWork = unitOfWork;
             _mapper = mapper;
-            _currentContext = httpContextAccessor.HttpContext;
         }
         
-        public static string GetImageUrl(HttpContext context, string imageName)
-        {
-            return Path.Combine(GetBaseUrl(context), "images", imageName);
-        }
- 
-        public static string GetBaseUrl(HttpContext context)
-        {
-            var request = context.Request;
-            var host = request.Host.ToUriComponent();
-            var pathBase = request.PathBase.ToUriComponent();
-            return $"{request.Scheme}://{host}{pathBase}";
-        }
+       
         private async Task<string> SaveFile(IFormFile file)
         {
             var folderName = Path.Combine("wwwroot", "images");

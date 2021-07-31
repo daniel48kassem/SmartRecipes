@@ -34,14 +34,25 @@
           <e p="RecipeDTO.cs" t="Include" />
           <e p="UploadedFileDTO.cs" t="Include" />
         </e>
+        <e p="Filters" t="Include">
+          <e p="BaseSpecification.cs" t="Include" />
+          <e p="FilterSpecification.cs" t="Include" />
+          <e p="ISpecification.cs" t="Include" />
+          <e p="QuerySpecificationExtensions.cs" t="Include" />
+          <e p="RecipeIngredients.cs" t="Include" />
+          <e p="RecipeParameters.cs" t="Include" />
+        </e>
         <e p="FlashOrder.csproj" t="IncludeRecursive" />
         <e p="IRepository" t="Include">
           <e p="IGenericRepository.cs" t="Include" />
+          <e p="IRecipeRepository.cs" t="Include" />
           <e p="IUnitOfWork.cs" t="Include" />
         </e>
         <e p="Logs" t="Include">
           <e p="log20210728.txt" t="Include" />
           <e p="log20210729.txt" t="Include" />
+          <e p="log20210730.txt" t="Include" />
+          <e p="log20210731.txt" t="Include" />
         </e>
         <e p="Middlewares" t="Include">
           <e p="MyHttpContext.cs" t="Include" />
@@ -70,6 +81,7 @@
         </e>
         <e p="Repository" t="Include">
           <e p="GenericRepository.cs" t="Include" />
+          <e p="RecipeRepository.cs" t="Include" />
           <e p="UnitOfWork.cs" t="Include" />
         </e>
         <e p="Resources" t="Include">
@@ -86,6 +98,7 @@
         <e p="wwwroot" t="Include">
           <e p="Images" t="Include">
             <e p="burning_universe-1280x800.jpg" t="Include" />
+            <e p="Screenshot_2021-07-25-09-59-49.png" t="Include" />
           </e>
         </e>
       </e>
