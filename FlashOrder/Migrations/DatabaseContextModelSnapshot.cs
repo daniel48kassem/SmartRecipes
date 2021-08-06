@@ -175,8 +175,8 @@ namespace FlashOrder.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("ChefId")
-                        .HasColumnType("int");
+                    b.Property<string>("ChefId")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
@@ -185,6 +185,8 @@ namespace FlashOrder.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ChefId");
 
                     b.ToTable("Recipes");
                 });
@@ -337,6 +339,15 @@ namespace FlashOrder.Migrations
                     b.Navigation("Item");
 
                     b.Navigation("Recipe");
+                });
+
+            modelBuilder.Entity("FlashOrder.Data.Recipe", b =>
+                {
+                    b.HasOne("FlashOrder.Data.ApiUser", "Chef")
+                        .WithMany()
+                        .HasForeignKey("ChefId");
+
+                    b.Navigation("Chef");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

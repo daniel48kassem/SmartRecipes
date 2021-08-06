@@ -617,3 +617,1177 @@ WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
 2021-08-06 01:12:58.147 -05:00 [INF] Executed action FlashOrder.Controllers.AccountController.Login (FlashOrder) in 4731.5786ms
 2021-08-06 01:12:58.148 -05:00 [INF] Executed endpoint 'FlashOrder.Controllers.AccountController.Login (FlashOrder)'
 2021-08-06 01:12:58.181 -05:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/Account/login application/json-patch+json 61 - 202 467 application/json;+charset=utf-8 5288.4111ms
+2021-08-06 03:14:00.878 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-06 03:14:01.293 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-06 03:14:01.293 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-06 03:14:01.294 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-06 03:14:01.294 -05:00 [INF] Hosting environment: Development
+2021-08-06 03:14:01.294 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-06 03:14:01.989 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-06 03:14:02.166 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 181.9280ms
+2021-08-06 03:14:02.308 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - -
+2021-08-06 03:14:02.338 -05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-08-06 03:14:02.338 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - - - 0 142933 text/css 29.6569ms
+2021-08-06 03:14:02.589 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/favicon-16x16.png - -
+2021-08-06 03:14:02.605 -05:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2021-08-06 03:14:02.605 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/favicon-16x16.png - - - 0 665 image/png 15.7495ms
+2021-08-06 03:14:02.750 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-06 03:14:03.095 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 344.5513ms
+2021-08-06 03:19:50.644 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-06 03:19:51.235 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-06 03:19:51.235 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-06 03:19:51.235 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-06 03:19:51.235 -05:00 [INF] Hosting environment: Development
+2021-08-06 03:19:51.235 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-06 03:19:52.203 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-06 03:19:52.393 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 196.3313ms
+2021-08-06 03:19:52.825 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/favicon-16x16.png - -
+2021-08-06 03:19:52.857 -05:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2021-08-06 03:19:52.857 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/favicon-16x16.png - - - 0 665 image/png 31.8500ms
+2021-08-06 03:19:52.909 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-06 03:19:53.144 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 235.0480ms
+2021-08-06 03:19:59.252 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-06 03:19:59.254 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 0.8434ms
+2021-08-06 03:19:59.342 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui-bundle.js - -
+2021-08-06 03:19:59.344 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - -
+2021-08-06 03:19:59.346 -05:00 [INF] The file /swagger-ui-bundle.js was not modified
+2021-08-06 03:19:59.346 -05:00 [INF] The file /swagger-ui-standalone-preset.js was not modified
+2021-08-06 03:19:59.346 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui-bundle.js - - - 304 - application/javascript 4.3103ms
+2021-08-06 03:19:59.347 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - - - 304 - application/javascript 2.0975ms
+2021-08-06 03:19:59.664 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-06 03:19:59.678 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 14.3090ms
+2021-08-06 03:31:41.445 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-06 03:31:41.845 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-06 03:31:41.845 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-06 03:31:41.845 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-06 03:31:41.845 -05:00 [INF] Hosting environment: Development
+2021-08-06 03:31:41.846 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-06 03:31:42.261 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Recipe - -
+2021-08-06 03:31:42.514 -05:00 [INF] Executing endpoint 'FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder)'
+2021-08-06 03:31:42.671 -05:00 [INF] Route matched with {action = "GetRecipes", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRecipes(FlashOrder.RecipeParameters) on controller FlashOrder.Controllers.RecipeController (FlashOrder).
+2021-08-06 03:31:42.673 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-06 03:31:42.886 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 208.8349ms
+2021-08-06 03:31:42.999 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - -
+2021-08-06 03:31:43.078 -05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-08-06 03:31:43.082 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - - - 0 142933 text/css 79.5024ms
+2021-08-06 03:31:43.307 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-06 03:31:43.578 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 270.3381ms
+2021-08-06 03:31:44.614 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-06 03:31:45.555 -05:00 [INF] Executed DbCommand (49ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ChefId], [r].[Description], [r].[Title], [t].[Id], [t].[ItemId], [t].[Qty], [t].[RecipeId], [t].[Id0], [t].[ImagePath], [t].[Name], [t].[Price]
+FROM [Recipes] AS [r]
+LEFT JOIN (
+    SELECT [i].[Id], [i].[ItemId], [i].[Qty], [i].[RecipeId], [i0].[Id] AS [Id0], [i0].[ImagePath], [i0].[Name], [i0].[Price]
+    FROM [Ingredients] AS [i]
+    INNER JOIN [Items] AS [i0] ON [i].[ItemId] = [i0].[Id]
+) AS [t] ON [r].[Id] = [t].[RecipeId]
+ORDER BY [r].[Id], [t].[Id], [t].[Id0]
+2021-08-06 03:31:45.618 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[FlashOrder.DTOs.RecipeDTO, FlashOrder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-08-06 03:31:45.745 -05:00 [INF] Executed action FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder) in 3064.6748ms
+2021-08-06 03:31:45.746 -05:00 [INF] Executed endpoint 'FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder)'
+2021-08-06 03:31:45.754 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Recipe - - - 200 2 application/json;+charset=utf-8 3497.8322ms
+2021-08-06 03:32:06.577 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Recipe - -
+2021-08-06 03:32:06.584 -05:00 [INF] Executing endpoint 'FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder)'
+2021-08-06 03:32:06.587 -05:00 [INF] Route matched with {action = "GetRecipes", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRecipes(FlashOrder.RecipeParameters) on controller FlashOrder.Controllers.RecipeController (FlashOrder).
+2021-08-06 03:32:06.641 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-06 03:32:06.649 -05:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ChefId], [r].[Description], [r].[Title], [t].[Id], [t].[ItemId], [t].[Qty], [t].[RecipeId], [t].[Id0], [t].[ImagePath], [t].[Name], [t].[Price]
+FROM [Recipes] AS [r]
+LEFT JOIN (
+    SELECT [i].[Id], [i].[ItemId], [i].[Qty], [i].[RecipeId], [i0].[Id] AS [Id0], [i0].[ImagePath], [i0].[Name], [i0].[Price]
+    FROM [Ingredients] AS [i]
+    INNER JOIN [Items] AS [i0] ON [i].[ItemId] = [i0].[Id]
+) AS [t] ON [r].[Id] = [t].[RecipeId]
+ORDER BY [r].[Id], [t].[Id], [t].[Id0]
+2021-08-06 03:32:06.651 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[FlashOrder.DTOs.RecipeDTO, FlashOrder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-08-06 03:32:06.651 -05:00 [INF] Executed action FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder) in 64.261ms
+2021-08-06 03:32:06.651 -05:00 [INF] Executed endpoint 'FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder)'
+2021-08-06 03:32:06.652 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Recipe - - - 200 2 application/json;+charset=utf-8 75.1118ms
+2021-08-06 03:33:39.055 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Item/1 - -
+2021-08-06 03:33:39.060 -05:00 [INF] Executing endpoint 'FlashOrder.Controllers.ItemController.GetItem (FlashOrder)'
+2021-08-06 03:33:39.069 -05:00 [INF] Route matched with {action = "GetItem", controller = "Item"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetItem(Int32) on controller FlashOrder.Controllers.ItemController (FlashOrder).
+2021-08-06 03:33:39.076 -05:00 [INF] Executed action FlashOrder.Controllers.ItemController.GetItem (FlashOrder) in 7.2902ms
+2021-08-06 03:33:39.076 -05:00 [INF] Executed endpoint 'FlashOrder.Controllers.ItemController.GetItem (FlashOrder)'
+2021-08-06 03:33:39.080 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'FlashOrder.Utils.MyUtils' while attempting to activate 'FlashOrder.Controllers.ItemController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method59(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-08-06 03:33:39.116 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Item/1 - - - 500 - text/plain 61.2921ms
+2021-08-06 03:40:51.001 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-06 03:40:51.468 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-06 03:40:51.469 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-06 03:40:51.469 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-06 03:40:51.469 -05:00 [INF] Hosting environment: Development
+2021-08-06 03:40:51.469 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-06 03:40:52.598 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-06 03:40:52.747 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 153.0826ms
+2021-08-06 03:40:53.268 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-06 03:40:53.584 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 316.1589ms
+2021-08-06 03:41:27.200 -05:00 [INF] Request starting HTTP/2 PUT https://localhost:5001/api/Item/1 multipart/form-data;+boundary=---------------------------274357832824235112393730037334 26258
+2021-08-06 03:41:27.212 -05:00 [INF] CORS policy execution successful.
+2021-08-06 03:41:27.317 -05:00 [INF] Executing endpoint 'FlashOrder.Controllers.ItemController.UpdateItem (FlashOrder)'
+2021-08-06 03:41:27.380 -05:00 [INF] Route matched with {action = "UpdateItem", controller = "Item"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateItem(Int32, FlashOrder.DTOs.UpdateItemDTO) on controller FlashOrder.Controllers.ItemController (FlashOrder).
+2021-08-06 03:41:28.908 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-06 03:41:29.818 -05:00 [INF] Executed DbCommand (76ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [i].[Id], [i].[ImagePath], [i].[Name], [i].[Price]
+FROM [Items] AS [i]
+WHERE [i].[Id] = @__id_0
+2021-08-06 03:41:30.133 -05:00 [INF] Executed DbCommand (4ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (DbType = Double)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Items] SET [ImagePath] = @p0, [Name] = @p1, [Price] = @p2
+WHERE [Id] = @p3;
+SELECT @@ROWCOUNT;
+2021-08-06 03:41:30.174 -05:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 204
+2021-08-06 03:41:30.181 -05:00 [INF] Executed action FlashOrder.Controllers.ItemController.UpdateItem (FlashOrder) in 2794.1816ms
+2021-08-06 03:41:30.181 -05:00 [INF] Executed endpoint 'FlashOrder.Controllers.ItemController.UpdateItem (FlashOrder)'
+2021-08-06 03:41:30.194 -05:00 [INF] Request finished HTTP/2 PUT https://localhost:5001/api/Item/1 multipart/form-data;+boundary=---------------------------274357832824235112393730037334 26258 - 204 - - 2994.3159ms
+2021-08-06 03:41:49.978 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Item/1 - -
+2021-08-06 03:41:49.981 -05:00 [INF] Executing endpoint 'FlashOrder.Controllers.ItemController.GetItem (FlashOrder)'
+2021-08-06 03:41:49.988 -05:00 [INF] Route matched with {action = "GetItem", controller = "Item"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetItem(Int32) on controller FlashOrder.Controllers.ItemController (FlashOrder).
+2021-08-06 03:41:50.044 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-06 03:41:50.048 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [i].[Id], [i].[ImagePath], [i].[Name], [i].[Price]
+FROM [Items] AS [i]
+WHERE [i].[Id] = @__id_0
+2021-08-06 03:41:50.065 -05:00 [INF] Executing OkObjectResult, writing value of type 'FlashOrder.DTOs.GetItemDTO'.
+2021-08-06 03:41:50.249 -05:00 [INF] Executed action FlashOrder.Controllers.ItemController.GetItem (FlashOrder) in 260.6271ms
+2021-08-06 03:41:50.249 -05:00 [INF] Executed endpoint 'FlashOrder.Controllers.ItemController.GetItem (FlashOrder)'
+2021-08-06 03:41:50.250 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Item/1 - - - 200 116 application/json;+charset=utf-8 271.6283ms
+2021-08-06 03:41:56.365 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001//Images//Screenshot_2021-07-25-09-59-49.png - -
+2021-08-06 03:41:56.394 -05:00 [INF] Sending file. Request path: '//Images//Screenshot_2021-07-25-09-59-49.png'. Physical path: 'C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder\wwwroot\Images\Screenshot_2021-07-25-09-59-49.png'
+2021-08-06 03:41:56.395 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001//Images//Screenshot_2021-07-25-09-59-49.png - - - 200 25781 image/png 29.9976ms
+2021-08-06 03:41:57.182 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/favicon.ico - -
+2021-08-06 03:41:57.189 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/favicon.ico - - - 404 0 - 6.9607ms
+2021-08-06 03:42:48.082 -05:00 [INF] Request starting HTTP/2 PUT https://localhost:5001/api/Item/2 multipart/form-data;+boundary=---------------------------78822756242658760443058334320 42110
+2021-08-06 03:42:48.082 -05:00 [INF] CORS policy execution successful.
+2021-08-06 03:42:48.083 -05:00 [INF] Executing endpoint 'FlashOrder.Controllers.ItemController.UpdateItem (FlashOrder)'
+2021-08-06 03:42:48.083 -05:00 [INF] Route matched with {action = "UpdateItem", controller = "Item"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateItem(Int32, FlashOrder.DTOs.UpdateItemDTO) on controller FlashOrder.Controllers.ItemController (FlashOrder).
+2021-08-06 03:42:48.109 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-06 03:42:48.111 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [i].[Id], [i].[ImagePath], [i].[Name], [i].[Price]
+FROM [Items] AS [i]
+WHERE [i].[Id] = @__id_0
+2021-08-06 03:42:48.119 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (DbType = Double)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Items] SET [ImagePath] = @p0, [Name] = @p1, [Price] = @p2
+WHERE [Id] = @p3;
+SELECT @@ROWCOUNT;
+2021-08-06 03:42:48.121 -05:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 204
+2021-08-06 03:42:48.122 -05:00 [INF] Executed action FlashOrder.Controllers.ItemController.UpdateItem (FlashOrder) in 38.5159ms
+2021-08-06 03:42:48.122 -05:00 [INF] Executed endpoint 'FlashOrder.Controllers.ItemController.UpdateItem (FlashOrder)'
+2021-08-06 03:42:48.122 -05:00 [INF] Request finished HTTP/2 PUT https://localhost:5001/api/Item/2 multipart/form-data;+boundary=---------------------------78822756242658760443058334320 42110 - 204 - - 40.5999ms
+2021-08-06 03:42:55.324 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-06 03:42:55.324 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 0.7873ms
+2021-08-06 03:42:55.406 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui-bundle.js - -
+2021-08-06 03:42:55.408 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - -
+2021-08-06 03:42:55.411 -05:00 [INF] The file /swagger-ui-standalone-preset.js was not modified
+2021-08-06 03:42:55.411 -05:00 [INF] The file /swagger-ui-bundle.js was not modified
+2021-08-06 03:42:55.412 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - - - 304 - application/javascript 3.1578ms
+2021-08-06 03:42:55.412 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui-bundle.js - - - 304 - application/javascript 5.3552ms
+2021-08-06 03:42:55.676 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-06 03:42:55.688 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 11.8568ms
+2021-08-06 04:01:20.912 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-06 04:01:21.545 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-06 04:01:21.545 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-06 04:01:21.545 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-06 04:01:21.545 -05:00 [INF] Hosting environment: Development
+2021-08-06 04:01:21.545 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-06 04:01:22.708 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-06 04:01:22.885 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 180.4955ms
+2021-08-06 04:01:23.111 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - -
+2021-08-06 04:01:23.181 -05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-08-06 04:01:23.181 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - - - 0 142933 text/css 83.0617ms
+2021-08-06 04:01:23.460 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/favicon-16x16.png - -
+2021-08-06 04:01:23.468 -05:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2021-08-06 04:01:23.468 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/favicon-16x16.png - - - 0 665 image/png 7.4335ms
+2021-08-06 04:01:23.562 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-06 04:01:23.991 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 429.2650ms
+2021-08-06 04:01:30.613 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-06 04:01:30.614 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 1.2669ms
+2021-08-06 04:01:30.758 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui-bundle.js - -
+2021-08-06 04:01:30.758 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - -
+2021-08-06 04:01:30.766 -05:00 [INF] The file /swagger-ui-standalone-preset.js was not modified
+2021-08-06 04:01:30.766 -05:00 [INF] The file /swagger-ui-bundle.js was not modified
+2021-08-06 04:01:30.767 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui-bundle.js - - - 304 - application/javascript 8.5328ms
+2021-08-06 04:01:30.767 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - - - 304 - application/javascript 8.3832ms
+2021-08-06 04:01:31.155 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-06 04:01:31.169 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 13.7186ms
+2021-08-06 04:05:01.848 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-06 04:05:02.415 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-06 04:05:02.416 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-06 04:05:02.416 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-06 04:05:02.416 -05:00 [INF] Hosting environment: Development
+2021-08-06 04:05:02.416 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-06 04:05:03.315 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-06 04:05:03.702 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 398.8500ms
+2021-08-06 04:05:04.351 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-06 04:05:04.650 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 299.7540ms
+2021-08-06 04:05:08.119 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-06 04:05:08.121 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 1.4958ms
+2021-08-06 04:05:08.236 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui-bundle.js - -
+2021-08-06 04:05:08.256 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - -
+2021-08-06 04:05:08.267 -05:00 [INF] The file /swagger-ui-standalone-preset.js was not modified
+2021-08-06 04:05:08.268 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - - - 304 - application/javascript 12.6895ms
+2021-08-06 04:05:08.269 -05:00 [INF] The file /swagger-ui-bundle.js was not modified
+2021-08-06 04:05:08.269 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui-bundle.js - - - 304 - application/javascript 32.8646ms
+2021-08-06 04:05:08.657 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-06 04:05:08.669 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 12.0252ms
+2021-08-06 04:05:52.380 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-06 04:05:52.799 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-06 04:05:52.799 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-06 04:05:52.800 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-06 04:05:52.800 -05:00 [INF] Hosting environment: Development
+2021-08-06 04:05:52.800 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-06 04:05:54.013 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-06 04:05:54.174 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 169.1350ms
+2021-08-06 04:05:54.376 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - -
+2021-08-06 04:05:54.441 -05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-08-06 04:05:54.441 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - - - 0 142933 text/css 64.9316ms
+2021-08-06 04:05:55.247 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-06 04:05:55.481 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 234.1990ms
+2021-08-06 04:06:23.400 -05:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/Recipe application/json-patch+json 79
+2021-08-06 04:06:23.409 -05:00 [INF] CORS policy execution successful.
+2021-08-06 04:06:23.547 -05:00 [INF] Executing endpoint 'FlashOrder.Controllers.RecipeController.CreateRecipe (FlashOrder)'
+2021-08-06 04:06:23.613 -05:00 [INF] Route matched with {action = "CreateRecipe", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateRecipe(FlashOrder.DTOs.CreateRecipeDTO) on controller FlashOrder.Controllers.RecipeController (FlashOrder).
+2021-08-06 04:06:24.185 -05:00 [ERR] something went wrong in CreateRecipe
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FlashOrder.Controllers.RecipeController.CreateRecipe(CreateRecipeDTO recipeDTO) in C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder\Controllers\RecipeController.cs:line 67
+2021-08-06 04:06:24.230 -05:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-08-06 04:06:24.245 -05:00 [INF] Executed action FlashOrder.Controllers.RecipeController.CreateRecipe (FlashOrder) in 618.3074ms
+2021-08-06 04:06:24.246 -05:00 [INF] Executed endpoint 'FlashOrder.Controllers.RecipeController.CreateRecipe (FlashOrder)'
+2021-08-06 04:06:24.249 -05:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/Recipe application/json-patch+json 79 - 500 - text/plain;+charset=utf-8 848.9413ms
+2021-08-06 04:07:50.854 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-06 04:07:51.305 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-06 04:07:51.306 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-06 04:07:51.306 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-06 04:07:51.306 -05:00 [INF] Hosting environment: Development
+2021-08-06 04:07:51.306 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-06 04:07:52.566 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-06 04:07:52.741 -05:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/Recipe application/json-patch+json 79
+2021-08-06 04:07:52.754 -05:00 [INF] CORS policy execution successful.
+2021-08-06 04:07:52.791 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 233.7546ms
+2021-08-06 04:07:53.079 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - -
+2021-08-06 04:07:53.162 -05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-08-06 04:07:53.163 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - - - 0 142933 text/css 83.2521ms
+2021-08-06 04:07:53.207 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2021-08-06 04:07:53.222 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2021-08-06 04:07:53.224 -05:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/Recipe application/json-patch+json 79 - 401 0 - 483.2798ms
+2021-08-06 04:09:18.134 -05:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Recipe text/plain 130
+2021-08-06 04:09:18.140 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2021-08-06 04:09:18.141 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2021-08-06 04:09:18.147 -05:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/api/Recipe text/plain 130 - 401 0 - 12.7738ms
+2021-08-06 04:11:41.102 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/Account text/plain 151
+2021-08-06 04:11:41.105 -05:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2021-08-06 04:11:41.105 -05:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2021-08-06 04:11:41.105 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/Account text/plain 151 - 405 0 - 2.8929ms
+2021-08-06 04:11:43.595 -05:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Account text/plain 151
+2021-08-06 04:11:43.595 -05:00 [INF] Executing endpoint 'FlashOrder.Controllers.AccountController.Register (FlashOrder)'
+2021-08-06 04:11:43.721 -05:00 [INF] Route matched with {action = "Register", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(FlashOrder.DTOs.RegisterDTO) on controller FlashOrder.Controllers.AccountController (FlashOrder).
+2021-08-06 04:11:43.937 -05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2021-08-06 04:11:44.124 -05:00 [INF] Executed action FlashOrder.Controllers.AccountController.Register (FlashOrder) in 393.5034ms
+2021-08-06 04:11:44.126 -05:00 [INF] Executed endpoint 'FlashOrder.Controllers.AccountController.Register (FlashOrder)'
+2021-08-06 04:11:44.132 -05:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/api/Account text/plain 151 - 415 175 application/problem+json;+charset=utf-8 537.1904ms
+2021-08-06 04:12:19.744 -05:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/Account application/json-patch+json 124
+2021-08-06 04:12:19.744 -05:00 [INF] CORS policy execution successful.
+2021-08-06 04:12:19.746 -05:00 [INF] Executing endpoint 'FlashOrder.Controllers.AccountController.Register (FlashOrder)'
+2021-08-06 04:12:19.747 -05:00 [INF] Route matched with {action = "Register", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(FlashOrder.DTOs.RegisterDTO) on controller FlashOrder.Controllers.AccountController (FlashOrder).
+2021-08-06 04:12:19.853 -05:00 [INF] registration attempt For daniel@example.com
+2021-08-06 04:12:21.350 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-06 04:12:22.385 -05:00 [INF] Executed DbCommand (94ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Bio], [a].[ConcurrencyStamp], [a].[DisplayName], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2021-08-06 04:12:22.445 -05:00 [INF] Executed DbCommand (6ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Bio], [a].[ConcurrencyStamp], [a].[DisplayName], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2021-08-06 04:12:22.765 -05:00 [INF] Executed DbCommand (10ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 256), @p6='?' (DbType = Boolean), @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTimeOffset), @p9='?' (Size = 256), @p10='?' (Size = 256), @p11='?' (Size = 4000), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 4000), @p15='?' (DbType = Boolean), @p16='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [Bio], [ConcurrencyStamp], [DisplayName], [Email], [EmailConfirmed], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16);
+2021-08-06 04:12:22.806 -05:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2021-08-06 04:12:22.807 -05:00 [INF] Executed action FlashOrder.Controllers.AccountController.Register (FlashOrder) in 3059.0438ms
+2021-08-06 04:12:22.807 -05:00 [INF] Executed endpoint 'FlashOrder.Controllers.AccountController.Register (FlashOrder)'
+2021-08-06 04:12:22.820 -05:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/Account application/json-patch+json 124 - 200 0 - 3076.6354ms
+2021-08-06 04:12:59.880 -05:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Account/login text/plain 73
+2021-08-06 04:12:59.881 -05:00 [INF] Executing endpoint 'FlashOrder.Controllers.AccountController.Login (FlashOrder)'
+2021-08-06 04:12:59.887 -05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(FlashOrder.DTOs.LoginDTO) on controller FlashOrder.Controllers.AccountController (FlashOrder).
+2021-08-06 04:12:59.903 -05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2021-08-06 04:12:59.904 -05:00 [INF] Executed action FlashOrder.Controllers.AccountController.Login (FlashOrder) in 16.2854ms
+2021-08-06 04:12:59.904 -05:00 [INF] Executed endpoint 'FlashOrder.Controllers.AccountController.Login (FlashOrder)'
+2021-08-06 04:12:59.904 -05:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/api/Account/login text/plain 73 - 415 175 application/problem+json;+charset=utf-8 24.1226ms
+2021-08-06 04:13:49.901 -05:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Account/login application/json 73
+2021-08-06 04:13:49.901 -05:00 [INF] Executing endpoint 'FlashOrder.Controllers.AccountController.Login (FlashOrder)'
+2021-08-06 04:13:49.902 -05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(FlashOrder.DTOs.LoginDTO) on controller FlashOrder.Controllers.AccountController (FlashOrder).
+2021-08-06 04:13:50.004 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-06 04:13:50.021 -05:00 [INF] Executed DbCommand (11ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Bio], [a].[ConcurrencyStamp], [a].[DisplayName], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2021-08-06 04:13:50.216 -05:00 [INF] Executing AcceptedResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-08-06 04:13:50.223 -05:00 [INF] Executed action FlashOrder.Controllers.AccountController.Login (FlashOrder) in 321.4959ms
+2021-08-06 04:13:50.223 -05:00 [INF] Executed endpoint 'FlashOrder.Controllers.AccountController.Login (FlashOrder)'
+2021-08-06 04:13:50.224 -05:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/api/Account/login application/json 73 - 202 459 application/json;+charset=utf-8 322.7801ms
+2021-08-06 04:14:06.240 -05:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Recipe text/plain 130
+2021-08-06 04:14:06.322 -05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenNoExpirationException: IDX10225: Lifetime validation failed. The token is missing an Expiration Time. Tokentype: 'System.String'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2021-08-06 04:14:06.346 -05:00 [INF] Bearer was not authenticated. Failure message: IDX10225: Lifetime validation failed. The token is missing an Expiration Time. Tokentype: 'System.String'.
+2021-08-06 04:14:06.347 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2021-08-06 04:14:06.351 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2021-08-06 04:14:06.351 -05:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/api/Recipe text/plain 130 - 401 0 - 110.4681ms
+2021-08-06 04:18:43.045 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-06 04:18:43.495 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-06 04:18:43.495 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-06 04:18:43.496 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-06 04:18:43.496 -05:00 [INF] Hosting environment: Development
+2021-08-06 04:18:43.496 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-06 04:18:44.236 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-06 04:18:44.391 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 161.0636ms
+2021-08-06 04:18:44.624 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - -
+2021-08-06 04:18:44.703 -05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-08-06 04:18:44.703 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - - - 0 142933 text/css 79.2685ms
+2021-08-06 04:18:45.025 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-06 04:18:45.407 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 381.6452ms
+2021-08-06 04:18:59.312 -05:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/Recipe application/json-patch+json 79
+2021-08-06 04:18:59.322 -05:00 [INF] CORS policy execution successful.
+2021-08-06 04:18:59.429 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2021-08-06 04:18:59.438 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2021-08-06 04:18:59.439 -05:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/Recipe application/json-patch+json 79 - 401 0 - 127.3549ms
+2021-08-06 04:19:27.668 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-06 04:19:28.131 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-06 04:19:28.131 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-06 04:19:28.131 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-06 04:19:28.131 -05:00 [INF] Hosting environment: Development
+2021-08-06 04:19:28.131 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-06 04:19:29.217 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-06 04:19:29.459 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 248.5944ms
+2021-08-06 04:19:30.231 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-06 04:19:30.586 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 355.4438ms
+2021-08-06 04:19:31.756 -05:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/Recipe application/json-patch+json 79
+2021-08-06 04:19:31.770 -05:00 [INF] CORS policy execution successful.
+2021-08-06 04:19:31.953 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2021-08-06 04:19:31.965 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2021-08-06 04:19:31.968 -05:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/Recipe application/json-patch+json 79 - 401 0 - 212.5314ms
+2021-08-06 04:21:49.670 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-06 04:21:50.103 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-06 04:21:50.103 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-06 04:21:50.103 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-06 04:21:50.103 -05:00 [INF] Hosting environment: Development
+2021-08-06 04:21:50.103 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-06 04:21:51.021 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-06 04:21:51.177 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 158.9598ms
+2021-08-06 04:21:51.682 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-06 04:21:52.015 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 333.1297ms
+2021-08-06 04:21:53.015 -05:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/Recipe application/json-patch+json 79
+2021-08-06 04:21:53.028 -05:00 [INF] CORS policy execution successful.
+2021-08-06 04:21:53.150 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2021-08-06 04:21:53.159 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2021-08-06 04:21:53.161 -05:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/Recipe application/json-patch+json 79 - 401 0 - 145.2390ms
+2021-08-06 04:22:31.339 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-06 04:22:31.771 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-06 04:22:31.772 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-06 04:22:31.772 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-06 04:22:31.772 -05:00 [INF] Hosting environment: Development
+2021-08-06 04:22:31.772 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-06 04:22:32.685 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-06 04:22:33.011 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 330.8449ms
+2021-08-06 04:22:33.662 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-06 04:22:33.962 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 300.2887ms
+2021-08-06 04:22:37.722 -05:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/Recipe application/json-patch+json 79
+2021-08-06 04:22:37.739 -05:00 [INF] CORS policy execution successful.
+2021-08-06 04:22:37.911 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2021-08-06 04:22:37.924 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2021-08-06 04:22:37.925 -05:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/Recipe application/json-patch+json 79 - 401 0 - 203.8667ms
+2021-08-06 04:23:11.642 -05:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Account/login application/json 73
+2021-08-06 04:23:11.649 -05:00 [INF] Executing endpoint 'FlashOrder.Controllers.AccountController.Login (FlashOrder)'
+2021-08-06 04:23:11.700 -05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(FlashOrder.DTOs.LoginDTO) on controller FlashOrder.Controllers.AccountController (FlashOrder).
+2021-08-06 04:23:13.233 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-06 04:23:14.100 -05:00 [INF] Executed DbCommand (78ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Bio], [a].[ConcurrencyStamp], [a].[DisplayName], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2021-08-06 04:23:14.429 -05:00 [INF] Executing AcceptedResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-08-06 04:23:14.500 -05:00 [INF] Executed action FlashOrder.Controllers.AccountController.Login (FlashOrder) in 2784.5319ms
+2021-08-06 04:23:14.501 -05:00 [INF] Executed endpoint 'FlashOrder.Controllers.AccountController.Login (FlashOrder)'
+2021-08-06 04:23:14.513 -05:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/api/Account/login application/json 73 - 202 459 application/json;+charset=utf-8 2870.5443ms
+2021-08-06 04:23:24.605 -05:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Recipe text/plain 130
+2021-08-06 04:23:24.696 -05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenInvalidAudienceException: IDX10208: Unable to validate audience. validationParameters.ValidAudience is null or whitespace and validationParameters.ValidAudiences is null.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateAudience(IEnumerable`1 audiences, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateAudience(IEnumerable`1 audiences, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2021-08-06 04:23:24.717 -05:00 [INF] Bearer was not authenticated. Failure message: IDX10208: Unable to validate audience. validationParameters.ValidAudience is null or whitespace and validationParameters.ValidAudiences is null.
+2021-08-06 04:23:24.718 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2021-08-06 04:23:24.722 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2021-08-06 04:23:24.722 -05:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/api/Recipe text/plain 130 - 401 0 - 116.9347ms
+2021-08-06 04:23:29.468 -05:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Recipe text/plain 130
+2021-08-06 04:23:29.468 -05:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenInvalidAudienceException: IDX10208: Unable to validate audience. validationParameters.ValidAudience is null or whitespace and validationParameters.ValidAudiences is null.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateAudience(IEnumerable`1 audiences, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateAudience(IEnumerable`1 audiences, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2021-08-06 04:23:29.469 -05:00 [INF] Bearer was not authenticated. Failure message: IDX10208: Unable to validate audience. validationParameters.ValidAudience is null or whitespace and validationParameters.ValidAudiences is null.
+2021-08-06 04:23:29.470 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2021-08-06 04:23:29.470 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2021-08-06 04:23:29.471 -05:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/api/Recipe text/plain 130 - 401 0 - 4.1617ms
+2021-08-06 04:24:04.269 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-06 04:24:04.636 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-06 04:24:04.636 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-06 04:24:04.636 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-06 04:24:04.636 -05:00 [INF] Hosting environment: Development
+2021-08-06 04:24:04.636 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-06 04:24:05.706 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-06 04:24:05.913 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 206.4103ms
+2021-08-06 04:24:06.503 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-06 04:24:06.802 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 299.5483ms
+2021-08-06 04:24:07.782 -05:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Recipe text/plain 130
+2021-08-06 04:24:08.102 -05:00 [INF] Successfully validated the token.
+2021-08-06 04:24:08.111 -05:00 [INF] Authorization was successful.
+2021-08-06 04:24:08.112 -05:00 [INF] Executing endpoint 'FlashOrder.Controllers.RecipeController.CreateRecipe (FlashOrder)'
+2021-08-06 04:24:08.162 -05:00 [INF] Route matched with {action = "CreateRecipe", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateRecipe(FlashOrder.DTOs.CreateRecipeDTO) on controller FlashOrder.Controllers.RecipeController (FlashOrder).
+2021-08-06 04:24:08.353 -05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2021-08-06 04:24:08.530 -05:00 [INF] Executed action FlashOrder.Controllers.RecipeController.CreateRecipe (FlashOrder) in 353.0182ms
+2021-08-06 04:24:08.532 -05:00 [INF] Executed endpoint 'FlashOrder.Controllers.RecipeController.CreateRecipe (FlashOrder)'
+2021-08-06 04:24:08.535 -05:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/api/Recipe text/plain 130 - 415 175 application/problem+json;+charset=utf-8 753.5755ms
+2021-08-06 04:25:35.674 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-06 04:25:36.094 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-06 04:25:36.095 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-06 04:25:36.095 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-06 04:25:36.095 -05:00 [INF] Hosting environment: Development
+2021-08-06 04:25:36.095 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-06 04:25:37.130 -05:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Recipe text/plain 130
+2021-08-06 04:25:37.130 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-06 04:25:37.445 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 321.8643ms
+2021-08-06 04:25:38.233 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-06 04:25:38.255 -05:00 [INF] Successfully validated the token.
+2021-08-06 04:25:38.269 -05:00 [INF] Authorization was successful.
+2021-08-06 04:25:38.274 -05:00 [INF] Executing endpoint 'FlashOrder.Controllers.RecipeController.CreateRecipe (FlashOrder)'
+2021-08-06 04:25:38.363 -05:00 [INF] Route matched with {action = "CreateRecipe", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateRecipe(FlashOrder.DTOs.CreateRecipeDTO) on controller FlashOrder.Controllers.RecipeController (FlashOrder).
+2021-08-06 04:25:38.507 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 273.2630ms
+2021-08-06 04:25:38.734 -05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2021-08-06 04:25:39.015 -05:00 [INF] Executed action FlashOrder.Controllers.RecipeController.CreateRecipe (FlashOrder) in 640.4265ms
+2021-08-06 04:25:39.020 -05:00 [INF] Executed endpoint 'FlashOrder.Controllers.RecipeController.CreateRecipe (FlashOrder)'
+2021-08-06 04:25:39.026 -05:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/api/Recipe text/plain 130 - 415 175 application/problem+json;+charset=utf-8 1903.6015ms
+2021-08-06 04:28:20.875 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-06 04:28:21.423 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-06 04:28:21.423 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-06 04:28:21.424 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-06 04:28:21.424 -05:00 [INF] Hosting environment: Development
+2021-08-06 04:28:21.424 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-06 04:28:21.959 -05:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Recipe application/json 130
+2021-08-06 04:28:22.287 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-06 04:28:22.587 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 298.6059ms
+2021-08-06 04:28:22.999 -05:00 [INF] Successfully validated the token.
+2021-08-06 04:28:23.028 -05:00 [INF] Authorization was successful.
+2021-08-06 04:28:23.033 -05:00 [INF] Executing endpoint 'FlashOrder.Controllers.RecipeController.CreateRecipe (FlashOrder)'
+2021-08-06 04:28:23.231 -05:00 [INF] Route matched with {action = "CreateRecipe", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateRecipe(FlashOrder.DTOs.CreateRecipeDTO) on controller FlashOrder.Controllers.RecipeController (FlashOrder).
+2021-08-06 04:28:23.453 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-06 04:28:23.914 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 460.8512ms
+2021-08-06 04:28:25.986 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-06 04:28:27.090 -05:00 [INF] Executed DbCommand (122ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Bio], [a].[ConcurrencyStamp], [a].[DisplayName], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2021-08-06 04:28:27.179 -05:00 [ERR] something went wrong in CreateRecipe
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FlashOrder.Controllers.RecipeController.CreateRecipe(CreateRecipeDTO recipeDTO) in C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder\Controllers\RecipeController.cs:line 72
+2021-08-06 04:28:27.219 -05:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-08-06 04:28:27.275 -05:00 [INF] Executed action FlashOrder.Controllers.RecipeController.CreateRecipe (FlashOrder) in 4032.3245ms
+2021-08-06 04:28:27.280 -05:00 [INF] Executed endpoint 'FlashOrder.Controllers.RecipeController.CreateRecipe (FlashOrder)'
+2021-08-06 04:28:27.293 -05:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/api/Recipe application/json 130 - 500 23 application/json;+charset=utf-8 5343.4590ms
+2021-08-06 04:29:29.170 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-06 04:29:30.163 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-06 04:29:30.164 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-06 04:29:30.164 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-06 04:29:30.164 -05:00 [INF] Hosting environment: Development
+2021-08-06 04:29:30.164 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-06 04:29:31.676 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-06 04:29:32.222 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 561.3965ms
+2021-08-06 04:29:33.313 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-06 04:29:33.642 -05:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Recipe application/json 130
+2021-08-06 04:29:33.886 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 572.3223ms
+2021-08-06 04:29:34.335 -05:00 [INF] Successfully validated the token.
+2021-08-06 04:29:34.351 -05:00 [INF] Authorization was successful.
+2021-08-06 04:29:34.353 -05:00 [INF] Executing endpoint 'FlashOrder.Controllers.RecipeController.CreateRecipe (FlashOrder)'
+2021-08-06 04:29:34.449 -05:00 [INF] Route matched with {action = "CreateRecipe", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateRecipe(FlashOrder.DTOs.CreateRecipeDTO) on controller FlashOrder.Controllers.RecipeController (FlashOrder).
+2021-08-06 04:29:36.159 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-06 04:29:37.105 -05:00 [INF] Executed DbCommand (87ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Bio], [a].[ConcurrencyStamp], [a].[DisplayName], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2021-08-06 04:29:37.172 -05:00 [ERR] something went wrong in CreateRecipe
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FlashOrder.Controllers.RecipeController.CreateRecipe(CreateRecipeDTO recipeDTO) in C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder\Controllers\RecipeController.cs:line 69
+2021-08-06 04:29:37.211 -05:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-08-06 04:29:37.275 -05:00 [INF] Executed action FlashOrder.Controllers.RecipeController.CreateRecipe (FlashOrder) in 2803.9932ms
+2021-08-06 04:29:37.276 -05:00 [INF] Executed endpoint 'FlashOrder.Controllers.RecipeController.CreateRecipe (FlashOrder)'
+2021-08-06 04:29:37.286 -05:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/api/Recipe application/json 130 - 500 23 application/json;+charset=utf-8 3644.1541ms
+2021-08-06 04:30:31.244 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-06 04:30:35.304 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-06 04:30:35.305 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-06 04:30:35.307 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-06 04:30:35.307 -05:00 [INF] Hosting environment: Development
+2021-08-06 04:30:35.307 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-06 04:30:40.741 -05:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Recipe application/json 130
+2021-08-06 04:30:40.741 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-06 04:30:42.754 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 1485.8972ms
+2021-08-06 04:30:42.771 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - -
+2021-08-06 04:30:42.782 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/favicon-16x16.png - -
+2021-08-06 04:30:42.964 -05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-08-06 04:30:42.964 -05:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2021-08-06 04:30:42.965 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - - - 0 142933 text/css 193.7700ms
+2021-08-06 04:30:42.965 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/favicon-16x16.png - - - 0 665 image/png 182.7381ms
+2021-08-06 04:30:42.983 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-06 04:30:43.693 -05:00 [INF] Successfully validated the token.
+2021-08-06 04:30:43.755 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 771.2105ms
+2021-08-06 04:30:43.769 -05:00 [INF] Authorization was successful.
+2021-08-06 04:30:43.776 -05:00 [INF] Executing endpoint 'FlashOrder.Controllers.RecipeController.CreateRecipe (FlashOrder)'
+2021-08-06 04:30:44.079 -05:00 [INF] Route matched with {action = "CreateRecipe", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateRecipe(FlashOrder.DTOs.CreateRecipeDTO) on controller FlashOrder.Controllers.RecipeController (FlashOrder).
+2021-08-06 04:33:21.458 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-06 04:33:23.793 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-06 04:33:23.794 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-06 04:33:23.796 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-06 04:33:23.796 -05:00 [INF] Hosting environment: Development
+2021-08-06 04:33:23.796 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-06 04:33:25.196 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-06 04:33:25.899 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 678.4440ms
+2021-08-06 04:33:58.840 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-06 04:34:01.248 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-06 04:34:01.249 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-06 04:34:01.251 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-06 04:34:01.251 -05:00 [INF] Hosting environment: Development
+2021-08-06 04:34:01.251 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-06 04:34:02.111 -05:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Recipe application/json 130
+2021-08-06 04:34:02.274 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-06 04:34:02.994 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 694.9401ms
+2021-08-06 04:34:03.804 -05:00 [INF] Successfully validated the token.
+2021-08-06 04:34:03.866 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/favicon-16x16.png - -
+2021-08-06 04:34:03.938 -05:00 [INF] Authorization was successful.
+2021-08-06 04:34:03.948 -05:00 [INF] Executing endpoint 'FlashOrder.Controllers.RecipeController.CreateRecipe (FlashOrder)'
+2021-08-06 04:34:03.967 -05:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2021-08-06 04:34:03.968 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/favicon-16x16.png - - - 0 665 image/png 142.7593ms
+2021-08-06 04:34:04.240 -05:00 [INF] Route matched with {action = "CreateRecipe", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateRecipe(FlashOrder.DTOs.CreateRecipeDTO) on controller FlashOrder.Controllers.RecipeController (FlashOrder).
+2021-08-06 04:34:28.220 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-06 04:34:30.395 -05:00 [INF] Executed DbCommand (113ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Bio], [a].[ConcurrencyStamp], [a].[DisplayName], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2021-08-06 04:34:30.670 -05:00 [ERR] something went wrong in CreateRecipe
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FlashOrder.Controllers.RecipeController.CreateRecipe(CreateRecipeDTO recipeDTO) in C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder\Controllers\RecipeController.cs:line 73
+2021-08-06 04:34:31.099 -05:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-08-06 04:34:31.255 -05:00 [INF] Executed action FlashOrder.Controllers.RecipeController.CreateRecipe (FlashOrder) in 27001.2068ms
+2021-08-06 04:34:31.260 -05:00 [INF] Executed endpoint 'FlashOrder.Controllers.RecipeController.CreateRecipe (FlashOrder)'
+2021-08-06 04:34:31.281 -05:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/api/Recipe application/json 130 - 500 23 application/json;+charset=utf-8 29203.2084ms
+2021-08-06 04:35:25.477 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-06 04:35:28.914 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-06 04:35:28.915 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-06 04:35:28.925 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-06 04:35:28.925 -05:00 [INF] Hosting environment: Development
+2021-08-06 04:35:28.925 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-06 04:35:30.154 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-06 04:35:30.795 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 622.0488ms
+2021-08-06 04:35:33.802 -05:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Recipe application/json 130
+2021-08-06 04:35:34.929 -05:00 [INF] Successfully validated the token.
+2021-08-06 04:35:34.967 -05:00 [INF] Authorization was successful.
+2021-08-06 04:35:34.974 -05:00 [INF] Executing endpoint 'FlashOrder.Controllers.RecipeController.CreateRecipe (FlashOrder)'
+2021-08-06 04:35:35.117 -05:00 [INF] Route matched with {action = "CreateRecipe", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateRecipe(FlashOrder.DTOs.CreateRecipeDTO) on controller FlashOrder.Controllers.RecipeController (FlashOrder).
+2021-08-06 04:36:11.936 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-06 04:36:13.407 -05:00 [INF] Executed DbCommand (108ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Bio], [a].[ConcurrencyStamp], [a].[DisplayName], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2021-08-06 04:36:13.605 -05:00 [ERR] something went wrong in CreateRecipe
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FlashOrder.Controllers.RecipeController.CreateRecipe(CreateRecipeDTO recipeDTO) in C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder\Controllers\RecipeController.cs:line 74
+2021-08-06 04:36:13.867 -05:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-08-06 04:36:13.949 -05:00 [INF] Executed action FlashOrder.Controllers.RecipeController.CreateRecipe (FlashOrder) in 38820.1729ms
+2021-08-06 04:36:13.956 -05:00 [INF] Executed endpoint 'FlashOrder.Controllers.RecipeController.CreateRecipe (FlashOrder)'
+2021-08-06 04:36:13.975 -05:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/api/Recipe application/json 130 - 500 23 application/json;+charset=utf-8 40173.4074ms
+2021-08-06 04:37:29.597 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-06 04:37:30.066 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-06 04:37:30.066 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-06 04:37:30.067 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-06 04:37:30.067 -05:00 [INF] Hosting environment: Development
+2021-08-06 04:37:30.067 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-06 04:37:31.301 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-06 04:37:31.449 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 150.9980ms
+2021-08-06 04:37:31.594 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - -
+2021-08-06 04:37:31.655 -05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-08-06 04:37:31.656 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - - - 0 142933 text/css 61.0335ms
+2021-08-06 04:37:31.948 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-06 04:37:32.177 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 229.7142ms
+2021-08-06 04:37:38.482 -05:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Recipe application/json 130
+2021-08-06 04:37:38.795 -05:00 [INF] Successfully validated the token.
+2021-08-06 04:37:38.807 -05:00 [INF] Authorization was successful.
+2021-08-06 04:37:38.808 -05:00 [INF] Executing endpoint 'FlashOrder.Controllers.RecipeController.CreateRecipe (FlashOrder)'
+2021-08-06 04:37:38.868 -05:00 [INF] Route matched with {action = "CreateRecipe", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateRecipe(FlashOrder.DTOs.CreateRecipeDTO) on controller FlashOrder.Controllers.RecipeController (FlashOrder).
+2021-08-06 04:37:40.463 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-06 04:37:41.383 -05:00 [INF] Executed DbCommand (90ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Bio], [a].[ConcurrencyStamp], [a].[DisplayName], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2021-08-06 04:37:41.446 -05:00 [ERR] something went wrong in CreateRecipe
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at FlashOrder.Controllers.RecipeController.CreateRecipe(CreateRecipeDTO recipeDTO) in C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder\Controllers\RecipeController.cs:line 76
+2021-08-06 04:37:41.480 -05:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-08-06 04:37:41.535 -05:00 [INF] Executed action FlashOrder.Controllers.RecipeController.CreateRecipe (FlashOrder) in 2652.5717ms
+2021-08-06 04:37:41.538 -05:00 [INF] Executed endpoint 'FlashOrder.Controllers.RecipeController.CreateRecipe (FlashOrder)'
+2021-08-06 04:37:41.549 -05:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/api/Recipe application/json 130 - 500 23 application/json;+charset=utf-8 3067.9687ms
+2021-08-06 04:38:05.103 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-06 04:38:07.380 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-06 04:38:07.380 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-06 04:38:07.383 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-06 04:38:07.383 -05:00 [INF] Hosting environment: Development
+2021-08-06 04:38:07.383 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-06 04:38:08.402 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-06 04:38:08.872 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 450.5738ms
+2021-08-06 04:38:11.265 -05:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Recipe application/json 130
+2021-08-06 04:38:12.131 -05:00 [INF] Successfully validated the token.
+2021-08-06 04:38:12.234 -05:00 [INF] Authorization was successful.
+2021-08-06 04:38:12.241 -05:00 [INF] Executing endpoint 'FlashOrder.Controllers.RecipeController.CreateRecipe (FlashOrder)'
+2021-08-06 04:38:12.489 -05:00 [INF] Route matched with {action = "CreateRecipe", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateRecipe(FlashOrder.DTOs.CreateRecipeDTO) on controller FlashOrder.Controllers.RecipeController (FlashOrder).
+2021-08-06 04:58:02.363 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-06 04:58:05.371 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-06 04:58:05.372 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-06 04:58:05.375 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-06 04:58:05.375 -05:00 [INF] Hosting environment: Development
+2021-08-06 04:58:05.376 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-06 04:58:06.775 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-06 04:58:07.269 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 444.4375ms
+2021-08-06 04:58:07.689 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - -
+2021-08-06 04:58:07.787 -05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-08-06 04:58:07.790 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - - - 0 142933 text/css 98.3496ms
+2021-08-06 04:58:09.865 -05:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Recipe application/json 130
+2021-08-06 04:58:10.734 -05:00 [INF] Successfully validated the token.
+2021-08-06 04:58:10.767 -05:00 [INF] Authorization was successful.
+2021-08-06 04:58:10.771 -05:00 [INF] Executing endpoint 'FlashOrder.Controllers.RecipeController.CreateRecipe (FlashOrder)'
+2021-08-06 04:58:10.943 -05:00 [INF] Route matched with {action = "CreateRecipe", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateRecipe(FlashOrder.DTOs.CreateRecipeDTO) on controller FlashOrder.Controllers.RecipeController (FlashOrder).
+2021-08-06 04:59:20.598 -05:00 [ERR] something went wrong in CreateRecipe
+System.ArgumentNullException: Value cannot be null. (Parameter 'email')
+   at Microsoft.AspNetCore.Identity.UserManager`1.FindByEmailAsync(String email)
+   at FlashOrder.Controllers.RecipeController.CreateRecipe(CreateRecipeDTO recipeDTO) in C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder\Controllers\RecipeController.cs:line 70
+2021-08-06 04:59:20.970 -05:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-08-06 04:59:21.050 -05:00 [INF] Executed action FlashOrder.Controllers.RecipeController.CreateRecipe (FlashOrder) in 70089.8854ms
+2021-08-06 04:59:21.057 -05:00 [INF] Executed endpoint 'FlashOrder.Controllers.RecipeController.CreateRecipe (FlashOrder)'
+2021-08-06 04:59:21.060 -05:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/api/Recipe application/json 130 - 500 23 application/json;+charset=utf-8 71195.0170ms
+2021-08-06 05:04:44.346 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-06 05:04:44.891 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-06 05:04:44.891 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-06 05:04:44.891 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-06 05:04:44.891 -05:00 [INF] Hosting environment: Development
+2021-08-06 05:04:44.891 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-06 05:04:45.961 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-06 05:04:46.139 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 182.7131ms
+2021-08-06 05:04:46.246 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - -
+2021-08-06 05:04:46.329 -05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-08-06 05:04:46.335 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - - - 0 142933 text/css 89.0682ms
+2021-08-06 05:04:46.617 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/favicon-16x16.png - -
+2021-08-06 05:04:46.624 -05:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2021-08-06 05:04:46.624 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/favicon-16x16.png - - - 0 665 image/png 9.2518ms
+2021-08-06 05:04:46.729 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-06 05:04:47.144 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 414.3388ms
+2021-08-06 05:04:51.645 -05:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Account/login application/json 73
+2021-08-06 05:04:51.741 -05:00 [INF] Executing endpoint 'FlashOrder.Controllers.AccountController.Login (FlashOrder)'
+2021-08-06 05:04:51.797 -05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(FlashOrder.DTOs.LoginDTO) on controller FlashOrder.Controllers.AccountController (FlashOrder).
+2021-08-06 05:04:53.358 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-06 05:04:54.436 -05:00 [INF] Executed DbCommand (111ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Bio], [a].[ConcurrencyStamp], [a].[DisplayName], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2021-08-06 05:04:54.768 -05:00 [INF] Executing AcceptedResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-08-06 05:04:54.839 -05:00 [INF] Executed action FlashOrder.Controllers.AccountController.Login (FlashOrder) in 3027.1963ms
+2021-08-06 05:04:54.840 -05:00 [INF] Executed endpoint 'FlashOrder.Controllers.AccountController.Login (FlashOrder)'
+2021-08-06 05:04:54.851 -05:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/api/Account/login application/json 73 - 202 579 application/json;+charset=utf-8 3206.2901ms
+2021-08-06 05:05:14.118 -05:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Recipe application/json 130
+2021-08-06 05:05:14.275 -05:00 [INF] Successfully validated the token.
+2021-08-06 05:05:14.289 -05:00 [INF] Authorization was successful.
+2021-08-06 05:05:14.290 -05:00 [INF] Executing endpoint 'FlashOrder.Controllers.RecipeController.CreateRecipe (FlashOrder)'
+2021-08-06 05:05:14.301 -05:00 [INF] Route matched with {action = "CreateRecipe", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateRecipe(FlashOrder.DTOs.CreateRecipeDTO) on controller FlashOrder.Controllers.RecipeController (FlashOrder).
+2021-08-06 05:05:14.407 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-06 05:05:14.424 -05:00 [INF] Executed DbCommand (12ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Bio], [a].[ConcurrencyStamp], [a].[DisplayName], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2021-08-06 05:05:14.797 -05:00 [INF] Executed DbCommand (27ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Recipes] ([ChefId], [Description], [Title])
+VALUES (@p0, @p1, @p2);
+SELECT [Id]
+FROM [Recipes]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2021-08-06 05:05:14.858 -05:00 [INF] Executed DbCommand (6ms) [Parameters=[@p3='?' (DbType = Int32), @p4='?' (DbType = Double), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Ingredients] ([ItemId], [Qty], [RecipeId])
+VALUES (@p3, @p4, @p5);
+SELECT [Id]
+FROM [Ingredients]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2021-08-06 05:05:14.888 -05:00 [INF] Executing CreatedAtRouteResult, writing value of type 'FlashOrder.Data.Recipe'.
+2021-08-06 05:05:14.954 -05:00 [INF] Executed action FlashOrder.Controllers.RecipeController.CreateRecipe (FlashOrder) in 652.7367ms
+2021-08-06 05:05:14.954 -05:00 [INF] Executed endpoint 'FlashOrder.Controllers.RecipeController.CreateRecipe (FlashOrder)'
+2021-08-06 05:05:14.957 -05:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/api/Recipe application/json 130 - 201 752 application/json;+charset=utf-8 839.0949ms
+2021-08-06 05:08:43.947 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-06 05:08:46.424 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-06 05:08:46.424 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-06 05:08:46.426 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-06 05:08:46.426 -05:00 [INF] Hosting environment: Development
+2021-08-06 05:08:46.427 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-06 05:08:47.749 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-06 05:08:48.225 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 446.9729ms
+2021-08-06 05:08:48.427 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - -
+2021-08-06 05:08:48.510 -05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-08-06 05:08:48.512 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - - - 0 142933 text/css 83.7461ms
+2021-08-06 05:08:48.593 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/favicon-16x16.png - -
+2021-08-06 05:08:48.595 -05:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2021-08-06 05:08:48.595 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/favicon-16x16.png - - - 0 665 image/png 2.3303ms
+2021-08-06 05:08:48.712 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-06 05:08:49.200 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 487.6099ms
+2021-08-06 05:08:55.914 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Recipe - -
+2021-08-06 05:08:56.329 -05:00 [INF] Executing endpoint 'FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder)'
+2021-08-06 05:08:56.472 -05:00 [INF] Route matched with {action = "GetRecipes", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRecipes(FlashOrder.RecipeParameters) on controller FlashOrder.Controllers.RecipeController (FlashOrder).
+2021-08-06 05:08:58.310 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-06 05:09:00.045 -05:00 [INF] Executed DbCommand (181ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ChefId], [r].[Description], [r].[Title], [a].[Id], [a].[AccessFailedCount], [a].[Bio], [a].[ConcurrencyStamp], [a].[DisplayName], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [t].[Id], [t].[ItemId], [t].[Qty], [t].[RecipeId], [t].[Id0], [t].[ImagePath], [t].[Name], [t].[Price]
+FROM [Recipes] AS [r]
+LEFT JOIN [AspNetUsers] AS [a] ON [r].[ChefId] = [a].[Id]
+LEFT JOIN (
+    SELECT [i].[Id], [i].[ItemId], [i].[Qty], [i].[RecipeId], [i0].[Id] AS [Id0], [i0].[ImagePath], [i0].[Name], [i0].[Price]
+    FROM [Ingredients] AS [i]
+    INNER JOIN [Items] AS [i0] ON [i].[ItemId] = [i0].[Id]
+) AS [t] ON [r].[Id] = [t].[RecipeId]
+ORDER BY [r].[Id], [a].[Id], [t].[Id], [t].[Id0]
+2021-08-06 05:09:00.266 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[FlashOrder.DTOs.RecipeDTO, FlashOrder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-08-06 05:09:00.637 -05:00 [INF] Executed action FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder) in 4152.8791ms
+2021-08-06 05:09:00.638 -05:00 [INF] Executed endpoint 'FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder)'
+2021-08-06 05:09:00.654 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Recipe - - - 200 320 application/json;+charset=utf-8 4740.0689ms
+2021-08-06 07:10:59.276 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-06 07:10:59.657 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-06 07:10:59.657 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-06 07:10:59.657 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-06 07:10:59.657 -05:00 [INF] Hosting environment: Development
+2021-08-06 07:10:59.657 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-06 07:11:00.359 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-06 07:11:00.512 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 151.3318ms
+2021-08-06 07:11:00.666 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - -
+2021-08-06 07:11:00.695 -05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-08-06 07:11:00.696 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - - - 0 142933 text/css 29.4474ms
+2021-08-06 07:11:00.798 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/favicon-16x16.png - -
+2021-08-06 07:11:00.801 -05:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2021-08-06 07:11:00.801 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/favicon-16x16.png - - - 0 665 image/png 3.0232ms
+2021-08-06 07:11:00.855 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-06 07:11:01.105 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 249.7891ms
+2021-08-06 07:17:44.206 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-06 07:17:44.879 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-06 07:17:44.879 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-06 07:17:44.880 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-06 07:17:44.880 -05:00 [INF] Hosting environment: Development
+2021-08-06 07:17:44.881 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-06 07:17:45.775 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-06 07:17:46.001 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 227.8616ms
+2021-08-06 07:17:46.506 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-06 07:17:46.912 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 405.2610ms
+2021-08-06 07:18:12.633 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-06 07:18:13.051 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-06 07:18:13.052 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-06 07:18:13.052 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-06 07:18:13.052 -05:00 [INF] Hosting environment: Development
+2021-08-06 07:18:13.052 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-06 07:18:13.965 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-06 07:18:14.099 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 138.2120ms
+2021-08-06 07:18:14.521 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-06 07:18:14.823 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 301.1441ms
+2021-08-06 07:19:52.040 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-06 07:19:52.466 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-06 07:19:52.466 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-06 07:19:52.467 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-06 07:19:52.467 -05:00 [INF] Hosting environment: Development
+2021-08-06 07:19:52.467 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-06 07:19:53.249 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-06 07:19:53.507 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 259.9971ms
+2021-08-06 07:19:54.246 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-06 07:19:54.708 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 456.2247ms
+2021-08-06 07:20:55.733 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-06 07:20:56.102 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-06 07:20:56.102 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-06 07:20:56.102 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-06 07:20:56.102 -05:00 [INF] Hosting environment: Development
+2021-08-06 07:20:56.102 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-06 07:20:56.667 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-06 07:20:56.804 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 135.9684ms
+2021-08-06 07:20:57.102 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-06 07:20:57.318 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 215.8298ms
+2021-08-06 07:25:13.325 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-06 07:25:13.951 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-06 07:25:13.951 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-06 07:25:13.951 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-06 07:25:13.951 -05:00 [INF] Hosting environment: Development
+2021-08-06 07:25:13.951 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-06 07:25:14.807 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-06 07:25:14.956 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 152.1324ms
+2021-08-06 07:25:15.387 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-06 07:25:15.800 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 412.4952ms
+2021-08-06 07:27:28.528 -05:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Account text/plain 151
+2021-08-06 07:27:28.634 -05:00 [INF] Executing endpoint 'FlashOrder.Controllers.AccountController.Register (FlashOrder)'
+2021-08-06 07:27:28.703 -05:00 [INF] Route matched with {action = "Register", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(FlashOrder.DTOs.RegisterDTO) on controller FlashOrder.Controllers.AccountController (FlashOrder).
+2021-08-06 07:27:28.947 -05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2021-08-06 07:27:29.139 -05:00 [INF] Executed action FlashOrder.Controllers.AccountController.Register (FlashOrder) in 425.7337ms
+2021-08-06 07:27:29.141 -05:00 [INF] Executed endpoint 'FlashOrder.Controllers.AccountController.Register (FlashOrder)'
+2021-08-06 07:27:29.143 -05:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/api/Account text/plain 151 - 415 175 application/problem+json;+charset=utf-8 615.7908ms
+2021-08-06 07:28:40.075 -05:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Recipe/1 application/json 125
+2021-08-06 07:28:40.078 -05:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2021-08-06 07:28:40.079 -05:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2021-08-06 07:28:40.079 -05:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/api/Recipe/1 application/json 125 - 405 0 - 4.0663ms
+2021-08-06 07:29:37.187 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/Recipe/1 application/json -
+2021-08-06 07:29:37.191 -05:00 [INF] Executing endpoint 'FlashOrder.Controllers.RecipeController.GetRecipe (FlashOrder)'
+2021-08-06 07:29:37.200 -05:00 [INF] Route matched with {action = "GetRecipe", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRecipe(Int32) on controller FlashOrder.Controllers.RecipeController (FlashOrder).
+2021-08-06 07:29:38.399 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-06 07:29:39.516 -05:00 [INF] Executed DbCommand (86ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[ChefId], [t].[Description], [t].[Title], [t0].[Id], [t0].[ItemId], [t0].[Qty], [t0].[RecipeId], [t0].[Id0], [t0].[ImagePath], [t0].[Name], [t0].[Price]
+FROM (
+    SELECT TOP(1) [r].[Id], [r].[ChefId], [r].[Description], [r].[Title]
+    FROM [Recipes] AS [r]
+    WHERE [r].[Id] = @__id_0
+) AS [t]
+LEFT JOIN (
+    SELECT [i].[Id], [i].[ItemId], [i].[Qty], [i].[RecipeId], [i0].[Id] AS [Id0], [i0].[ImagePath], [i0].[Name], [i0].[Price]
+    FROM [Ingredients] AS [i]
+    INNER JOIN [Items] AS [i0] ON [i].[ItemId] = [i0].[Id]
+) AS [t0] ON [t].[Id] = [t0].[RecipeId]
+ORDER BY [t].[Id], [t0].[Id], [t0].[Id0]
+2021-08-06 07:29:39.627 -05:00 [INF] Executing OkObjectResult, writing value of type 'FlashOrder.DTOs.RecipeDTO'.
+2021-08-06 07:29:39.654 -05:00 [INF] Executed action FlashOrder.Controllers.RecipeController.GetRecipe (FlashOrder) in 2453.8499ms
+2021-08-06 07:29:39.654 -05:00 [INF] Executed endpoint 'FlashOrder.Controllers.RecipeController.GetRecipe (FlashOrder)'
+2021-08-06 07:29:39.667 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/Recipe/1 application/json - - 200 229 application/json;+charset=utf-8 2479.0759ms
+2021-08-06 07:30:47.359 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-06 07:30:47.799 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-06 07:30:47.800 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-06 07:30:47.800 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-06 07:30:47.800 -05:00 [INF] Hosting environment: Development
+2021-08-06 07:30:47.800 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-06 07:30:48.509 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-06 07:30:48.659 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 149.4039ms
+2021-08-06 07:30:49.085 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-06 07:30:49.417 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 332.8512ms
+2021-08-06 07:30:54.891 -05:00 [INF] Request starting HTTP/1.1 PUT https://localhost:5001/api/Recipe/1 application/json 125
+2021-08-06 07:30:54.998 -05:00 [INF] Authorization failed. These requirements were not met:
+FlashOrder.Policies.OnlyChefOfRecipeRequirement
+2021-08-06 07:30:55.004 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2021-08-06 07:30:55.008 -05:00 [INF] Request finished HTTP/1.1 PUT https://localhost:5001/api/Recipe/1 application/json 125 - 401 0 - 116.5091ms
+2021-08-06 07:30:58.111 -05:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Recipe/1 application/json 125
+2021-08-06 07:30:58.122 -05:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2021-08-06 07:30:58.122 -05:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2021-08-06 07:30:58.122 -05:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/api/Recipe/1 application/json 125 - 405 0 - 11.0748ms
+2021-08-06 07:31:00.930 -05:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Recipe/1 application/json 125
+2021-08-06 07:31:00.931 -05:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2021-08-06 07:31:00.931 -05:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2021-08-06 07:31:00.931 -05:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/api/Recipe/1 application/json 125 - 405 0 - 1.6315ms
+2021-08-06 07:31:04.848 -05:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/Recipe/1 application/json 125
+2021-08-06 07:31:04.849 -05:00 [INF] Executing endpoint 'FlashOrder.Controllers.RecipeController.GetRecipe (FlashOrder)'
+2021-08-06 07:31:04.916 -05:00 [INF] Route matched with {action = "GetRecipe", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRecipe(Int32) on controller FlashOrder.Controllers.RecipeController (FlashOrder).
+2021-08-06 07:31:06.263 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-06 07:31:07.365 -05:00 [INF] Executed DbCommand (79ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[ChefId], [t].[Description], [t].[Title], [t].[Id0], [t].[AccessFailedCount], [t].[Bio], [t].[ConcurrencyStamp], [t].[DisplayName], [t].[Email], [t].[EmailConfirmed], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[SecurityStamp], [t].[TwoFactorEnabled], [t].[UserName], [t0].[Id], [t0].[ItemId], [t0].[Qty], [t0].[RecipeId], [t0].[Id0], [t0].[ImagePath], [t0].[Name], [t0].[Price]
+FROM (
+    SELECT TOP(1) [r].[Id], [r].[ChefId], [r].[Description], [r].[Title], [a].[Id] AS [Id0], [a].[AccessFailedCount], [a].[Bio], [a].[ConcurrencyStamp], [a].[DisplayName], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+    FROM [Recipes] AS [r]
+    LEFT JOIN [AspNetUsers] AS [a] ON [r].[ChefId] = [a].[Id]
+    WHERE [r].[Id] = @__id_0
+) AS [t]
+LEFT JOIN (
+    SELECT [i].[Id], [i].[ItemId], [i].[Qty], [i].[RecipeId], [i0].[Id] AS [Id0], [i0].[ImagePath], [i0].[Name], [i0].[Price]
+    FROM [Ingredients] AS [i]
+    INNER JOIN [Items] AS [i0] ON [i].[ItemId] = [i0].[Id]
+) AS [t0] ON [t].[Id] = [t0].[RecipeId]
+ORDER BY [t].[Id], [t].[Id0], [t0].[Id], [t0].[Id0]
+2021-08-06 07:31:07.498 -05:00 [INF] Executing OkObjectResult, writing value of type 'FlashOrder.DTOs.RecipeDTO'.
+2021-08-06 07:31:07.683 -05:00 [INF] Executed action FlashOrder.Controllers.RecipeController.GetRecipe (FlashOrder) in 2754.0307ms
+2021-08-06 07:31:07.684 -05:00 [INF] Executed endpoint 'FlashOrder.Controllers.RecipeController.GetRecipe (FlashOrder)'
+2021-08-06 07:31:07.694 -05:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/api/Recipe/1 application/json 125 - 200 318 application/json;+charset=utf-8 2845.9819ms
+2021-08-06 07:32:49.268 -05:00 [INF] Request starting HTTP/1.1 PUT https://localhost:5001/api/Recipe/1 application/json 125
+2021-08-06 07:32:49.484 -05:00 [INF] Successfully validated the token.
+2021-08-06 07:32:49.485 -05:00 [INF] Authorization failed. These requirements were not met:
+FlashOrder.Policies.OnlyChefOfRecipeRequirement
+2021-08-06 07:32:49.487 -05:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2021-08-06 07:32:49.487 -05:00 [INF] Request finished HTTP/1.1 PUT https://localhost:5001/api/Recipe/1 application/json 125 - 403 0 - 219.2297ms
+2021-08-06 07:35:01.189 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-06 07:35:01.795 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-06 07:35:01.795 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-06 07:35:01.796 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-06 07:35:01.796 -05:00 [INF] Hosting environment: Development
+2021-08-06 07:35:01.796 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-06 07:35:02.873 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-06 07:35:03.105 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 228.1797ms
+2021-08-06 07:35:03.479 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-06 07:35:03.696 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 218.7837ms
+2021-08-06 07:35:04.794 -05:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Account/login application/json 73
+2021-08-06 07:35:04.885 -05:00 [INF] Executing endpoint 'FlashOrder.Controllers.AccountController.Login (FlashOrder)'
+2021-08-06 07:35:04.940 -05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(FlashOrder.DTOs.LoginDTO) on controller FlashOrder.Controllers.AccountController (FlashOrder).
+2021-08-06 07:35:06.600 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-06 07:35:07.504 -05:00 [INF] Executed DbCommand (83ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Bio], [a].[ConcurrencyStamp], [a].[DisplayName], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2021-08-06 07:35:07.827 -05:00 [INF] Executing AcceptedResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-08-06 07:35:07.897 -05:00 [INF] Executed action FlashOrder.Controllers.AccountController.Login (FlashOrder) in 2944.9055ms
+2021-08-06 07:35:07.906 -05:00 [INF] Executed endpoint 'FlashOrder.Controllers.AccountController.Login (FlashOrder)'
+2021-08-06 07:35:07.921 -05:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/api/Account/login application/json 73 - 202 723 application/json;+charset=utf-8 3126.4411ms
+2021-08-06 07:35:16.206 -05:00 [INF] Request starting HTTP/1.1 PUT https://localhost:5001/api/Recipe/1 application/json 125
+2021-08-06 07:35:16.351 -05:00 [INF] Successfully validated the token.
+2021-08-06 07:35:16.359 -05:00 [INF] Authorization failed. These requirements were not met:
+FlashOrder.Policies.OnlyChefOfRecipeRequirement
+2021-08-06 07:35:16.361 -05:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2021-08-06 07:35:16.362 -05:00 [INF] Request finished HTTP/1.1 PUT https://localhost:5001/api/Recipe/1 application/json 125 - 403 0 - 156.0517ms
+2021-08-06 07:35:56.927 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-06 07:35:57.291 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-06 07:35:57.291 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-06 07:35:57.291 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-06 07:35:57.291 -05:00 [INF] Hosting environment: Development
+2021-08-06 07:35:57.291 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-06 07:35:58.317 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-06 07:35:58.539 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 219.6832ms
+2021-08-06 07:35:59.191 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-06 07:35:59.441 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 249.8354ms
+2021-08-06 07:36:07.645 -05:00 [INF] Request starting HTTP/1.1 PUT https://localhost:5001/api/Recipe/1 application/json 125
+2021-08-06 07:36:08.029 -05:00 [INF] Successfully validated the token.
+2021-08-06 07:36:08.039 -05:00 [INF] Authorization failed. These requirements were not met:
+FlashOrder.Policies.OnlyChefOfRecipeRequirement
+2021-08-06 07:36:08.043 -05:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2021-08-06 07:36:08.046 -05:00 [INF] Request finished HTTP/1.1 PUT https://localhost:5001/api/Recipe/1 application/json 125 - 403 0 - 400.4081ms
+2021-08-06 07:36:12.347 -05:00 [INF] Request starting HTTP/1.1 PUT https://localhost:5001/api/Recipe/1 application/json 125
+2021-08-06 07:36:12.354 -05:00 [INF] Successfully validated the token.
+2021-08-06 07:36:12.354 -05:00 [INF] Authorization failed. These requirements were not met:
+FlashOrder.Policies.OnlyChefOfRecipeRequirement
+2021-08-06 07:36:12.355 -05:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2021-08-06 07:36:12.355 -05:00 [INF] Request finished HTTP/1.1 PUT https://localhost:5001/api/Recipe/1 application/json 125 - 403 0 - 7.6689ms
+2021-08-06 08:05:08.956 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-06 08:05:09.334 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-06 08:05:09.334 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-06 08:05:09.335 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-06 08:05:09.335 -05:00 [INF] Hosting environment: Development
+2021-08-06 08:05:09.335 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-06 08:05:10.403 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-06 08:05:10.562 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 160.9025ms
+2021-08-06 08:05:10.666 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - -
+2021-08-06 08:05:10.732 -05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-08-06 08:05:10.733 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - - - 0 142933 text/css 67.2973ms
+2021-08-06 08:05:10.915 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-06 08:05:11.271 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 356.4547ms
+2021-08-06 08:05:14.574 -05:00 [INF] Request starting HTTP/1.1 PUT https://localhost:5001/api/Recipe/1 application/json 125
+2021-08-06 08:05:14.936 -05:00 [INF] Successfully validated the token.
+2021-08-06 08:05:14.945 -05:00 [INF] Authorization failed. These requirements were not met:
+FlashOrder.Policies.OnlyChefOfRecipeRequirement
+2021-08-06 08:05:14.948 -05:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2021-08-06 08:05:14.951 -05:00 [INF] Request finished HTTP/1.1 PUT https://localhost:5001/api/Recipe/1 application/json 125 - 403 0 - 377.8381ms
+2021-08-06 11:10:32.962 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-06 11:10:33.725 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-06 11:10:33.725 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-06 11:10:33.726 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-06 11:10:33.726 -05:00 [INF] Hosting environment: Development
+2021-08-06 11:10:33.726 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-06 11:10:34.654 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-06 11:10:34.881 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 231.2899ms
+2021-08-06 11:10:35.044 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - -
+2021-08-06 11:10:35.112 -05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-08-06 11:10:35.112 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - - - 0 142933 text/css 68.9466ms
+2021-08-06 11:10:35.388 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/favicon-16x16.png - -
+2021-08-06 11:10:35.390 -05:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2021-08-06 11:10:35.390 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/favicon-16x16.png - - - 0 665 image/png 2.8137ms
+2021-08-06 11:10:35.481 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-06 11:10:35.866 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 385.2816ms
+2021-08-06 11:10:40.951 -05:00 [INF] Request starting HTTP/1.1 PUT https://localhost:5001/api/Recipe/1 application/json 125
+2021-08-06 11:10:41.299 -05:00 [INF] Successfully validated the token.
+2021-08-06 11:10:41.306 -05:00 [INF] Authorization failed. These requirements were not met:
+FlashOrder.Policies.CreatorChefRequirement
+2021-08-06 11:10:41.309 -05:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2021-08-06 11:10:41.315 -05:00 [INF] Request finished HTTP/1.1 PUT https://localhost:5001/api/Recipe/1 application/json 125 - 403 0 - 363.5714ms
+2021-08-06 11:19:02.801 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-06 11:19:03.188 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-06 11:19:03.188 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-06 11:19:03.189 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-06 11:19:03.189 -05:00 [INF] Hosting environment: Development
+2021-08-06 11:19:03.189 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-06 11:19:03.965 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-06 11:19:04.160 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 199.1149ms
+2021-08-06 11:19:04.382 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - -
+2021-08-06 11:19:04.443 -05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-08-06 11:19:04.444 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - - - 0 142933 text/css 61.7317ms
+2021-08-06 11:19:04.567 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/favicon-16x16.png - -
+2021-08-06 11:19:04.575 -05:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2021-08-06 11:19:04.575 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/favicon-16x16.png - - - 0 665 image/png 7.7101ms
+2021-08-06 11:19:04.762 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-06 11:19:05.137 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 374.6886ms
+2021-08-06 11:19:05.878 -05:00 [INF] Request starting HTTP/1.1 PUT https://localhost:5001/api/Recipe/1 application/json 125
+2021-08-06 11:19:06.315 -05:00 [INF] Successfully validated the token.
+2021-08-06 11:19:06.324 -05:00 [INF] Authorization failed. These requirements were not met:
+FlashOrder.Policies.CreatorChefRequirement
+2021-08-06 11:19:06.326 -05:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2021-08-06 11:19:06.329 -05:00 [INF] Request finished HTTP/1.1 PUT https://localhost:5001/api/Recipe/1 application/json 125 - 403 0 - 450.7332ms
+2021-08-06 11:53:38.402 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-06 11:53:38.969 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-06 11:53:38.970 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-06 11:53:38.970 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-06 11:53:38.970 -05:00 [INF] Hosting environment: Development
+2021-08-06 11:53:38.970 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-06 11:53:39.972 -05:00 [INF] Request starting HTTP/1.1 PUT https://localhost:5001/api/Recipe/1 application/json 125
+2021-08-06 11:53:39.972 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-06 11:53:40.275 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 310.8388ms
+2021-08-06 11:53:40.590 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - -
+2021-08-06 11:53:40.612 -05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-08-06 11:53:40.613 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - - - 0 142933 text/css 22.7302ms
+2021-08-06 11:53:41.016 -05:00 [INF] Successfully validated the token.
+2021-08-06 11:53:41.043 -05:00 [INF] Authorization was successful.
+2021-08-06 11:53:41.045 -05:00 [INF] Executing endpoint 'FlashOrder.Controllers.RecipeController.UpdateRecipe (FlashOrder)'
+2021-08-06 11:53:41.140 -05:00 [INF] Route matched with {action = "UpdateRecipe", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateRecipe(Int32, FlashOrder.DTOs.UpdateRecipeDTO) on controller FlashOrder.Controllers.RecipeController (FlashOrder).
+2021-08-06 11:53:45.196 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-06 11:53:46.468 -05:00 [INF] Executed DbCommand (92ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ChefId], [r].[Description], [r].[Title]
+FROM [Recipes] AS [r]
+WHERE [r].[Id] = @__id_0
+2021-08-06 11:53:46.524 -05:00 [INF] Authorization failed. These requirements were not met:
+FlashOrder.Policies.CreatorChefRequirement
+2021-08-06 11:53:46.530 -05:00 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2021-08-06 11:53:46.599 -05:00 [INF] Executed action FlashOrder.Controllers.RecipeController.UpdateRecipe (FlashOrder) in 5449.0386ms
+2021-08-06 11:53:46.601 -05:00 [INF] Executed endpoint 'FlashOrder.Controllers.RecipeController.UpdateRecipe (FlashOrder)'
+2021-08-06 11:53:46.612 -05:00 [INF] Request finished HTTP/1.1 PUT https://localhost:5001/api/Recipe/1 application/json 125 - 401 44 application/json;+charset=utf-8 6649.3527ms
+2021-08-06 11:55:20.956 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-06 11:55:21.404 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-06 11:55:21.405 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-06 11:55:21.405 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-06 11:55:21.405 -05:00 [INF] Hosting environment: Development
+2021-08-06 11:55:21.405 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-06 11:55:24.956 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-06 11:55:25.355 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 404.9795ms
+2021-08-06 11:55:26.929 -05:00 [INF] Request starting HTTP/1.1 PUT https://localhost:5001/api/Recipe/1 application/json 125
+2021-08-06 11:55:27.145 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - -
+2021-08-06 11:55:27.172 -05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-08-06 11:55:27.172 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - - - 0 142933 text/css 27.4499ms
+2021-08-06 11:55:27.566 -05:00 [INF] Successfully validated the token.
+2021-08-06 11:55:27.580 -05:00 [INF] Authorization was successful.
+2021-08-06 11:55:27.582 -05:00 [INF] Executing endpoint 'FlashOrder.Controllers.RecipeController.UpdateRecipe (FlashOrder)'
+2021-08-06 11:55:27.657 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/favicon-16x16.png - -
+2021-08-06 11:55:27.659 -05:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2021-08-06 11:55:27.659 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/favicon-16x16.png - - - 0 665 image/png 1.7724ms
+2021-08-06 11:55:27.683 -05:00 [INF] Route matched with {action = "UpdateRecipe", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateRecipe(Int32, FlashOrder.DTOs.UpdateRecipeDTO) on controller FlashOrder.Controllers.RecipeController (FlashOrder).
+2021-08-06 11:55:27.874 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-06 11:55:28.151 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 276.8304ms
+2021-08-06 11:55:29.901 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-06 11:55:30.869 -05:00 [INF] Executed DbCommand (74ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ChefId], [r].[Description], [r].[Title]
+FROM [Recipes] AS [r]
+WHERE [r].[Id] = @__id_0
+2021-08-06 11:55:30.919 -05:00 [INF] Authorization failed. These requirements were not met:
+FlashOrder.Policies.CreatorChefRequirement
+2021-08-06 11:55:30.924 -05:00 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2021-08-06 11:55:30.984 -05:00 [INF] Executed action FlashOrder.Controllers.RecipeController.UpdateRecipe (FlashOrder) in 3285.3744ms
+2021-08-06 11:55:30.985 -05:00 [INF] Executed endpoint 'FlashOrder.Controllers.RecipeController.UpdateRecipe (FlashOrder)'
+2021-08-06 11:55:30.999 -05:00 [INF] Request finished HTTP/1.1 PUT https://localhost:5001/api/Recipe/1 application/json 125 - 401 44 application/json;+charset=utf-8 4070.7591ms
+2021-08-06 11:58:16.584 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-06 11:58:16.936 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-06 11:58:16.936 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-06 11:58:16.936 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-06 11:58:16.936 -05:00 [INF] Hosting environment: Development
+2021-08-06 11:58:16.936 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-06 11:58:17.916 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-06 11:58:18.092 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 180.9256ms
+2021-08-06 11:58:18.565 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-06 11:58:18.908 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 343.2451ms
+2021-08-06 11:58:22.647 -05:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Account/login application/json 73
+2021-08-06 11:58:22.747 -05:00 [INF] Executing endpoint 'FlashOrder.Controllers.AccountController.Login (FlashOrder)'
+2021-08-06 11:58:22.806 -05:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(FlashOrder.DTOs.LoginDTO) on controller FlashOrder.Controllers.AccountController (FlashOrder).
+2021-08-06 11:58:24.375 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-06 11:58:25.349 -05:00 [INF] Executed DbCommand (85ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Bio], [a].[ConcurrencyStamp], [a].[DisplayName], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2021-08-06 11:58:25.697 -05:00 [INF] Executing AcceptedResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-08-06 11:58:25.776 -05:00 [INF] Executed action FlashOrder.Controllers.AccountController.Login (FlashOrder) in 2954.5051ms
+2021-08-06 11:58:25.777 -05:00 [INF] Executed endpoint 'FlashOrder.Controllers.AccountController.Login (FlashOrder)'
+2021-08-06 11:58:25.788 -05:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/api/Account/login application/json 73 - 202 579 application/json;+charset=utf-8 3141.2834ms
+2021-08-06 11:59:46.611 -05:00 [INF] Request starting HTTP/1.1 PUT https://localhost:5001/api/Recipe/1 application/json 125
+2021-08-06 11:59:46.706 -05:00 [INF] Successfully validated the token.
+2021-08-06 11:59:46.714 -05:00 [INF] Authorization was successful.
+2021-08-06 11:59:46.714 -05:00 [INF] Executing endpoint 'FlashOrder.Controllers.RecipeController.UpdateRecipe (FlashOrder)'
+2021-08-06 11:59:46.720 -05:00 [INF] Route matched with {action = "UpdateRecipe", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateRecipe(Int32, FlashOrder.DTOs.UpdateRecipeDTO) on controller FlashOrder.Controllers.RecipeController (FlashOrder).
+2021-08-06 11:59:46.802 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-06 11:59:46.826 -05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ChefId], [r].[Description], [r].[Title]
+FROM [Recipes] AS [r]
+WHERE [r].[Id] = @__id_0
+2021-08-06 11:59:46.830 -05:00 [INF] Authorization was successful.
+2021-08-06 11:59:47.112 -05:00 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Double), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Ingredients] ([ItemId], [Qty], [RecipeId])
+VALUES (@p0, @p1, @p2);
+SELECT [Id]
+FROM [Ingredients]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2021-08-06 11:59:47.165 -05:00 [INF] Executed DbCommand (9ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (Size = 450), @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Recipes] SET [ChefId] = @p0, [Description] = @p1, [Title] = @p2
+WHERE [Id] = @p3;
+SELECT @@ROWCOUNT;
+2021-08-06 11:59:47.192 -05:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 204
+2021-08-06 11:59:47.193 -05:00 [INF] Executed action FlashOrder.Controllers.RecipeController.UpdateRecipe (FlashOrder) in 472.4072ms
+2021-08-06 11:59:47.193 -05:00 [INF] Executed endpoint 'FlashOrder.Controllers.RecipeController.UpdateRecipe (FlashOrder)'
+2021-08-06 11:59:47.195 -05:00 [INF] Request finished HTTP/1.1 PUT https://localhost:5001/api/Recipe/1 application/json 125 - 204 - - 584.0583ms
+2021-08-06 12:00:00.261 -05:00 [INF] Application is shutting down...
+2021-08-06 12:00:07.780 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-06 12:00:08.153 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-06 12:00:08.153 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-06 12:00:08.154 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-06 12:00:08.154 -05:00 [INF] Hosting environment: Development
+2021-08-06 12:00:08.154 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-06 12:00:09.075 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-06 12:00:09.253 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 181.4352ms
+2021-08-06 12:00:09.698 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-06 12:00:10.033 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 335.1278ms
+2021-08-06 12:00:18.057 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Recipe - -
+2021-08-06 12:00:18.184 -05:00 [INF] Executing endpoint 'FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder)'
+2021-08-06 12:00:18.249 -05:00 [INF] Route matched with {action = "GetRecipes", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRecipes(FlashOrder.RecipeParameters) on controller FlashOrder.Controllers.RecipeController (FlashOrder).
+2021-08-06 12:00:19.744 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-06 12:00:21.109 -05:00 [INF] Executed DbCommand (65ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ChefId], [r].[Description], [r].[Title], [a].[Id], [a].[AccessFailedCount], [a].[Bio], [a].[ConcurrencyStamp], [a].[DisplayName], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [t].[Id], [t].[ItemId], [t].[Qty], [t].[RecipeId], [t].[Id0], [t].[ImagePath], [t].[Name], [t].[Price]
+FROM [Recipes] AS [r]
+LEFT JOIN [AspNetUsers] AS [a] ON [r].[ChefId] = [a].[Id]
+LEFT JOIN (
+    SELECT [i].[Id], [i].[ItemId], [i].[Qty], [i].[RecipeId], [i0].[Id] AS [Id0], [i0].[ImagePath], [i0].[Name], [i0].[Price]
+    FROM [Ingredients] AS [i]
+    INNER JOIN [Items] AS [i0] ON [i].[ItemId] = [i0].[Id]
+) AS [t] ON [r].[Id] = [t].[RecipeId]
+ORDER BY [r].[Id], [a].[Id], [t].[Id], [t].[Id0]
+2021-08-06 12:00:21.292 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[FlashOrder.DTOs.RecipeDTO, FlashOrder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-08-06 12:00:21.513 -05:00 [INF] Executed action FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder) in 3249.991ms
+2021-08-06 12:00:21.514 -05:00 [INF] Executed endpoint 'FlashOrder.Controllers.RecipeController.GetRecipes (FlashOrder)'
+2021-08-06 12:00:21.526 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Recipe - - - 200 450 application/json;+charset=utf-8 3469.3362ms

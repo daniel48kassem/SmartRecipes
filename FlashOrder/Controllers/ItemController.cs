@@ -46,7 +46,7 @@ namespace FlashOrder.Controllers
             try
             {
                 var file = itemDTO.ImageFile;
-                var path=await  _myUtils.SaveFileToPublicFolder(file,"");
+                var path=await  _myUtils.SaveFileToPublicFolder(file,"Images");
                 
                 var item = _mapper.Map<Item>(itemDTO);
                 item.ImagePath = path;
@@ -111,11 +111,11 @@ namespace FlashOrder.Controllers
                 //updating image data
                 if (file != null)
                 {
-                    var path=await  _myUtils.SaveFileToPublicFolder(file,"");
+                    var path=await  _myUtils.SaveFileToPublicFolder(file,"Images");
                     item.ImagePath = path;
                 }
                 
-                //mapping (source,out object)
+                //mapping (source: object,destination: object)
                 _mapper.Map(itemDTO,item);
                 _unitOfWork.Items.Update(item);
                 await _unitOfWork.save();

@@ -6,7 +6,6 @@ namespace FlashOrder
     {
         public string Title { get; set; }
         public IList<string> Ingredients { get; set; }
-        
         public double Cost { get; set; }
     }
 }

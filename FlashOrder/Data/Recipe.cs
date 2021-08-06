@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FlashOrder.Data
 {
@@ -6,7 +8,11 @@ namespace FlashOrder.Data
     {
         public int Id { get; set; }
         public string Title { get; set; }
-        public int ChefId { get; set; }
+        
+        [ ForeignKey("ApiUser")]
+        public string ChefId { get; set; }
+        public ApiUser Chef { get; set; }
+        
         public string Description { get; set; }
         
         public virtual IList<Ingredient> Ingredients { get; set; }

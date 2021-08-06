@@ -2,8 +2,11 @@ using AutoMapper;
 using FlashOrder.Configurations;
 using FlashOrder.Data;
 using FlashOrder.IRepository;
+using FlashOrder.Policies;
 using FlashOrder.Repository;
 using FlashOrder.Services.Auth;
+using FlashOrder.Utils;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -48,6 +51,17 @@ namespace FlashOrder
             services.ConfigureIdentity();
             services.ConfigureJWT(Configuration);
 
+            services.AddAuthorization(options =>
+            {
+                // options.AddPolicy("OnlyChefOfRecipe", policy => policy.RequireClaim("Recipe"));
+                // options.AddPolicy("OnlyChefOfRecipe",
+                //     policy => policy.Requirements.Add(new OnlyChefOfRecipeRequirement()));
+                
+                
+                options.AddPolicy("CreatorChefPolicy",
+                    policy => policy.Requirements.Add(new CreatorChefRequirement()));
+            });
+            
             services.AddAutoMapper(typeof(MapperInitializer));
 
             
@@ -58,7 +72,12 @@ namespace FlashOrder
             services.AddControllers().AddNewtonsoftJson(op =>
                 op.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
             
+            // services.AddSingleton<IAuthorizationHandler, OnlyChefOfRecipe>();
+ 
+            services.AddSingleton<IAuthorizationHandler, CreatorChefHandler>();
             services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            
+            services.AddScoped(typeof(MyUtils));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

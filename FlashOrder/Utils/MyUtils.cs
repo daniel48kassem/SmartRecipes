@@ -16,9 +16,9 @@ namespace FlashOrder.Utils
             _logger = logger;
         }
    
-        public async Task<string> SaveFileToPublicFolder(IFormFile file,string path)
+        public async Task<string> SaveFileToPublicFolder(IFormFile file,string folderPath)
         {
-            var folderName = Path.Combine("wwwroot", "images");
+            var folderName = Path.Combine("wwwroot", folderPath);
             var pathToSave = Path.Combine(Directory.GetCurrentDirectory(), folderName);
             var fileName = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
             

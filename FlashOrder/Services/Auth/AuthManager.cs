@@ -34,11 +34,14 @@ namespace FlashOrder.Services.Auth
 
         public async Task<string> CreateToken()
         {
+            //this claims will be available in User in All Controllers,you will need them
+            
             var claims = new[] {    
                 new Claim(ClaimTypes.Name, _user.UserName),
                 // new Claim(ClaimTypes.Role, _user.),
                 new Claim(ClaimTypes.NameIdentifier,
-                    Guid.NewGuid().ToString())
+                    _user.Id),
+                new Claim(ClaimTypes.Email, _user.Email)
             };
 
 
@@ -48,10 +51,13 @@ namespace FlashOrder.Services.Auth
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings.GetSection("Key").Value));
             
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256Signature);
-            
+
+            // var lifeTime =DateTime.Now.AddMinutes(Convert.ToDouble(jwtSettings.GetSection("TokenExpirationDuration").Value)) ;
+            var lifeTime =DateTime.Now.AddMinutes(Convert.ToDouble(4546545)) ;
+
             var tokenDescriptor =  new JwtSecurityToken(jwtSettings.GetSection("Issuer").Value,
                 claims:claims, 
-                expires: DateTime.Now.AddMinutes(Convert.ToDouble(jwtSettings.GetSection("TokenExpirationDuration").Value)),
+                expires: lifeTime,
                 signingCredentials: credentials); 
             
             return new JwtSecurityTokenHandler().WriteToken(tokenDescriptor);  

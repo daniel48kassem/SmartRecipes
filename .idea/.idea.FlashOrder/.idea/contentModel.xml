@@ -40,11 +40,6 @@
           <e p="UserDTO.cs" t="Include" />
         </e>
         <e p="Filters" t="Include">
-          <e p="BaseSpecification.cs" t="Include" />
-          <e p="FilterSpecification.cs" t="Include" />
-          <e p="ISpecification.cs" t="Include" />
-          <e p="QuerySpecificationExtensions.cs" t="Include" />
-          <e p="RecipeIngredients.cs" t="Include" />
           <e p="RecipeParameters.cs" t="Include" />
         </e>
         <e p="FlashOrder.csproj" t="IncludeRecursive" />
@@ -65,18 +60,8 @@
           <e p="MyHttpContext.cs" t="Include" />
         </e>
         <e p="Migrations" t="Include">
-          <e p="20210728104812_Setup.cs" t="Include" />
-          <e p="20210728104812_Setup.Designer.cs" t="Include" />
-          <e p="20210728112635_AddedTitle.cs" t="Include" />
-          <e p="20210728112635_AddedTitle.Designer.cs" t="Include" />
-          <e p="20210728124000_ChangesImage.cs" t="Include" />
-          <e p="20210728124000_ChangesImage.Designer.cs" t="Include" />
-          <e p="20210728161703_ChangesItem.cs" t="Include" />
-          <e p="20210728161703_ChangesItem.Designer.cs" t="Include" />
-          <e p="20210805124243_IdentityAdded.cs" t="Include" />
-          <e p="20210805124243_IdentityAdded.Designer.cs" t="Include" />
-          <e p="20210805213545_JwtAdded.cs" t="Include" />
-          <e p="20210805213545_JwtAdded.Designer.cs" t="Include" />
+          <e p="20210806082533_AddedChefIdToRecipe.cs" t="Include" />
+          <e p="20210806082533_AddedChefIdToRecipe.Designer.cs" t="Include" />
           <e p="DatabaseContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
@@ -85,6 +70,14 @@
               <e p="FlashOrder.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
+        </e>
+        <e p="Policies" t="Include">
+          <e p="CreatorChefHandler.cs" t="Include" />
+          <e p="CreatorChefRequirement.cs" t="Include" />
+          <e p="IRecipeIdProvider.cs" t="Include" />
+          <e p="OnlyChefOfRecipe.cs" t="Include" />
+          <e p="OnlyChefOfRecipeRequirement.cs" t="Include" />
+          <e p="RecipeIdProvider.cs" t="Include" />
         </e>
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">
@@ -117,6 +110,7 @@
         <e p="wwwroot" t="Include">
           <e p="Images" t="Include">
             <e p="burning_universe-1280x800.jpg" t="Include" />
+            <e p="Butterfly2.png" t="Include" />
             <e p="Screenshot_2021-07-25-09-59-49.png" t="Include" />
           </e>
         </e>

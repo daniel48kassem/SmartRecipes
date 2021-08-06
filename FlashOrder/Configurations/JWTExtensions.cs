@@ -17,6 +17,7 @@ namespace FlashOrder.Configurations
                     {
                         ValidateIssuer = true,
                         ValidateLifetime = true,
+                        ValidateAudience = false,
                         ValidateIssuerSigningKey = true,
                         ValidIssuer = configuration["JWT:Issuer"],
                         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JWT:Key"]))
