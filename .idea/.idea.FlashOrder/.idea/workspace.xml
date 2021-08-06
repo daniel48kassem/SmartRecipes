@@ -5,10 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f789b059-6e4e-4152-a1e5-962adab9c142" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/FlashOrder/Data/ApiUser.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FlashOrder/Configurations/IdentityExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FlashOrder/Configurations/JWTExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FlashOrder/Controllers/AccountController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FlashOrder/DTOs/UserDTO.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FlashOrder/Services/Auth/AuthManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FlashOrder/Services/Auth/IAuthManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FlashOrder/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FlashOrder/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FlashOrder/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FlashOrder/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FlashOrder/DTOs/UploadedFileDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FlashOrder/DTOs/UploadedFileDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FlashOrder/Configurations/MapperInitializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FlashOrder/Configurations/MapperInitializer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FlashOrder/Controllers/ItemController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FlashOrder/Controllers/ItemController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FlashOrder/Data/ApiUser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FlashOrder/Data/ApiUser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FlashOrder/Data/DatabaseContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FlashOrder/Data/DatabaseContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FlashOrder/FlashOrder.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/FlashOrder/FlashOrder.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FlashOrder/Migrations/DatabaseContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FlashOrder/Migrations/DatabaseContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FlashOrder/ServiceExtensions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FlashOrder/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FlashOrder/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FlashOrder/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/FlashOrder/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +36,6 @@
     <setting file="file://$PROJECT_DIR$/FlashOrder/Data/DatabaseContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/FlashOrder/Filters/BaseSpecification.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/FlashOrder/Data/Ingredient.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/FlashOrder/ServiceExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/FlashOrder/Startup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/FlashOrder/Data/Item.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/FlashOrder/WeatherForecast.cs" root0="FORCE_HIGHLIGHTING" />
@@ -31,17 +43,7 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/FlashOrder/ServiceExtensions.cs" />
-      <option value="$PROJECT_DIR$/FlashOrder/Data/recipe.cs" />
-      <option value="$PROJECT_DIR$/FlashOrder/appsettings.json" />
-      <option value="$PROJECT_DIR$/RightRecipe/Data/DatabaseContext.cs" />
-      <option value="$PROJECT_DIR$/RightRecipe/Data/Ingredient.cs" />
-      <option value="$PROJECT_DIR$/FlashOrder/Configurations/Entities/CountryConfiguration.cs" />
-      <option value="$PROJECT_DIR$/FlashOrder/Configurations/Entities/ItemConfiguration.cs" />
-      <option value="$PROJECT_DIR$/FlashOrder/Program.cs" />
-      <option value="$PROJECT_DIR$/FlashOrder/Data/Image.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/DTOs/ImageDTO.cs" />
-      <option value="$PROJECT_DIR$/FlashOrder/Data/DatabaseContext.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/Middlewares/MyHttpContext.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/Configurations/HttpContextExtensions.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/Data/Item.cs" />
@@ -65,19 +67,33 @@
       <option value="$PROJECT_DIR$/FlashOrder/IRepository/IUnitOfWork.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/Repository/UnitOfWork.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/Utils/Utils.cs" />
-      <option value="$PROJECT_DIR$/FlashOrder/Startup.cs" />
-      <option value="$PROJECT_DIR$/FlashOrder/Controllers/ItemController.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/Filters/RecipeParameters.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/Data/Ingredient.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/Data/Recipe.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/DTOs/IngredientDTO.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/DTOs/RecipeDTO.cs" />
-      <option value="$PROJECT_DIR$/FlashOrder/Configurations/MapperInitializer.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/Controllers/RecipeController.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/Repository/RecipeRepository.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/Utils/MyUtils.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/DTOs/UploadedFileDTO.cs" />
+      <option value="$PROJECT_DIR$/FlashOrder/Data/DatabaseContext.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/Data/ApiUser.cs" />
+      <option value="$PROJECT_DIR$/FlashOrder/Services/TokenService.cs" />
+      <option value="$PROJECT_DIR$/FlashOrder/Configurations/IdentityExtensions.cs" />
+      <option value="$PROJECT_DIR$/FlashOrder/DTOs/LoginDTO.cs" />
+      <option value="$PROJECT_DIR$/FlashOrder/DTOs/RegisterDTO.cs" />
+      <option value="$PROJECT_DIR$/FlashOrder/Tokens/ITokenService.cs" />
+      <option value="$PROJECT_DIR$/FlashOrder/Tokens/TokenService.cs" />
+      <option value="$PROJECT_DIR$/FlashOrder/Services/Tokens/TokenService.cs" />
+      <option value="$PROJECT_DIR$/FlashOrder/Configurations/MapperInitializer.cs" />
+      <option value="$PROJECT_DIR$/FlashOrder/DTOs/UserDTO.cs" />
+      <option value="$PROJECT_DIR$/FlashOrder/appsettings.json" />
+      <option value="$PROJECT_DIR$/FlashOrder/Controllers/ItemController.cs" />
+      <option value="$PROJECT_DIR$/FlashOrder/Services/Auth/IAuthManager.cs" />
+      <option value="$PROJECT_DIR$/FlashOrder/Startup.cs" />
+      <option value="$PROJECT_DIR$/FlashOrder/Configurations/JWTExtensions.cs" />
+      <option value="$PROJECT_DIR$/FlashOrder/Services/Auth/AuthManager.cs" />
+      <option value="$PROJECT_DIR$/FlashOrder/Controllers/AccountController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1vfWuTxGRnxNIs4XXA7SAgbj397" />
@@ -151,7 +167,9 @@
       <workItem from="1627663817004" duration="4063000" />
       <workItem from="1627732712857" duration="2786000" />
       <workItem from="1627750818175" duration="5552000" />
-      <workItem from="1628083743909" duration="1790000" />
+      <workItem from="1628083743909" duration="2095000" />
+      <workItem from="1628165788471" duration="1808000" />
+      <workItem from="1628168159071" duration="19964000" />
     </task>
     <servers />
   </component>

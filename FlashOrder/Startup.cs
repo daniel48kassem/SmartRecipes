@@ -1,24 +1,17 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using AutoMapper;
 using FlashOrder.Configurations;
 using FlashOrder.Data;
 using FlashOrder.IRepository;
 using FlashOrder.Repository;
-using FlashOrder.Utils;
+using FlashOrder.Services.Auth;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 
 namespace FlashOrder
@@ -39,18 +32,29 @@ namespace FlashOrder
             {
                 c.SwaggerDoc("v1", new OpenApiInfo {Title = "FlashOrder", Version = "v1"});
             });
+            
             services.AddCors(o =>
             {
                 o.AddPolicy("AllowAll", 
                     builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             });
+            
+            
             services.AddDbContext<DatabaseContext>(options=>
                 options.UseSqlServer(Configuration.GetConnectionString("sqlConnection")));
-            
+
+
+            services.AddAuthentication();
+            services.ConfigureIdentity();
+            services.ConfigureJWT(Configuration);
+
             services.AddAutoMapper(typeof(MapperInitializer));
+
+            
             //every time is needed ,a new instance is created ,it is similar to service provider in laravel
             services.AddTransient<IUnitOfWork, UnitOfWork>();
-            
+            services.AddScoped<IAuthManager, AuthManager>();
+
             services.AddControllers().AddNewtonsoftJson(op =>
                 op.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
             
@@ -78,7 +82,7 @@ namespace FlashOrder
             //using cors with the policy "AllowAll"
             app.UseCors("AllowAll");
             app.UseRouting();
-            // app.UseAuthentication();
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints => { endpoints.MapControllers(); });

@@ -13,9 +13,12 @@
             <e p="ItemConfiguration.cs" t="Include" />
           </e>
           <e p="HttpContextExtensions.cs" t="Include" />
+          <e p="IdentityExtensions.cs" t="Include" />
+          <e p="JWTExtensions.cs" t="Include" />
           <e p="MapperInitializer.cs" t="Include" />
         </e>
         <e p="Controllers" t="Include">
+          <e p="AccountController.cs" t="Include" />
           <e p="ItemController.cs" t="Include" />
           <e p="RecipeController.cs" t="Include" />
           <e p="WeatherForecastController.cs" t="Include" />
@@ -34,6 +37,7 @@
           <e p="ItemDTO.cs" t="Include" />
           <e p="RecipeDTO.cs" t="Include" />
           <e p="UploadedFileDTO.cs" t="Include" />
+          <e p="UserDTO.cs" t="Include" />
         </e>
         <e p="Filters" t="Include">
           <e p="BaseSpecification.cs" t="Include" />
@@ -54,6 +58,8 @@
           <e p="log20210729.txt" t="Include" />
           <e p="log20210730.txt" t="Include" />
           <e p="log20210731.txt" t="Include" />
+          <e p="log20210805.txt" t="Include" />
+          <e p="log20210806.txt" t="Include" />
         </e>
         <e p="Middlewares" t="Include">
           <e p="MyHttpContext.cs" t="Include" />
@@ -67,6 +73,10 @@
           <e p="20210728124000_ChangesImage.Designer.cs" t="Include" />
           <e p="20210728161703_ChangesItem.cs" t="Include" />
           <e p="20210728161703_ChangesItem.Designer.cs" t="Include" />
+          <e p="20210805124243_IdentityAdded.cs" t="Include" />
+          <e p="20210805124243_IdentityAdded.Designer.cs" t="Include" />
+          <e p="20210805213545_JwtAdded.cs" t="Include" />
+          <e p="20210805213545_JwtAdded.Designer.cs" t="Include" />
           <e p="DatabaseContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
@@ -93,7 +103,12 @@
             <e p="burning_universe-1280x800.jpg" t="Include" />
           </e>
         </e>
-        <e p="ServiceExtensions.cs" t="Include" />
+        <e p="Services" t="Include">
+          <e p="Auth" t="Include">
+            <e p="AuthManager.cs" t="Include" />
+            <e p="IAuthManager.cs" t="Include" />
+          </e>
+        </e>
         <e p="Startup.cs" t="Include" />
         <e p="Utils" t="Include">
           <e p="MyUtils.cs" t="Include" />

@@ -1,9 +1,10 @@
 ﻿using FlashOrder.Configurations.Entities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-
+// using Microsoft.AspNetCore.Identity.;
 namespace FlashOrder.Data
 {
-    public class DatabaseContext:DbContext
+    public class DatabaseContext:IdentityDbContext<ApiUser>
     {
         public DatabaseContext(DbContextOptions options) : base(options)
         {

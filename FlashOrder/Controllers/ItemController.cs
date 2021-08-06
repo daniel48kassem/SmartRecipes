@@ -25,12 +25,12 @@ namespace FlashOrder.Controllers
         private readonly ILogger<ItemController> _logger;
         private readonly MyUtils _myUtils;
         
-        public ItemController(ILogger<ItemController> logger, IMapper mapper, IUnitOfWork unitOfWork,MyUtils utils)
+        public ItemController(ILogger<ItemController> logger, IMapper mapper, IUnitOfWork unitOfWork,MyUtils myUtils)
         {
             _logger = logger;
             _unitOfWork = unitOfWork;
             _mapper = mapper;
-            _myUtils = _myUtils;
+            _myUtils = myUtils;
         }
         
         
