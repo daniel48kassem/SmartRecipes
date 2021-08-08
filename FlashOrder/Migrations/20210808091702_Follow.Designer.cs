@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FlashOrder.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20210806082533_AddedChefIdToRecipe")]
-    partial class AddedChefIdToRecipe
+    [Migration("20210808091702_Follow")]
+    partial class Follow
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -90,6 +90,21 @@ namespace FlashOrder.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers");
+                });
+
+            modelBuilder.Entity("FlashOrder.Data.Follow", b =>
+                {
+                    b.Property<string>("ChefId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("FollowerId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("ChefId", "FollowerId");
+
+                    b.HasIndex("FollowerId");
+
+                    b.ToTable("Follow");
                 });
 
             modelBuilder.Entity("FlashOrder.Data.Image", b =>
@@ -193,6 +208,29 @@ namespace FlashOrder.Migrations
                     b.ToTable("Recipes");
                 });
 
+            modelBuilder.Entity("FlashOrder.Data.Step", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Order")
+                        .HasColumnType("int");
+
+                    b.Property<int>("RecipeId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RecipeId");
+
+                    b.ToTable("Steps");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
                     b.Property<string>("Id")
@@ -218,6 +256,29 @@ namespace FlashOrder.Migrations
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "6bcb6741-bdb0-4000-af43-eca83683a756",
+                            ConcurrencyStamp = "41270f3a-bc50-4dbc-b592-f24619426cee",
+                            Name = "Chef",
+                            NormalizedName = "Chef"
+                        },
+                        new
+                        {
+                            Id = "5721d016-25cc-417a-b32e-eeb17564f245",
+                            ConcurrencyStamp = "d0cda8b3-f280-46df-8661-8d27f54f22ad",
+                            Name = "User",
+                            NormalizedName = "USER"
+                        },
+                        new
+                        {
+                            Id = "6ad1818b-d421-4051-9e02-a90a8b868744",
+                            ConcurrencyStamp = "80524914-4b5d-4915-b01b-75fad14c6c35",
+                            Name = "Administrator",
+                            NormalizedName = "ADMINISTRATOR"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -324,6 +385,25 @@ namespace FlashOrder.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("FlashOrder.Data.Follow", b =>
+                {
+                    b.HasOne("FlashOrder.Data.ApiUser", "Chef")
+                        .WithMany("ChefFollowers")
+                        .HasForeignKey("ChefId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("FlashOrder.Data.ApiUser", "Follower")
+                        .WithMany("FollowedChefs")
+                        .HasForeignKey("FollowerId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Chef");
+
+                    b.Navigation("Follower");
+                });
+
             modelBuilder.Entity("FlashOrder.Data.Ingredient", b =>
                 {
                     b.HasOne("FlashOrder.Data.Item", "Item")
@@ -350,6 +430,17 @@ namespace FlashOrder.Migrations
                         .HasForeignKey("ChefId");
 
                     b.Navigation("Chef");
+                });
+
+            modelBuilder.Entity("FlashOrder.Data.Step", b =>
+                {
+                    b.HasOne("FlashOrder.Data.Recipe", "Recipe")
+                        .WithMany("Steps")
+                        .HasForeignKey("RecipeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Recipe");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -403,9 +494,18 @@ namespace FlashOrder.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("FlashOrder.Data.ApiUser", b =>
+                {
+                    b.Navigation("ChefFollowers");
+
+                    b.Navigation("FollowedChefs");
+                });
+
             modelBuilder.Entity("FlashOrder.Data.Recipe", b =>
                 {
                     b.Navigation("Ingredients");
+
+                    b.Navigation("Steps");
                 });
 #pragma warning restore 612, 618
         }

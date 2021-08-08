@@ -90,6 +90,21 @@ namespace FlashOrder.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
+            modelBuilder.Entity("FlashOrder.Data.Follow", b =>
+                {
+                    b.Property<string>("ChefId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("FollowerId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("ChefId", "FollowerId");
+
+                    b.HasIndex("FollowerId");
+
+                    b.ToTable("Follows");
+                });
+
             modelBuilder.Entity("FlashOrder.Data.Image", b =>
                 {
                     b.Property<int>("Id")
@@ -243,22 +258,22 @@ namespace FlashOrder.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "a7726ecf-988e-4d5a-bfb6-5da5b50a40e9",
-                            ConcurrencyStamp = "a95437eb-9670-4e9c-aad0-45fa7306fdcb",
+                            Id = "d96fed85-5484-4b14-9c2c-6f82e3968771",
+                            ConcurrencyStamp = "91d751fd-62be-4cc2-b3e7-e78073206a0f",
                             Name = "Chef",
                             NormalizedName = "Chef"
                         },
                         new
                         {
-                            Id = "b4a8a4ca-1ea0-4e23-ad09-398893cdcb80",
-                            ConcurrencyStamp = "da988374-9049-4860-bd1f-83affe0ac4f9",
+                            Id = "4f4b634a-13f9-4439-80a5-5878a7db58b8",
+                            ConcurrencyStamp = "6b64782b-d7dc-4888-b414-ac5b4fd860fa",
                             Name = "User",
                             NormalizedName = "USER"
                         },
                         new
                         {
-                            Id = "886f1eba-91ff-464a-b581-a3e0ddbe206e",
-                            ConcurrencyStamp = "f6c281da-f302-455e-be43-5e2a2504ff00",
+                            Id = "21c39015-b001-4bc3-863b-05f99a759a1c",
+                            ConcurrencyStamp = "59f6f3b3-f06b-40c5-baa6-43312df5b532",
                             Name = "Administrator",
                             NormalizedName = "ADMINISTRATOR"
                         });
@@ -368,6 +383,25 @@ namespace FlashOrder.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("FlashOrder.Data.Follow", b =>
+                {
+                    b.HasOne("FlashOrder.Data.ApiUser", "Chef")
+                        .WithMany("ChefFollowers")
+                        .HasForeignKey("ChefId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("FlashOrder.Data.ApiUser", "Follower")
+                        .WithMany("FollowedChefs")
+                        .HasForeignKey("FollowerId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Chef");
+
+                    b.Navigation("Follower");
+                });
+
             modelBuilder.Entity("FlashOrder.Data.Ingredient", b =>
                 {
                     b.HasOne("FlashOrder.Data.Item", "Item")
@@ -456,6 +490,13 @@ namespace FlashOrder.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("FlashOrder.Data.ApiUser", b =>
+                {
+                    b.Navigation("ChefFollowers");
+
+                    b.Navigation("FollowedChefs");
                 });
 
             modelBuilder.Entity("FlashOrder.Data.Recipe", b =>

@@ -20,13 +20,16 @@
         </e>
         <e p="Controllers" t="Include">
           <e p="AccountController.cs" t="Include" />
+          <e p="ChefController.cs" t="Include" />
           <e p="ItemController.cs" t="Include" />
           <e p="RecipeController.cs" t="Include" />
+          <e p="UserController.cs" t="Include" />
         </e>
         <e p="Data" t="Include">
           <e p="ApiUser.cs" t="Include" />
           <e p="DatabaseContext.cs" t="Include" />
           <e p="Error.cs" t="Include" />
+          <e p="Follow.cs" t="Include" />
           <e p="Image.cs" t="Include" />
           <e p="Ingredient.cs" t="Include" />
           <e p="Item.cs" t="Include" />
@@ -34,6 +37,7 @@
           <e p="Step.cs" t="Include" />
         </e>
         <e p="DTOs" t="Include">
+          <e p="FollowDTO.cs" t="Include" />
           <e p="ImageDTO.cs" t="Include" />
           <e p="IngredientDTO.cs" t="Include" />
           <e p="ItemDTO.cs" t="Include" />
@@ -59,21 +63,16 @@
           <e p="log20210805.txt" t="Include" />
           <e p="log20210806.txt" t="Include" />
           <e p="log20210807.txt" t="Include" />
+          <e p="log20210808.txt" t="Include" />
         </e>
         <e p="Middlewares" t="Include">
           <e p="MyHttpContext.cs" t="Include" />
         </e>
         <e p="Migrations" t="Include">
-          <e p="20210806082533_AddedChefIdToRecipe.cs" t="Include" />
-          <e p="20210806082533_AddedChefIdToRecipe.Designer.cs" t="Include" />
-          <e p="20210807062203_AddedSomeRoles.cs" t="Include" />
-          <e p="20210807062203_AddedSomeRoles.Designer.cs" t="Include" />
-          <e p="20210807074156_AddedStepsToRecipes.cs" t="Include" />
-          <e p="20210807074156_AddedStepsToRecipes.Designer.cs" t="Include" />
-          <e p="20210807074820_AddedRoleConfigurations.cs" t="Include" />
-          <e p="20210807074820_AddedRoleConfigurations.Designer.cs" t="Include" />
-          <e p="20210807122055_AddedOrderColumnToStep.cs" t="Include" />
-          <e p="20210807122055_AddedOrderColumnToStep.Designer.cs" t="Include" />
+          <e p="20210808091702_Follow.cs" t="Include" />
+          <e p="20210808091702_Follow.Designer.cs" t="Include" />
+          <e p="20210808152014_AddDbSetFollow.cs" t="Include" />
+          <e p="20210808152014_AddDbSetFollow.Designer.cs" t="Include" />
           <e p="DatabaseContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">

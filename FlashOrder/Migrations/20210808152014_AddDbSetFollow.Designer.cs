@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FlashOrder.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20210807074156_AddedStepsToRecipes")]
-    partial class AddedStepsToRecipes
+    [Migration("20210808152014_AddDbSetFollow")]
+    partial class AddDbSetFollow
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -90,6 +90,21 @@ namespace FlashOrder.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers");
+                });
+
+            modelBuilder.Entity("FlashOrder.Data.Follow", b =>
+                {
+                    b.Property<string>("ChefId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("FollowerId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("ChefId", "FollowerId");
+
+                    b.HasIndex("FollowerId");
+
+                    b.ToTable("Follows");
                 });
 
             modelBuilder.Entity("FlashOrder.Data.Image", b =>
@@ -203,7 +218,7 @@ namespace FlashOrder.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Number")
+                    b.Property<int>("Order")
                         .HasColumnType("int");
 
                     b.Property<int>("RecipeId")
@@ -241,6 +256,29 @@ namespace FlashOrder.Migrations
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "d96fed85-5484-4b14-9c2c-6f82e3968771",
+                            ConcurrencyStamp = "91d751fd-62be-4cc2-b3e7-e78073206a0f",
+                            Name = "Chef",
+                            NormalizedName = "Chef"
+                        },
+                        new
+                        {
+                            Id = "4f4b634a-13f9-4439-80a5-5878a7db58b8",
+                            ConcurrencyStamp = "6b64782b-d7dc-4888-b414-ac5b4fd860fa",
+                            Name = "User",
+                            NormalizedName = "USER"
+                        },
+                        new
+                        {
+                            Id = "21c39015-b001-4bc3-863b-05f99a759a1c",
+                            ConcurrencyStamp = "59f6f3b3-f06b-40c5-baa6-43312df5b532",
+                            Name = "Administrator",
+                            NormalizedName = "ADMINISTRATOR"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -347,6 +385,25 @@ namespace FlashOrder.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("FlashOrder.Data.Follow", b =>
+                {
+                    b.HasOne("FlashOrder.Data.ApiUser", "Chef")
+                        .WithMany("ChefFollowers")
+                        .HasForeignKey("ChefId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("FlashOrder.Data.ApiUser", "Follower")
+                        .WithMany("FollowedChefs")
+                        .HasForeignKey("FollowerId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Chef");
+
+                    b.Navigation("Follower");
+                });
+
             modelBuilder.Entity("FlashOrder.Data.Ingredient", b =>
                 {
                     b.HasOne("FlashOrder.Data.Item", "Item")
@@ -435,6 +492,13 @@ namespace FlashOrder.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("FlashOrder.Data.ApiUser", b =>
+                {
+                    b.Navigation("ChefFollowers");
+
+                    b.Navigation("FollowedChefs");
                 });
 
             modelBuilder.Entity("FlashOrder.Data.Recipe", b =>

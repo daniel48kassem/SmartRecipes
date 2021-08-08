@@ -12,6 +12,7 @@ namespace FlashOrder.Repository
         // private IGenericRepository<Recipe> _recipes;
         private IGenericRepository<Ingredient> _ingredients;
         private IGenericRepository<Step> _steps;
+        private IGenericRepository<Follow> _follows;
         
         private IRecipeRepository _recipes;
         
@@ -25,6 +26,7 @@ namespace FlashOrder.Repository
         public IGenericRepository<Step> Steps=>_steps ??= new GenericRepository<Step>(_context);
         public IRecipeRepository Recipes =>_recipes??=new RecipeRepository(_context);
         public IGenericRepository<Ingredient> Ingredients=> _ingredients??= new GenericRepository<Ingredient>(_context);
+        public IGenericRepository<Follow> Follows=> _follows??= new GenericRepository<Follow>(_context);
         
         public async Task save()
         {

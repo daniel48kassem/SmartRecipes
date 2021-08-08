@@ -10,6 +10,7 @@ namespace FlashOrder.IRepository
         IRecipeRepository Recipes { get; }
         IGenericRepository<Item> Items { get; }
         IGenericRepository<Step> Steps { get; }
+        IGenericRepository<Follow> Follows { get; }
         Task save();
     }
 }

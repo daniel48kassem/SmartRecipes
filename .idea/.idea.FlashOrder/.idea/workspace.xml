@@ -5,29 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f789b059-6e4e-4152-a1e5-962adab9c142" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/FlashOrder/Configurations/Entities/RoleConfiguration.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlashOrder/DTOs/StepDTO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlashOrder/Data/Error.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlashOrder/Data/Step.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FlashOrder/Controllers/ChefController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FlashOrder/Controllers/UserController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FlashOrder/DTOs/FollowDTO.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FlashOrder/Data/Follow.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FlashOrder/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FlashOrder/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FlashOrder/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FlashOrder/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FlashOrder/Configurations/MapperInitializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FlashOrder/Configurations/MapperInitializer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FlashOrder/Controllers/ItemController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FlashOrder/Controllers/ItemController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FlashOrder/Controllers/RecipeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FlashOrder/Controllers/RecipeController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FlashOrder/Controllers/WeatherForecastController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FlashOrder/DTOs/RecipeDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FlashOrder/DTOs/RecipeDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FlashOrder/Data/ApiUser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FlashOrder/Data/ApiUser.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FlashOrder/Data/DatabaseContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FlashOrder/Data/DatabaseContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FlashOrder/Data/Recipe.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FlashOrder/Data/Recipe.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FlashOrder/IRepository/IRecipeRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FlashOrder/IRepository/IRecipeRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FlashOrder/IRepository/IUnitOfWork.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FlashOrder/IRepository/IUnitOfWork.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FlashOrder/Migrations/DatabaseContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FlashOrder/Migrations/DatabaseContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FlashOrder/Policies/CreatorChefHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FlashOrder/Policies/CreatorChefHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FlashOrder/Policies/IRecipeIdProvider.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FlashOrder/Policies/OnlyChefOfRecipe.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FlashOrder/Policies/OnlyChefOfRecipeRequirement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FlashOrder/Policies/RecipeIdProvider.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FlashOrder/Migrations/20210806082533_AddedChefIdToRecipe.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FlashOrder/Migrations/20210806082533_AddedChefIdToRecipe.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FlashOrder/Migrations/20210807062203_AddedSomeRoles.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FlashOrder/Migrations/20210807062203_AddedSomeRoles.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FlashOrder/Migrations/20210807074156_AddedStepsToRecipes.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FlashOrder/Migrations/20210807074156_AddedStepsToRecipes.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FlashOrder/Migrations/20210807074820_AddedRoleConfigurations.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FlashOrder/Migrations/20210807074820_AddedRoleConfigurations.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FlashOrder/Migrations/20210807122055_AddedOrderColumnToStep.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FlashOrder/Migrations/20210807122055_AddedOrderColumnToStep.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FlashOrder/Migrations/DatabaseContextModelSnapshot.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/FlashOrder/Repository/UnitOfWork.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FlashOrder/Repository/UnitOfWork.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FlashOrder/Services/Auth/AuthManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FlashOrder/Services/Auth/AuthManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +38,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D7970BCA-7F38-4659-8B39-F768CCA2C7AA/74/0ca3b32f/IdentityUser.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/FlashOrder/Data/DatabaseContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4D1F2224-9BBE-4676-A871-766038953138/f7/9f31812c/ModelBuilder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/FlashOrder/Data/Ingredient.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/07DFB1EA-008B-4715-8970-C250EA4475FC/38/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/FlashOrder/Startup.cs" root0="FORCE_HIGHLIGHTING" />
@@ -50,19 +49,12 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/FlashOrder/Filters/BaseSpecification.cs" />
-      <option value="$PROJECT_DIR$/FlashOrder/Filters/RecipeIngredients.cs" />
-      <option value="$PROJECT_DIR$/FlashOrder/Filters/QuerySpecificationExtensions.cs" />
-      <option value="$PROJECT_DIR$/FlashOrder/Filters/OwnerParameters.cs" />
-      <option value="$PROJECT_DIR$/FlashOrder/IRepository/IRecipe.cs" />
-      <option value="$PROJECT_DIR$/FlashOrder/Repository/GenericRepository.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/IRepository/IGenericRepository.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/Logs/log20210730.txt" />
       <option value="$PROJECT_DIR$/FlashOrder/Utils/Utils.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/Data/Ingredient.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/DTOs/IngredientDTO.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/DTOs/UploadedFileDTO.cs" />
-      <option value="$PROJECT_DIR$/FlashOrder/Data/ApiUser.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/Services/TokenService.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/Configurations/IdentityExtensions.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/DTOs/LoginDTO.cs" />
@@ -88,19 +80,26 @@
       <option value="$PROJECT_DIR$/FlashOrder/Configurations/Entities/RoleConfiguration.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/Controllers/ItemController.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/DTOs/RecipeDTO.cs" />
-      <option value="$PROJECT_DIR$/FlashOrder/IRepository/IUnitOfWork.cs" />
-      <option value="$PROJECT_DIR$/FlashOrder/Repository/UnitOfWork.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/Data/Recipe.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/Configurations/MapperInitializer.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/Logs/log20210807.txt" />
       <option value="$PROJECT_DIR$/FlashOrder/Repository/RecipeRepository.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/IRepository/IRecipeRepository.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/Data/Step.cs" />
-      <option value="$PROJECT_DIR$/FlashOrder/Data/DatabaseContext.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/DTOs/StepDTO.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/Data/Error.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/Services/Auth/AuthManager.cs" />
+      <option value="$PROJECT_DIR$/FlashOrder/Migrations/20210808090808_Follow.cs" />
+      <option value="$PROJECT_DIR$/FlashOrder/DTOs/FollowDTO.cs" />
+      <option value="$PROJECT_DIR$/FlashOrder/Controllers/ChefController.cs" />
+      <option value="$PROJECT_DIR$/FlashOrder/Data/ApiUser.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/Controllers/RecipeController.cs" />
+      <option value="$PROJECT_DIR$/FlashOrder/IRepository/IUnitOfWork.cs" />
+      <option value="$PROJECT_DIR$/FlashOrder/Repository/UnitOfWork.cs" />
+      <option value="$PROJECT_DIR$/FlashOrder/Logs/log20210808.txt" />
+      <option value="$PROJECT_DIR$/FlashOrder/Data/Follow.cs" />
+      <option value="$PROJECT_DIR$/FlashOrder/Controllers/UserController.cs" />
+      <option value="$PROJECT_DIR$/FlashOrder/Data/DatabaseContext.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1vfWuTxGRnxNIs4XXA7SAgbj397" />
@@ -181,6 +180,8 @@
       <workItem from="1628168159071" duration="41325000" />
       <workItem from="1628316724376" duration="15385000" />
       <workItem from="1628351344092" duration="2995000" />
+      <workItem from="1628401680607" duration="8327000" />
+      <workItem from="1628410494251" duration="9057000" />
     </task>
     <servers />
   </component>

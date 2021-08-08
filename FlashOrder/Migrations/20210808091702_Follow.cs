@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace FlashOrder.Migrations
 {
-    public partial class AddedChefIdToRecipe : Migration
+    public partial class Follow : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -184,6 +184,28 @@ namespace FlashOrder.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Follow",
+                columns: table => new
+                {
+                    ChefId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    FollowerId = table.Column<string>(type: "nvarchar(450)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Follow", x => new { x.ChefId, x.FollowerId });
+                    table.ForeignKey(
+                        name: "FK_Follow_AspNetUsers_ChefId",
+                        column: x => x.ChefId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_Follow_AspNetUsers_FollowerId",
+                        column: x => x.FollowerId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id");
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Recipes",
                 columns: table => new
                 {
@@ -231,15 +253,45 @@ namespace FlashOrder.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "Steps",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Order = table.Column<int>(type: "int", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    RecipeId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Steps", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Steps_Recipes_RecipeId",
+                        column: x => x.RecipeId,
+                        principalTable: "Recipes",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
             migrationBuilder.InsertData(
-                table: "Items",
-                columns: new[] { "Id", "ImagePath", "Name", "Price" },
-                values: new object[] { 1, null, "Egg", 300.0 });
+                table: "AspNetRoles",
+                columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
+                values: new object[,]
+                {
+                    { "6bcb6741-bdb0-4000-af43-eca83683a756", "41270f3a-bc50-4dbc-b592-f24619426cee", "Chef", "Chef" },
+                    { "5721d016-25cc-417a-b32e-eeb17564f245", "d0cda8b3-f280-46df-8661-8d27f54f22ad", "User", "USER" },
+                    { "6ad1818b-d421-4051-9e02-a90a8b868744", "80524914-4b5d-4915-b01b-75fad14c6c35", "Administrator", "ADMINISTRATOR" }
+                });
 
             migrationBuilder.InsertData(
                 table: "Items",
                 columns: new[] { "Id", "ImagePath", "Name", "Price" },
-                values: new object[] { 2, null, "Olive Oil", 8000.0 });
+                values: new object[,]
+                {
+                    { 1, null, "Egg", 300.0 },
+                    { 2, null, "Olive Oil", 8000.0 }
+                });
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
@@ -281,6 +333,11 @@ namespace FlashOrder.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Follow_FollowerId",
+                table: "Follow",
+                column: "FollowerId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Ingredients_ItemId",
                 table: "Ingredients",
                 column: "ItemId");
@@ -294,6 +351,11 @@ namespace FlashOrder.Migrations
                 name: "IX_Recipes_ChefId",
                 table: "Recipes",
                 column: "ChefId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Steps_RecipeId",
+                table: "Steps",
+                column: "RecipeId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -314,10 +376,16 @@ namespace FlashOrder.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
+                name: "Follow");
+
+            migrationBuilder.DropTable(
                 name: "Images");
 
             migrationBuilder.DropTable(
                 name: "Ingredients");
+
+            migrationBuilder.DropTable(
+                name: "Steps");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
