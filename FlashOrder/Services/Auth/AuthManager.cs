@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
@@ -35,18 +37,23 @@ namespace FlashOrder.Services.Auth
         public async Task<string> CreateToken()
         {
             //this claims will be available in User in All Controllers,you will need them
-            
-            var claims = new[] {    
+
+            var claims = new List<Claim>
+            {
                 new Claim(ClaimTypes.Name, _user.UserName),
-                // new Claim(ClaimTypes.Role, _user.),
                 new Claim(ClaimTypes.NameIdentifier,
                     _user.Id),
                 new Claim(ClaimTypes.Email, _user.Email)
             };
 
-
-            var jwtSettings = _configuration.GetSection("JWT");
+            var roles = await _userManager.GetRolesAsync(_user);
+            foreach (var role in roles)
+            {
+                claims.Add(new Claim(ClaimTypes.Role, role));
+            }
             
+            
+            var jwtSettings = _configuration.GetSection("JWT");
             
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings.GetSection("Key").Value));
             
