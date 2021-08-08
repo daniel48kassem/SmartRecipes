@@ -18,12 +18,15 @@ namespace FlashOrder.DTOs
         public string Description { get; set; }
         [Required] 
         public virtual IList<CreateIngredientDTO> Ingredients { get; set; }
+        [Required] 
+        public virtual IList<CreateStepDTO> Steps { get; set; }
     }
 
     public class RecipeDTO : GeneralRecipeDTO
     {
             public int Id { get; set; }
             public IList<IngredientDTO> Ingredients { get; set; }
+            public IList<StepDTO> Steps { get; set; }
             public double Cost { get; set; }
     }
 

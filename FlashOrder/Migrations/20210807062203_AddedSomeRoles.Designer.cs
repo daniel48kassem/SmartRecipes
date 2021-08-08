@@ -4,14 +4,16 @@ using FlashOrder.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace FlashOrder.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    partial class DatabaseContextModelSnapshot : ModelSnapshot
+    [Migration("20210807062203_AddedSomeRoles")]
+    partial class AddedSomeRoles
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -191,29 +193,6 @@ namespace FlashOrder.Migrations
                     b.ToTable("Recipes");
                 });
 
-            modelBuilder.Entity("FlashOrder.Data.Step", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Order")
-                        .HasColumnType("int");
-
-                    b.Property<int>("RecipeId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("RecipeId");
-
-                    b.ToTable("Steps");
-                });
-
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
                     b.Property<string>("Id")
@@ -239,29 +218,6 @@ namespace FlashOrder.Migrations
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = "a7726ecf-988e-4d5a-bfb6-5da5b50a40e9",
-                            ConcurrencyStamp = "a95437eb-9670-4e9c-aad0-45fa7306fdcb",
-                            Name = "Chef",
-                            NormalizedName = "Chef"
-                        },
-                        new
-                        {
-                            Id = "b4a8a4ca-1ea0-4e23-ad09-398893cdcb80",
-                            ConcurrencyStamp = "da988374-9049-4860-bd1f-83affe0ac4f9",
-                            Name = "User",
-                            NormalizedName = "USER"
-                        },
-                        new
-                        {
-                            Id = "886f1eba-91ff-464a-b581-a3e0ddbe206e",
-                            ConcurrencyStamp = "f6c281da-f302-455e-be43-5e2a2504ff00",
-                            Name = "Administrator",
-                            NormalizedName = "ADMINISTRATOR"
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -396,17 +352,6 @@ namespace FlashOrder.Migrations
                     b.Navigation("Chef");
                 });
 
-            modelBuilder.Entity("FlashOrder.Data.Step", b =>
-                {
-                    b.HasOne("FlashOrder.Data.Recipe", "Recipe")
-                        .WithMany("Steps")
-                        .HasForeignKey("RecipeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Recipe");
-                });
-
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -461,8 +406,6 @@ namespace FlashOrder.Migrations
             modelBuilder.Entity("FlashOrder.Data.Recipe", b =>
                 {
                     b.Navigation("Ingredients");
-
-                    b.Navigation("Steps");
                 });
 #pragma warning restore 612, 618
         }

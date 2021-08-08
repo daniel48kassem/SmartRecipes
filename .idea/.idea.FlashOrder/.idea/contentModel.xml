@@ -11,6 +11,7 @@
         <e p="Configurations" t="Include">
           <e p="Entities" t="Include">
             <e p="ItemConfiguration.cs" t="Include" />
+            <e p="RoleConfiguration.cs" t="Include" />
           </e>
           <e p="HttpContextExtensions.cs" t="Include" />
           <e p="IdentityExtensions.cs" t="Include" />
@@ -21,21 +22,23 @@
           <e p="AccountController.cs" t="Include" />
           <e p="ItemController.cs" t="Include" />
           <e p="RecipeController.cs" t="Include" />
-          <e p="WeatherForecastController.cs" t="Include" />
         </e>
         <e p="Data" t="Include">
           <e p="ApiUser.cs" t="Include" />
           <e p="DatabaseContext.cs" t="Include" />
+          <e p="Error.cs" t="Include" />
           <e p="Image.cs" t="Include" />
           <e p="Ingredient.cs" t="Include" />
           <e p="Item.cs" t="Include" />
           <e p="recipe.cs" t="Include" />
+          <e p="Step.cs" t="Include" />
         </e>
         <e p="DTOs" t="Include">
           <e p="ImageDTO.cs" t="Include" />
           <e p="IngredientDTO.cs" t="Include" />
           <e p="ItemDTO.cs" t="Include" />
           <e p="RecipeDTO.cs" t="Include" />
+          <e p="StepDTO.cs" t="Include" />
           <e p="UploadedFileDTO.cs" t="Include" />
           <e p="UserDTO.cs" t="Include" />
         </e>
@@ -55,6 +58,7 @@
           <e p="log20210731.txt" t="Include" />
           <e p="log20210805.txt" t="Include" />
           <e p="log20210806.txt" t="Include" />
+          <e p="log20210807.txt" t="Include" />
         </e>
         <e p="Middlewares" t="Include">
           <e p="MyHttpContext.cs" t="Include" />
@@ -62,6 +66,14 @@
         <e p="Migrations" t="Include">
           <e p="20210806082533_AddedChefIdToRecipe.cs" t="Include" />
           <e p="20210806082533_AddedChefIdToRecipe.Designer.cs" t="Include" />
+          <e p="20210807062203_AddedSomeRoles.cs" t="Include" />
+          <e p="20210807062203_AddedSomeRoles.Designer.cs" t="Include" />
+          <e p="20210807074156_AddedStepsToRecipes.cs" t="Include" />
+          <e p="20210807074156_AddedStepsToRecipes.Designer.cs" t="Include" />
+          <e p="20210807074820_AddedRoleConfigurations.cs" t="Include" />
+          <e p="20210807074820_AddedRoleConfigurations.Designer.cs" t="Include" />
+          <e p="20210807122055_AddedOrderColumnToStep.cs" t="Include" />
+          <e p="20210807122055_AddedOrderColumnToStep.Designer.cs" t="Include" />
           <e p="DatabaseContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
@@ -74,10 +86,6 @@
         <e p="Policies" t="Include">
           <e p="CreatorChefHandler.cs" t="Include" />
           <e p="CreatorChefRequirement.cs" t="Include" />
-          <e p="IRecipeIdProvider.cs" t="Include" />
-          <e p="OnlyChefOfRecipe.cs" t="Include" />
-          <e p="OnlyChefOfRecipeRequirement.cs" t="Include" />
-          <e p="RecipeIdProvider.cs" t="Include" />
         </e>
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">

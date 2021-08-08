@@ -103,7 +103,12 @@ namespace FlashOrder.Controllers
             try
             {
                 var recipe = await _unitOfWork.Recipes.Get(q => q.Id == id,
-                    new List<string> {"Ingredients.Item","Chef"});
+                    new List<string> {"Ingredients.Item","Chef","Steps"});
+                
+                //sort the steps according to the order property
+                recipe.Steps=recipe.Steps.OrderBy(s => s.Order).ToList();
+                
+                
                 var res = _mapper.Map<RecipeDTO>(recipe);
                 return Ok(res);
             }
@@ -130,6 +135,7 @@ namespace FlashOrder.Controllers
             {
                 var recipe=await _unitOfWork.Recipes.Get(q=>q.Id==id);
 
+                // resource based authorization to check if the current user is the owner of recipe
                 if (!  _authorizationService.AuthorizeAsync(User, recipe, "CreatorChefPolicy").Result.Succeeded)
                 {
                     return Unauthorized("You are Not Allowed To Perform This Action");

@@ -26,8 +26,8 @@ namespace FlashOrder.Services.Auth
         public async Task<bool> ValidateUser(LoginDTO loginDto)
         {
             _user = await _userManager.FindByEmailAsync(loginDto.Email);
-            Console.WriteLine(_user.Email);
-            Console.WriteLine(_user.PasswordHash);
+            // Console.WriteLine(_user.Email);
+            // Console.WriteLine(_user.PasswordHash);
             // Console.WriteLine(loginDto.Password);
             return (_user != null && await _userManager.CheckPasswordAsync(_user, loginDto.Password));
         }

@@ -12,13 +12,8 @@ namespace FlashOrder.Policies
             CreatorChefRequirement requirement,
             Recipe resource)
         {
-            Console.WriteLine("DANIEL Resss");
-            Console.WriteLine(resource.Description);
-            Console.WriteLine(resource.ChefId);
-
             
             var Id = context.User.FindFirst(c => c.Type == ClaimTypes.NameIdentifier).Value;
-            Console.WriteLine(Id);
             
             if (context.User.HasClaim(ClaimTypes.NameIdentifier, resource.ChefId))
             {

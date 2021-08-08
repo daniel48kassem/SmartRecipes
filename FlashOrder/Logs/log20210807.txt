@@ -1,0 +1,352 @@
+2021-08-07 06:18:27.700 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-07 06:18:28.227 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-07 06:18:28.228 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-07 06:18:28.228 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-07 06:18:28.228 -05:00 [INF] Hosting environment: Development
+2021-08-07 06:18:28.228 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-07 06:18:29.156 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-07 06:18:29.307 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 162.8614ms
+2021-08-07 06:18:29.424 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - -
+2021-08-07 06:18:29.446 -05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-08-07 06:18:29.447 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - - - 0 142933 text/css 22.7425ms
+2021-08-07 06:18:30.110 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-07 06:18:30.406 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 295.6881ms
+2021-08-07 06:18:31.408 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Recipe/2 - -
+2021-08-07 06:18:31.508 -05:00 [INF] Executing endpoint 'FlashOrder.Controllers.RecipeController.GetRecipe (FlashOrder)'
+2021-08-07 06:18:31.570 -05:00 [INF] Route matched with {action = "GetRecipe", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRecipe(Int32) on controller FlashOrder.Controllers.RecipeController (FlashOrder).
+2021-08-07 06:18:33.132 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-07 06:18:33.586 -05:00 [WRN] Compiling a query which loads related collections for more than one collection navigation either via 'Include' or through projection but no 'QuerySplittingBehavior' has been configured. By default Entity Framework will use 'QuerySplittingBehavior.SingleQuery' which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'
+2021-08-07 06:18:34.214 -05:00 [INF] Executed DbCommand (91ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[ChefId], [t].[Description], [t].[Title], [t].[Id0], [t].[AccessFailedCount], [t].[Bio], [t].[ConcurrencyStamp], [t].[DisplayName], [t].[Email], [t].[EmailConfirmed], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[SecurityStamp], [t].[TwoFactorEnabled], [t].[UserName], [t0].[Id], [t0].[ItemId], [t0].[Qty], [t0].[RecipeId], [t0].[Id0], [t0].[ImagePath], [t0].[Name], [t0].[Price], [s].[Id], [s].[Description], [s].[Number], [s].[RecipeId]
+FROM (
+    SELECT TOP(1) [r].[Id], [r].[ChefId], [r].[Description], [r].[Title], [a].[Id] AS [Id0], [a].[AccessFailedCount], [a].[Bio], [a].[ConcurrencyStamp], [a].[DisplayName], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+    FROM [Recipes] AS [r]
+    LEFT JOIN [AspNetUsers] AS [a] ON [r].[ChefId] = [a].[Id]
+    WHERE [r].[Id] = @__id_0
+) AS [t]
+LEFT JOIN (
+    SELECT [i].[Id], [i].[ItemId], [i].[Qty], [i].[RecipeId], [i0].[Id] AS [Id0], [i0].[ImagePath], [i0].[Name], [i0].[Price]
+    FROM [Ingredients] AS [i]
+    INNER JOIN [Items] AS [i0] ON [i].[ItemId] = [i0].[Id]
+) AS [t0] ON [t].[Id] = [t0].[RecipeId]
+LEFT JOIN [Steps] AS [s] ON [t].[Id] = [s].[RecipeId]
+ORDER BY [t].[Id], [t].[Id0], [t0].[Id], [t0].[Id0], [s].[Id]
+2021-08-07 06:18:34.346 -05:00 [INF] Executing OkObjectResult, writing value of type 'FlashOrder.DTOs.RecipeDTO'.
+2021-08-07 06:18:34.532 -05:00 [INF] Executed action FlashOrder.Controllers.RecipeController.GetRecipe (FlashOrder) in 2951.9787ms
+2021-08-07 06:18:34.533 -05:00 [INF] Executed endpoint 'FlashOrder.Controllers.RecipeController.GetRecipe (FlashOrder)'
+2021-08-07 06:18:34.546 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Recipe/2 - - - 200 507 application/json;+charset=utf-8 3138.8716ms
+2021-08-07 06:20:11.817 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-07 06:20:12.285 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-07 06:20:12.286 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-07 06:20:12.286 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-07 06:20:12.286 -05:00 [INF] Hosting environment: Development
+2021-08-07 06:20:12.286 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-07 06:20:12.705 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Recipe/2 - -
+2021-08-07 06:20:12.955 -05:00 [INF] Executing endpoint 'FlashOrder.Controllers.RecipeController.GetRecipe (FlashOrder)'
+2021-08-07 06:20:13.070 -05:00 [INF] Route matched with {action = "GetRecipe", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRecipe(Int32) on controller FlashOrder.Controllers.RecipeController (FlashOrder).
+2021-08-07 06:20:13.072 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger - -
+2021-08-07 06:20:13.075 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger - - - 0 - - 2.6008ms
+2021-08-07 06:20:13.098 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-07 06:20:13.271 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 172.7906ms
+2021-08-07 06:20:13.485 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - -
+2021-08-07 06:20:13.514 -05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-08-07 06:20:13.514 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - - - 0 142933 text/css 28.7588ms
+2021-08-07 06:20:13.928 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-07 06:20:14.338 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 410.0619ms
+2021-08-07 06:20:15.941 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-07 06:20:16.429 -05:00 [WRN] Compiling a query which loads related collections for more than one collection navigation either via 'Include' or through projection but no 'QuerySplittingBehavior' has been configured. By default Entity Framework will use 'QuerySplittingBehavior.SingleQuery' which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'
+2021-08-07 06:20:17.121 -05:00 [INF] Executed DbCommand (91ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[ChefId], [t].[Description], [t].[Title], [t].[Id0], [t].[AccessFailedCount], [t].[Bio], [t].[ConcurrencyStamp], [t].[DisplayName], [t].[Email], [t].[EmailConfirmed], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[SecurityStamp], [t].[TwoFactorEnabled], [t].[UserName], [t0].[Id], [t0].[ItemId], [t0].[Qty], [t0].[RecipeId], [t0].[Id0], [t0].[ImagePath], [t0].[Name], [t0].[Price], [s].[Id], [s].[Description], [s].[Number], [s].[RecipeId]
+FROM (
+    SELECT TOP(1) [r].[Id], [r].[ChefId], [r].[Description], [r].[Title], [a].[Id] AS [Id0], [a].[AccessFailedCount], [a].[Bio], [a].[ConcurrencyStamp], [a].[DisplayName], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+    FROM [Recipes] AS [r]
+    LEFT JOIN [AspNetUsers] AS [a] ON [r].[ChefId] = [a].[Id]
+    WHERE [r].[Id] = @__id_0
+) AS [t]
+LEFT JOIN (
+    SELECT [i].[Id], [i].[ItemId], [i].[Qty], [i].[RecipeId], [i0].[Id] AS [Id0], [i0].[ImagePath], [i0].[Name], [i0].[Price]
+    FROM [Ingredients] AS [i]
+    INNER JOIN [Items] AS [i0] ON [i].[ItemId] = [i0].[Id]
+) AS [t0] ON [t].[Id] = [t0].[RecipeId]
+LEFT JOIN [Steps] AS [s] ON [t].[Id] = [s].[RecipeId]
+ORDER BY [t].[Id], [t].[Id0], [t0].[Id], [t0].[Id0], [s].[Id]
+2021-08-07 06:20:17.265 -05:00 [INF] Executing OkObjectResult, writing value of type 'FlashOrder.DTOs.RecipeDTO'.
+2021-08-07 06:20:17.459 -05:00 [INF] Executed action FlashOrder.Controllers.RecipeController.GetRecipe (FlashOrder) in 4377.8991ms
+2021-08-07 06:20:17.465 -05:00 [INF] Executed endpoint 'FlashOrder.Controllers.RecipeController.GetRecipe (FlashOrder)'
+2021-08-07 06:20:17.475 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Recipe/2 - - - 200 507 application/json;+charset=utf-8 4775.6972ms
+2021-08-07 06:22:24.986 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-07 06:22:25.412 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-07 06:22:25.412 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-07 06:22:25.413 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-07 06:22:25.413 -05:00 [INF] Hosting environment: Development
+2021-08-07 06:22:25.413 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-07 06:22:26.146 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-07 06:22:26.346 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 204.4012ms
+2021-08-07 06:22:27.210 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-07 06:22:27.428 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 217.3125ms
+2021-08-07 06:22:28.318 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Recipe/2 - -
+2021-08-07 06:22:28.415 -05:00 [INF] Executing endpoint 'FlashOrder.Controllers.RecipeController.GetRecipe (FlashOrder)'
+2021-08-07 06:22:28.478 -05:00 [INF] Route matched with {action = "GetRecipe", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRecipe(Int32) on controller FlashOrder.Controllers.RecipeController (FlashOrder).
+2021-08-07 06:22:29.984 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-07 06:22:30.457 -05:00 [WRN] Compiling a query which loads related collections for more than one collection navigation either via 'Include' or through projection but no 'QuerySplittingBehavior' has been configured. By default Entity Framework will use 'QuerySplittingBehavior.SingleQuery' which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'
+2021-08-07 06:22:31.208 -05:00 [INF] Executed DbCommand (138ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[ChefId], [t].[Description], [t].[Title], [t].[Id0], [t].[AccessFailedCount], [t].[Bio], [t].[ConcurrencyStamp], [t].[DisplayName], [t].[Email], [t].[EmailConfirmed], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[SecurityStamp], [t].[TwoFactorEnabled], [t].[UserName], [t0].[Id], [t0].[ItemId], [t0].[Qty], [t0].[RecipeId], [t0].[Id0], [t0].[ImagePath], [t0].[Name], [t0].[Price], [s].[Id], [s].[Description], [s].[Number], [s].[RecipeId]
+FROM (
+    SELECT TOP(1) [r].[Id], [r].[ChefId], [r].[Description], [r].[Title], [a].[Id] AS [Id0], [a].[AccessFailedCount], [a].[Bio], [a].[ConcurrencyStamp], [a].[DisplayName], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+    FROM [Recipes] AS [r]
+    LEFT JOIN [AspNetUsers] AS [a] ON [r].[ChefId] = [a].[Id]
+    WHERE [r].[Id] = @__id_0
+) AS [t]
+LEFT JOIN (
+    SELECT [i].[Id], [i].[ItemId], [i].[Qty], [i].[RecipeId], [i0].[Id] AS [Id0], [i0].[ImagePath], [i0].[Name], [i0].[Price]
+    FROM [Ingredients] AS [i]
+    INNER JOIN [Items] AS [i0] ON [i].[ItemId] = [i0].[Id]
+) AS [t0] ON [t].[Id] = [t0].[RecipeId]
+LEFT JOIN [Steps] AS [s] ON [t].[Id] = [s].[RecipeId]
+ORDER BY [t].[Id], [t].[Id0], [t0].[Id], [t0].[Id0], [s].[Id]
+2021-08-07 06:22:31.345 -05:00 [INF] Executing OkObjectResult, writing value of type 'FlashOrder.DTOs.RecipeDTO'.
+2021-08-07 06:22:31.541 -05:00 [INF] Executed action FlashOrder.Controllers.RecipeController.GetRecipe (FlashOrder) in 3050.3851ms
+2021-08-07 06:22:31.542 -05:00 [INF] Executed endpoint 'FlashOrder.Controllers.RecipeController.GetRecipe (FlashOrder)'
+2021-08-07 06:22:31.554 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Recipe/2 - - - 200 507 application/json;+charset=utf-8 3236.2503ms
+2021-08-07 06:23:20.126 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-07 06:23:20.637 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-07 06:23:20.638 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-07 06:23:20.638 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-07 06:23:20.638 -05:00 [INF] Hosting environment: Development
+2021-08-07 06:23:20.638 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-07 06:23:21.036 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger - -
+2021-08-07 06:23:21.036 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Recipe/2 - -
+2021-08-07 06:23:21.072 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-07 06:23:21.114 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger - - - 0 - - 83.7206ms
+2021-08-07 06:23:21.267 -05:00 [INF] Executing endpoint 'FlashOrder.Controllers.RecipeController.GetRecipe (FlashOrder)'
+2021-08-07 06:23:21.272 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 200.0513ms
+2021-08-07 06:23:21.417 -05:00 [INF] Route matched with {action = "GetRecipe", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRecipe(Int32) on controller FlashOrder.Controllers.RecipeController (FlashOrder).
+2021-08-07 06:23:21.606 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - -
+2021-08-07 06:23:21.634 -05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-08-07 06:23:21.634 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - - - 0 142933 text/css 27.7199ms
+2021-08-07 06:23:22.086 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-07 06:23:22.437 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 350.9176ms
+2021-08-07 06:23:24.472 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-07 06:23:25.001 -05:00 [WRN] Compiling a query which loads related collections for more than one collection navigation either via 'Include' or through projection but no 'QuerySplittingBehavior' has been configured. By default Entity Framework will use 'QuerySplittingBehavior.SingleQuery' which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'
+2021-08-07 06:23:25.709 -05:00 [INF] Executed DbCommand (86ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[ChefId], [t].[Description], [t].[Title], [t].[Id0], [t].[AccessFailedCount], [t].[Bio], [t].[ConcurrencyStamp], [t].[DisplayName], [t].[Email], [t].[EmailConfirmed], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[SecurityStamp], [t].[TwoFactorEnabled], [t].[UserName], [t0].[Id], [t0].[ItemId], [t0].[Qty], [t0].[RecipeId], [t0].[Id0], [t0].[ImagePath], [t0].[Name], [t0].[Price], [s].[Id], [s].[Description], [s].[Number], [s].[RecipeId]
+FROM (
+    SELECT TOP(1) [r].[Id], [r].[ChefId], [r].[Description], [r].[Title], [a].[Id] AS [Id0], [a].[AccessFailedCount], [a].[Bio], [a].[ConcurrencyStamp], [a].[DisplayName], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+    FROM [Recipes] AS [r]
+    LEFT JOIN [AspNetUsers] AS [a] ON [r].[ChefId] = [a].[Id]
+    WHERE [r].[Id] = @__id_0
+) AS [t]
+LEFT JOIN (
+    SELECT [i].[Id], [i].[ItemId], [i].[Qty], [i].[RecipeId], [i0].[Id] AS [Id0], [i0].[ImagePath], [i0].[Name], [i0].[Price]
+    FROM [Ingredients] AS [i]
+    INNER JOIN [Items] AS [i0] ON [i].[ItemId] = [i0].[Id]
+) AS [t0] ON [t].[Id] = [t0].[RecipeId]
+LEFT JOIN [Steps] AS [s] ON [t].[Id] = [s].[RecipeId]
+ORDER BY [t].[Id], [t].[Id0], [t0].[Id], [t0].[Id0], [s].[Id]
+2021-08-07 06:23:25.853 -05:00 [INF] Executing OkObjectResult, writing value of type 'FlashOrder.DTOs.RecipeDTO'.
+2021-08-07 06:23:26.071 -05:00 [INF] Executed action FlashOrder.Controllers.RecipeController.GetRecipe (FlashOrder) in 4639.1899ms
+2021-08-07 06:23:26.072 -05:00 [INF] Executed endpoint 'FlashOrder.Controllers.RecipeController.GetRecipe (FlashOrder)'
+2021-08-07 06:23:26.084 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Recipe/2 - - - 200 507 application/json;+charset=utf-8 5055.4818ms
+2021-08-07 06:24:02.611 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-07 06:24:03.086 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-07 06:24:03.086 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-07 06:24:03.086 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-07 06:24:03.086 -05:00 [INF] Hosting environment: Development
+2021-08-07 06:24:03.086 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-07 06:24:03.870 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Recipe/2 - -
+2021-08-07 06:24:03.966 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger - -
+2021-08-07 06:24:03.971 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger - - - 0 - - 4.0434ms
+2021-08-07 06:24:03.985 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-07 06:24:04.135 -05:00 [INF] Executing endpoint 'FlashOrder.Controllers.RecipeController.GetRecipe (FlashOrder)'
+2021-08-07 06:24:04.190 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 204.2686ms
+2021-08-07 06:24:04.286 -05:00 [INF] Route matched with {action = "GetRecipe", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRecipe(Int32) on controller FlashOrder.Controllers.RecipeController (FlashOrder).
+2021-08-07 06:24:04.922 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-07 06:24:05.205 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 282.8748ms
+2021-08-07 06:24:07.123 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-07 06:24:07.639 -05:00 [WRN] Compiling a query which loads related collections for more than one collection navigation either via 'Include' or through projection but no 'QuerySplittingBehavior' has been configured. By default Entity Framework will use 'QuerySplittingBehavior.SingleQuery' which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'
+2021-08-07 06:24:08.306 -05:00 [INF] Executed DbCommand (92ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[ChefId], [t].[Description], [t].[Title], [t].[Id0], [t].[AccessFailedCount], [t].[Bio], [t].[ConcurrencyStamp], [t].[DisplayName], [t].[Email], [t].[EmailConfirmed], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[SecurityStamp], [t].[TwoFactorEnabled], [t].[UserName], [t0].[Id], [t0].[ItemId], [t0].[Qty], [t0].[RecipeId], [t0].[Id0], [t0].[ImagePath], [t0].[Name], [t0].[Price], [t1].[Id], [t1].[Description], [t1].[Number], [t1].[RecipeId]
+FROM (
+    SELECT TOP(1) [r].[Id], [r].[ChefId], [r].[Description], [r].[Title], [a].[Id] AS [Id0], [a].[AccessFailedCount], [a].[Bio], [a].[ConcurrencyStamp], [a].[DisplayName], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+    FROM [Recipes] AS [r]
+    LEFT JOIN [AspNetUsers] AS [a] ON [r].[ChefId] = [a].[Id]
+    WHERE [r].[Id] = @__id_0
+) AS [t]
+LEFT JOIN (
+    SELECT [i].[Id], [i].[ItemId], [i].[Qty], [i].[RecipeId], [i0].[Id] AS [Id0], [i0].[ImagePath], [i0].[Name], [i0].[Price]
+    FROM [Ingredients] AS [i]
+    INNER JOIN [Items] AS [i0] ON [i].[ItemId] = [i0].[Id]
+) AS [t0] ON [t].[Id] = [t0].[RecipeId]
+LEFT JOIN (
+    SELECT [s].[Id], [s].[Description], [s].[Number], [s].[RecipeId]
+    FROM [Steps] AS [s]
+    WHERE [s].[Number] = 2
+) AS [t1] ON [t].[Id] = [t1].[RecipeId]
+ORDER BY [t].[Id], [t].[Id0], [t0].[Id], [t0].[Id0], [t1].[Id]
+2021-08-07 06:24:08.450 -05:00 [INF] Executing OkObjectResult, writing value of type 'FlashOrder.DTOs.RecipeDTO'.
+2021-08-07 06:24:08.673 -05:00 [INF] Executed action FlashOrder.Controllers.RecipeController.GetRecipe (FlashOrder) in 4377.5169ms
+2021-08-07 06:24:08.674 -05:00 [INF] Executed endpoint 'FlashOrder.Controllers.RecipeController.GetRecipe (FlashOrder)'
+2021-08-07 06:24:08.689 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Recipe/2 - - - 200 395 application/json;+charset=utf-8 4830.5358ms
+2021-08-07 06:24:54.107 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-07 06:24:54.514 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-07 06:24:54.514 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-07 06:24:54.514 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-07 06:24:54.514 -05:00 [INF] Hosting environment: Development
+2021-08-07 06:24:54.514 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-07 06:24:55.269 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-07 06:24:55.461 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 186.2541ms
+2021-08-07 06:24:55.620 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - -
+2021-08-07 06:24:55.654 -05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-08-07 06:24:55.654 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - - - 0 142933 text/css 34.7970ms
+2021-08-07 06:24:56.273 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-07 06:24:56.622 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 349.1525ms
+2021-08-07 06:24:57.051 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Recipe/2 - -
+2021-08-07 06:24:57.187 -05:00 [INF] Executing endpoint 'FlashOrder.Controllers.RecipeController.GetRecipe (FlashOrder)'
+2021-08-07 06:24:57.262 -05:00 [INF] Route matched with {action = "GetRecipe", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRecipe(Int32) on controller FlashOrder.Controllers.RecipeController (FlashOrder).
+2021-08-07 06:24:58.802 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-07 06:24:59.318 -05:00 [WRN] Compiling a query which loads related collections for more than one collection navigation either via 'Include' or through projection but no 'QuerySplittingBehavior' has been configured. By default Entity Framework will use 'QuerySplittingBehavior.SingleQuery' which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'
+2021-08-07 06:24:59.919 -05:00 [INF] Executed DbCommand (94ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[ChefId], [t].[Description], [t].[Title], [t].[Id0], [t].[AccessFailedCount], [t].[Bio], [t].[ConcurrencyStamp], [t].[DisplayName], [t].[Email], [t].[EmailConfirmed], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[SecurityStamp], [t].[TwoFactorEnabled], [t].[UserName], [t0].[Id], [t0].[ItemId], [t0].[Qty], [t0].[RecipeId], [t0].[Id0], [t0].[ImagePath], [t0].[Name], [t0].[Price], [t1].[Id], [t1].[Description], [t1].[Number], [t1].[RecipeId]
+FROM (
+    SELECT TOP(1) [r].[Id], [r].[ChefId], [r].[Description], [r].[Title], [a].[Id] AS [Id0], [a].[AccessFailedCount], [a].[Bio], [a].[ConcurrencyStamp], [a].[DisplayName], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+    FROM [Recipes] AS [r]
+    LEFT JOIN [AspNetUsers] AS [a] ON [r].[ChefId] = [a].[Id]
+    WHERE [r].[Id] = @__id_0
+) AS [t]
+LEFT JOIN (
+    SELECT [i].[Id], [i].[ItemId], [i].[Qty], [i].[RecipeId], [i0].[Id] AS [Id0], [i0].[ImagePath], [i0].[Name], [i0].[Price]
+    FROM [Ingredients] AS [i]
+    INNER JOIN [Items] AS [i0] ON [i].[ItemId] = [i0].[Id]
+) AS [t0] ON [t].[Id] = [t0].[RecipeId]
+LEFT JOIN (
+    SELECT [s].[Id], [s].[Description], [s].[Number], [s].[RecipeId]
+    FROM [Steps] AS [s]
+) AS [t1] ON [t].[Id] = [t1].[RecipeId]
+ORDER BY [t].[Id], [t].[Id0], [t0].[Id], [t0].[Id0], [t1].[Number], [t1].[Id]
+2021-08-07 06:25:00.059 -05:00 [INF] Executing OkObjectResult, writing value of type 'FlashOrder.DTOs.RecipeDTO'.
+2021-08-07 06:25:00.237 -05:00 [INF] Executed action FlashOrder.Controllers.RecipeController.GetRecipe (FlashOrder) in 2963.6326ms
+2021-08-07 06:25:00.238 -05:00 [INF] Executed endpoint 'FlashOrder.Controllers.RecipeController.GetRecipe (FlashOrder)'
+2021-08-07 06:25:00.247 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Recipe/2 - - - 200 507 application/json;+charset=utf-8 3196.4041ms
+2021-08-07 06:30:21.643 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-07 06:30:22.086 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-07 06:30:22.086 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-07 06:30:22.087 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-07 06:30:22.087 -05:00 [INF] Hosting environment: Development
+2021-08-07 06:30:22.087 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-07 06:30:22.996 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-07 06:30:23.220 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 230.5936ms
+2021-08-07 06:30:23.432 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - -
+2021-08-07 06:30:23.487 -05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-08-07 06:30:23.488 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - - - 0 142933 text/css 55.5396ms
+2021-08-07 06:30:23.857 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-07 06:30:24.293 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 435.5387ms
+2021-08-07 06:30:28.149 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Recipe/2 - -
+2021-08-07 06:30:28.255 -05:00 [INF] Executing endpoint 'FlashOrder.Controllers.RecipeController.GetRecipe (FlashOrder)'
+2021-08-07 06:30:28.315 -05:00 [INF] Route matched with {action = "GetRecipe", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRecipe(Int32) on controller FlashOrder.Controllers.RecipeController (FlashOrder).
+2021-08-07 06:30:29.758 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-07 06:30:29.926 -05:00 [ERR] something went wrong in CreateRecipe
+System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Query.InvalidIncludePathError': Unable to find navigation 'recipe => recipe.Steps.OrderBy(s => s.Number)' specified in string based include path 'recipe => recipe'. This exception can be suppressed or logged by passing event ID 'CoreEventId.InvalidIncludePathError' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`2.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam1 arg1, TParam2 arg2)
+   at Microsoft.EntityFrameworkCore.Diagnostics.CoreLoggerExtensions.InvalidIncludePathError(IDiagnosticsLogger`1 diagnostics, String navigationChain, String navigationName)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.ProcessInclude(NavigationExpansionExpression source, Expression expression, Boolean thenInclude, Boolean setLoaded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at System.Linq.Expressions.MethodCallExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at System.Linq.Expressions.MethodCallExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.Expand(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryTranslationPreprocessor.Process(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryTranslationPreprocessor.Process(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass12_0`1.<ExecuteAsync>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, LambdaExpression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.FirstOrDefaultAsync[TSource](IQueryable`1 source, Expression`1 predicate, CancellationToken cancellationToken)
+   at FlashOrder.Repository.RecipeRepository.Get(Expression`1 expression, List`1 includes) in C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder\Repository\RecipeRepository.cs:line 72
+   at FlashOrder.Controllers.RecipeController.GetRecipe(Int32 id) in C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder\Controllers\RecipeController.cs:line 102
+2021-08-07 06:30:29.959 -05:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-08-07 06:30:29.974 -05:00 [INF] Executed action FlashOrder.Controllers.RecipeController.GetRecipe (FlashOrder) in 1644.0691ms
+2021-08-07 06:30:29.975 -05:00 [INF] Executed endpoint 'FlashOrder.Controllers.RecipeController.GetRecipe (FlashOrder)'
+2021-08-07 06:30:29.985 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Recipe/2 - - - 500 - text/plain;+charset=utf-8 1835.8363ms
+2021-08-07 07:21:26.918 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-07 07:21:27.336 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-07 07:21:27.336 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-07 07:21:27.337 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-07 07:21:27.337 -05:00 [INF] Hosting environment: Development
+2021-08-07 07:21:27.337 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-07 07:21:28.481 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-07 07:21:28.621 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 144.9328ms
+2021-08-07 07:21:29.032 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/favicon-16x16.png - -
+2021-08-07 07:21:29.048 -05:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2021-08-07 07:21:29.048 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/favicon-16x16.png - - - 0 665 image/png 16.5231ms
+2021-08-07 07:21:29.076 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-07 07:21:29.503 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 427.2045ms
+2021-08-07 07:21:30.370 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Recipe/2 - -
+2021-08-07 07:21:30.486 -05:00 [INF] Executing endpoint 'FlashOrder.Controllers.RecipeController.GetRecipe (FlashOrder)'
+2021-08-07 07:21:30.550 -05:00 [INF] Route matched with {action = "GetRecipe", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRecipe(Int32) on controller FlashOrder.Controllers.RecipeController (FlashOrder).
+2021-08-07 07:21:32.005 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-07 07:21:32.488 -05:00 [WRN] Compiling a query which loads related collections for more than one collection navigation either via 'Include' or through projection but no 'QuerySplittingBehavior' has been configured. By default Entity Framework will use 'QuerySplittingBehavior.SingleQuery' which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'
+2021-08-07 07:21:33.128 -05:00 [INF] Executed DbCommand (92ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[ChefId], [t].[Description], [t].[Title], [t].[Id0], [t].[AccessFailedCount], [t].[Bio], [t].[ConcurrencyStamp], [t].[DisplayName], [t].[Email], [t].[EmailConfirmed], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[SecurityStamp], [t].[TwoFactorEnabled], [t].[UserName], [t0].[Id], [t0].[ItemId], [t0].[Qty], [t0].[RecipeId], [t0].[Id0], [t0].[ImagePath], [t0].[Name], [t0].[Price], [s].[Id], [s].[Description], [s].[Order], [s].[RecipeId]
+FROM (
+    SELECT TOP(1) [r].[Id], [r].[ChefId], [r].[Description], [r].[Title], [a].[Id] AS [Id0], [a].[AccessFailedCount], [a].[Bio], [a].[ConcurrencyStamp], [a].[DisplayName], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+    FROM [Recipes] AS [r]
+    LEFT JOIN [AspNetUsers] AS [a] ON [r].[ChefId] = [a].[Id]
+    WHERE [r].[Id] = @__id_0
+) AS [t]
+LEFT JOIN (
+    SELECT [i].[Id], [i].[ItemId], [i].[Qty], [i].[RecipeId], [i0].[Id] AS [Id0], [i0].[ImagePath], [i0].[Name], [i0].[Price]
+    FROM [Ingredients] AS [i]
+    INNER JOIN [Items] AS [i0] ON [i].[ItemId] = [i0].[Id]
+) AS [t0] ON [t].[Id] = [t0].[RecipeId]
+LEFT JOIN [Steps] AS [s] ON [t].[Id] = [s].[RecipeId]
+ORDER BY [t].[Id], [t].[Id0], [t0].[Id], [t0].[Id0], [s].[Id]
+2021-08-07 07:21:33.276 -05:00 [INF] Executing OkObjectResult, writing value of type 'FlashOrder.DTOs.RecipeDTO'.
+2021-08-07 07:21:33.506 -05:00 [INF] Executed action FlashOrder.Controllers.RecipeController.GetRecipe (FlashOrder) in 2941.1569ms
+2021-08-07 07:21:33.507 -05:00 [INF] Executed endpoint 'FlashOrder.Controllers.RecipeController.GetRecipe (FlashOrder)'
+2021-08-07 07:21:33.521 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Recipe/2 - - - 200 504 application/json;+charset=utf-8 3150.6642ms
+2021-08-07 07:29:05.208 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-07 07:29:05.709 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-07 07:29:05.709 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-07 07:29:05.710 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-07 07:29:05.710 -05:00 [INF] Hosting environment: Development
+2021-08-07 07:29:05.710 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-07 07:29:06.488 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Recipe/2 - -
+2021-08-07 07:29:06.589 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger - -
+2021-08-07 07:29:06.627 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-07 07:29:06.639 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger - - - 0 - - 49.2545ms
+2021-08-07 07:29:06.816 -05:00 [INF] Executing endpoint 'FlashOrder.Controllers.RecipeController.GetRecipe (FlashOrder)'
+2021-08-07 07:29:06.852 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 224.4682ms
+2021-08-07 07:29:06.958 -05:00 [INF] Route matched with {action = "GetRecipe", controller = "Recipe"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRecipe(Int32) on controller FlashOrder.Controllers.RecipeController (FlashOrder).
+2021-08-07 07:29:07.210 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/favicon-16x16.png - -
+2021-08-07 07:29:07.229 -05:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2021-08-07 07:29:07.229 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/favicon-16x16.png - - - 0 665 image/png 19.3334ms
+2021-08-07 07:29:07.308 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-07 07:29:07.711 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 402.3292ms
+2021-08-07 07:29:09.505 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-07 07:29:09.989 -05:00 [WRN] Compiling a query which loads related collections for more than one collection navigation either via 'Include' or through projection but no 'QuerySplittingBehavior' has been configured. By default Entity Framework will use 'QuerySplittingBehavior.SingleQuery' which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'
+2021-08-07 07:29:10.619 -05:00 [INF] Executed DbCommand (78ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[ChefId], [t].[Description], [t].[Title], [t].[Id0], [t].[AccessFailedCount], [t].[Bio], [t].[ConcurrencyStamp], [t].[DisplayName], [t].[Email], [t].[EmailConfirmed], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[SecurityStamp], [t].[TwoFactorEnabled], [t].[UserName], [t0].[Id], [t0].[ItemId], [t0].[Qty], [t0].[RecipeId], [t0].[Id0], [t0].[ImagePath], [t0].[Name], [t0].[Price], [s].[Id], [s].[Description], [s].[Order], [s].[RecipeId]
+FROM (
+    SELECT TOP(1) [r].[Id], [r].[ChefId], [r].[Description], [r].[Title], [a].[Id] AS [Id0], [a].[AccessFailedCount], [a].[Bio], [a].[ConcurrencyStamp], [a].[DisplayName], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+    FROM [Recipes] AS [r]
+    LEFT JOIN [AspNetUsers] AS [a] ON [r].[ChefId] = [a].[Id]
+    WHERE [r].[Id] = @__id_0
+) AS [t]
+LEFT JOIN (
+    SELECT [i].[Id], [i].[ItemId], [i].[Qty], [i].[RecipeId], [i0].[Id] AS [Id0], [i0].[ImagePath], [i0].[Name], [i0].[Price]
+    FROM [Ingredients] AS [i]
+    INNER JOIN [Items] AS [i0] ON [i].[ItemId] = [i0].[Id]
+) AS [t0] ON [t].[Id] = [t0].[RecipeId]
+LEFT JOIN [Steps] AS [s] ON [t].[Id] = [s].[RecipeId]
+ORDER BY [t].[Id], [t].[Id0], [t0].[Id], [t0].[Id0], [s].[Id]
+2021-08-07 07:29:10.746 -05:00 [INF] Executing OkObjectResult, writing value of type 'FlashOrder.DTOs.RecipeDTO'.
+2021-08-07 07:29:10.926 -05:00 [INF] Executed action FlashOrder.Controllers.RecipeController.GetRecipe (FlashOrder) in 3955.1319ms
+2021-08-07 07:29:10.927 -05:00 [INF] Executed endpoint 'FlashOrder.Controllers.RecipeController.GetRecipe (FlashOrder)'
+2021-08-07 07:29:10.939 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Recipe/2 - - - 200 504 application/json;+charset=utf-8 4465.8331ms

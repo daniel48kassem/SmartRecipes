@@ -25,6 +25,9 @@ namespace FlashOrder.Configurations
             
             CreateMap<ApiUser,UserDTO>().ReverseMap();
             CreateMap<ApiUser,RegisterDTO>().ReverseMap();
+            
+            CreateMap<Step,CreateStepDTO>().ReverseMap();
+            CreateMap<Step,StepDTO>().ReverseMap();
         }
     }
 }

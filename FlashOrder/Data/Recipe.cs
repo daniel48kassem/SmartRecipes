@@ -15,7 +15,9 @@ namespace FlashOrder.Data
         
         public string Description { get; set; }
         
+        
         public virtual IList<Ingredient> Ingredients { get; set; }
+        public virtual IList<Step> Steps { get; set; }
 
         public double CalculateCost()
         {

@@ -1,15 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using AutoMapper;
 using FlashOrder.Data;
 using FlashOrder.DTOs;
 using FlashOrder.IRepository;
 using FlashOrder.Utils;
-using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -18,6 +14,7 @@ namespace FlashOrder.Controllers
     [ApiController]
     [Route("api/[controller]")]
     [Produces("application/json")]
+    [Authorize(Roles = "Administrator")]
     public class ItemController : ControllerBase
     {
         private readonly IUnitOfWork _unitOfWork;
