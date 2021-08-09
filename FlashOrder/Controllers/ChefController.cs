@@ -39,6 +39,7 @@ namespace FlashOrder.Controllers
         {
             try
             {
+                //get the chefs
                 var chefs =await  _userManager.GetUsersInRoleAsync("Chef");
                 
                 var res = _mapper.Map<List<UserDTO>>(chefs);

@@ -21,6 +21,7 @@ namespace FlashOrder.IRepository
         Task Insert(T entity);
         Task InsertRange(IEnumerable<T> entities);
         Task Delete(int id);
+        Task Delete(T entity);
         void DeleteRange(IEnumerable<T> entities);
         void Update(T entity);
         

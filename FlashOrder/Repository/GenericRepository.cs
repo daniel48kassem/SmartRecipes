@@ -80,6 +80,10 @@ namespace FlashOrder.Repository
             _db.Remove(entity);
         }
 
+        public async Task Delete(T entity)
+        {
+            _db.Remove(entity);
+        }
         public void DeleteRange(IEnumerable<T> entities)
         {
             _db.RemoveRange(entities);

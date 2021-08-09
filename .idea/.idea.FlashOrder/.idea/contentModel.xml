@@ -64,6 +64,7 @@
           <e p="log20210806.txt" t="Include" />
           <e p="log20210807.txt" t="Include" />
           <e p="log20210808.txt" t="Include" />
+          <e p="log20210809.txt" t="Include" />
         </e>
         <e p="Middlewares" t="Include">
           <e p="MyHttpContext.cs" t="Include" />

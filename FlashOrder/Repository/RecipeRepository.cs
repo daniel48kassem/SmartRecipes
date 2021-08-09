@@ -150,5 +150,14 @@ namespace FlashOrder.Repository
             //here we ask him for not tracking the object status
             return recipes??await query.AsNoTracking().ToListAsync();
         }
+        
+        public async Task Delete(Recipe entity)
+        {
+            _db.Remove(entity);
+        }
     }
+    
+
+    
+    
 }
