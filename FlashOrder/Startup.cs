@@ -57,7 +57,6 @@ namespace FlashOrder
                 // options.AddPolicy("OnlyChefOfRecipe",
                 //     policy => policy.Requirements.Add(new OnlyChefOfRecipeRequirement()));
                 
-                
                 options.AddPolicy("CreatorChefPolicy",
                     policy => policy.Requirements.Add(new CreatorChefRequirement()));
             });
@@ -72,7 +71,6 @@ namespace FlashOrder
             services.AddControllers().AddNewtonsoftJson(op =>
                 op.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
             
-            // services.AddSingleton<IAuthorizationHandler, OnlyChefOfRecipe>();
  
             services.AddSingleton<IAuthorizationHandler, CreatorChefHandler>();
             services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();

@@ -32,13 +32,6 @@ namespace FlashOrder.Data
                 .HasForeignKey(bc => bc.FollowerId)
                 .OnDelete(DeleteBehavior.NoAction)
                 .IsRequired(true);
-
-            // builder.Entity<ApiUser>()
-            //     .HasMany(u => u.)
-            //     .WithMany(u => u.FriendOf);
-            //     .Map(m => m.ToTable("UserFriends")
-            //     .MapLeftKey("UserId")
-            //     .MapRightKey("FriendId"));
             
             builder.ApplyConfiguration(new ItemConfiguration());
             builder.ApplyConfiguration(new RoleConfiguration());

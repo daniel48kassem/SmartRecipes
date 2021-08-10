@@ -5,13 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f789b059-6e4e-4152-a1e5-962adab9c142" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/FlashOrder/Utils/Email/IMailService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FlashOrder/Utils/Email/IRecipeEmailSender.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FlashOrder/Utils/Email/MailRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FlashOrder/Utils/Email/MailService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FlashOrder/Utils/Email/MailSettings.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FlashOrder/Utils/Email/RecipeEmailSender.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FlashOrder/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FlashOrder/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FlashOrder/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FlashOrder/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FlashOrder/Controllers/ChefController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FlashOrder/Controllers/ChefController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FlashOrder/Controllers/RecipeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FlashOrder/Controllers/RecipeController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FlashOrder/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FlashOrder/Controllers/UserController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FlashOrder/IRepository/IGenericRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FlashOrder/IRepository/IGenericRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FlashOrder/Repository/GenericRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FlashOrder/Repository/GenericRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FlashOrder/Repository/RecipeRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FlashOrder/Repository/RecipeRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FlashOrder/Data/DatabaseContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FlashOrder/Data/DatabaseContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FlashOrder/FlashOrder.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/FlashOrder/FlashOrder.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FlashOrder/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FlashOrder/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FlashOrder/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/FlashOrder/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,26 +29,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D7970BCA-7F38-4659-8B39-F768CCA2C7AA/74/0ca3b32f/IdentityUser.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/FlashOrder/Data/DatabaseContext.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4D1F2224-9BBE-4676-A871-766038953138/f7/9f31812c/ModelBuilder.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/FlashOrder/Data/Ingredient.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/07DFB1EA-008B-4715-8970-C250EA4475FC/38/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/FlashOrder/Startup.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/FlashOrder/Data/Item.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/FlashOrder/WeatherForecast.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/D7970BCA-7F38-4659-8B39-F768CCA2C7AA/3/IdentityUser.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/FlashOrder/Data/Recipe.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/FlashOrder/Data/Item.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/FlashOrder/Data/Ingredient.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/FlashOrder/Data/DatabaseContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/FlashOrder/Startup.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/FlashOrder/Utils/Utils.cs" />
-      <option value="$PROJECT_DIR$/FlashOrder/Data/Ingredient.cs" />
-      <option value="$PROJECT_DIR$/FlashOrder/DTOs/IngredientDTO.cs" />
-      <option value="$PROJECT_DIR$/FlashOrder/DTOs/UploadedFileDTO.cs" />
-      <option value="$PROJECT_DIR$/FlashOrder/Services/TokenService.cs" />
-      <option value="$PROJECT_DIR$/FlashOrder/Configurations/IdentityExtensions.cs" />
-      <option value="$PROJECT_DIR$/FlashOrder/DTOs/LoginDTO.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/DTOs/RegisterDTO.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/Tokens/ITokenService.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/Tokens/TokenService.cs" />
@@ -49,7 +45,6 @@
       <option value="$PROJECT_DIR$/FlashOrder/DTOs/UserDTO.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/Services/Auth/IAuthManager.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/Controllers/AccountController.cs" />
-      <option value="$PROJECT_DIR$/FlashOrder/appsettings.json" />
       <option value="$PROJECT_DIR$/FlashOrder/Filters/RecipeParameters.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/Utils/MyUtils.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/Logs/log20210806.txt" />
@@ -59,7 +54,6 @@
       <option value="$PROJECT_DIR$/FlashOrder/Policies/IRecipeIdProvider.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/Policies/OnlyChefOfRecipe.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/Policies/CreatorChefRequirement.cs" />
-      <option value="$PROJECT_DIR$/FlashOrder/Startup.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/Policies/CreatorChefHandler.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/Configurations/Entities/RoleConfiguration.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/Controllers/ItemController.cs" />
@@ -73,19 +67,28 @@
       <option value="$PROJECT_DIR$/FlashOrder/Data/Error.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/Migrations/20210808090808_Follow.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/DTOs/FollowDTO.cs" />
-      <option value="$PROJECT_DIR$/FlashOrder/Controllers/RecipeController.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/IRepository/IUnitOfWork.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/Repository/UnitOfWork.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/Logs/log20210808.txt" />
       <option value="$PROJECT_DIR$/FlashOrder/Data/Follow.cs" />
-      <option value="$PROJECT_DIR$/FlashOrder/Data/DatabaseContext.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/Services/Auth/AuthManager.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/Data/ApiUser.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/Controllers/ChefController.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/IRepository/IGenericRepository.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/Repository/GenericRepository.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/Repository/RecipeRepository.cs" />
+      <option value="$PROJECT_DIR$/FlashOrder/Data/DatabaseContext.cs" />
+      <option value="$PROJECT_DIR$/FlashOrder/Controllers/RecipeController.cs" />
       <option value="$PROJECT_DIR$/FlashOrder/Controllers/UserController.cs" />
+      <option value="$PROJECT_DIR$/FlashOrder/Utils/EmailSender.cs" />
+      <option value="$PROJECT_DIR$/FlashOrder/Utils/Email/MailSettings.cs" />
+      <option value="$PROJECT_DIR$/FlashOrder/Utils/Email/MailRequest.cs" />
+      <option value="$PROJECT_DIR$/FlashOrder/appsettings.json" />
+      <option value="$PROJECT_DIR$/FlashOrder/Utils/Email/MailService.cs" />
+      <option value="$PROJECT_DIR$/FlashOrder/Utils/Email/IRecipeEmailSender.cs" />
+      <option value="$PROJECT_DIR$/FlashOrder/Utils/Email/IMailService.cs" />
+      <option value="$PROJECT_DIR$/FlashOrder/Utils/Email/RecipeEmailSender.cs" />
+      <option value="$PROJECT_DIR$/FlashOrder/Startup.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1vfWuTxGRnxNIs4XXA7SAgbj397" />
@@ -168,7 +171,12 @@
       <workItem from="1628351344092" duration="2995000" />
       <workItem from="1628401680607" duration="8327000" />
       <workItem from="1628410494251" duration="15870000" />
-      <workItem from="1628500992653" duration="3342000" />
+      <workItem from="1628500992653" duration="3577000" />
+      <workItem from="1628521234627" duration="724000" />
+      <workItem from="1628522626522" duration="1000" />
+      <workItem from="1628522812667" duration="13000" />
+      <workItem from="1628530505383" duration="1472000" />
+      <workItem from="1628537070459" duration="7842000" />
     </task>
     <servers />
   </component>
@@ -191,24 +199,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/FlashOrder/Controllers/UserController.cs</url>
-          <line>118</line>
-          <properties documentPath="C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder\Controllers\UserController.cs" initialLine="118" containingFunctionPresentation="method 'UnFollowChef'">
-            <startOffsets>
-              <option value="4186" />
-            </startOffsets>
-            <endOffsets>
-              <option value="4302" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

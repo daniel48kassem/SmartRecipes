@@ -116,6 +116,7 @@
         </e>
         <e p="WeatherForecast.cs" t="Include" />
         <e p="wwwroot" t="Include">
+          <e p="EmailTemplates" t="Include" />
           <e p="Images" t="Include">
             <e p="burning_universe-1280x800.jpg" t="Include" />
             <e p="Butterfly2.png" t="Include" />

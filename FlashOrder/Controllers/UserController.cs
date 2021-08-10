@@ -20,9 +20,7 @@ namespace FlashOrder.Controllers
     public class UserController : ControllerBase
     {
         private readonly ILogger<UserController> _logger;
-
         private readonly UserManager<ApiUser> _userManager;
-
         private readonly IMapper _mapper;
         private readonly IAuthManager _authManager;
         private readonly IUnitOfWork _unitOfWork;

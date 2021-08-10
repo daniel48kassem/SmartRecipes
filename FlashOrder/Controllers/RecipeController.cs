@@ -24,6 +24,8 @@ namespace FlashOrder.Controllers
         private readonly ILogger<RecipeController> _logger;
         private readonly UserManager<ApiUser> _userManager;
         private readonly IAuthorizationService _authorizationService;
+        
+        
         public RecipeController(ILogger<RecipeController> logger, IMapper mapper, IUnitOfWork unitOfWork,UserManager<ApiUser> userManager,IAuthorizationService authorizationService)
         {
             _logger = logger;
@@ -58,7 +60,6 @@ namespace FlashOrder.Controllers
         [Authorize]
         public async Task<IActionResult> CreateRecipe([FromBody] CreateRecipeDTO recipeDTO)
         {
-            
             
             if (!ModelState.IsValid)
             {
