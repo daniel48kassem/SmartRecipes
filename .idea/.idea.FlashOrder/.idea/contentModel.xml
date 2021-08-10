@@ -28,11 +28,11 @@
         <e p="Data" t="Include">
           <e p="ApiUser.cs" t="Include" />
           <e p="DatabaseContext.cs" t="Include" />
-          <e p="Error.cs" t="Include" />
           <e p="Follow.cs" t="Include" />
           <e p="Image.cs" t="Include" />
           <e p="Ingredient.cs" t="Include" />
           <e p="Item.cs" t="Include" />
+          <e p="Rating.cs" t="Include" />
           <e p="recipe.cs" t="Include" />
           <e p="Step.cs" t="Include" />
         </e>
@@ -74,6 +74,8 @@
           <e p="20210808091702_Follow.Designer.cs" t="Include" />
           <e p="20210808152014_AddDbSetFollow.cs" t="Include" />
           <e p="20210808152014_AddDbSetFollow.Designer.cs" t="Include" />
+          <e p="20210810152759_RatingRelationAdded.cs" t="Include" />
+          <e p="20210810152759_RatingRelationAdded.Designer.cs" t="Include" />
           <e p="DatabaseContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">

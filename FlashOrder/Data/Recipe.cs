@@ -19,6 +19,8 @@ namespace FlashOrder.Data
         public virtual IList<Ingredient> Ingredients { get; set; }
         public virtual IList<Step> Steps { get; set; }
 
+        public virtual IList<Rating> Raters { get; set; }
+
         public double CalculateCost()
         {
             var cost = 0.0;

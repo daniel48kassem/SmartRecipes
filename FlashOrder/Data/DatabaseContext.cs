@@ -16,6 +16,7 @@ namespace FlashOrder.Data
         {
             base.OnModelCreating(builder);
 
+            //define many to many relation between the user and chef as follow relation
             builder.Entity<Follow>()
                 .HasKey(bc => new {bc.ChefId, bc.FollowerId});
 
@@ -32,6 +33,24 @@ namespace FlashOrder.Data
                 .HasForeignKey(bc => bc.FollowerId)
                 .OnDelete(DeleteBehavior.NoAction)
                 .IsRequired(true);
+
+            //many to many relation between user and recipe as rating
+            builder.Entity<Rating>()
+                .HasKey(bc => new {bc.RecipeId, bc.UserId});
+
+            builder.Entity<Rating>()
+                .HasOne(bc => bc.Recipe)
+                .WithMany(b => b.Raters)
+                .HasForeignKey(bc => bc.RecipeId)
+                .OnDelete(DeleteBehavior.NoAction)
+                .IsRequired(true);
+
+            builder.Entity<Rating>()
+                .HasOne(bc => bc.User)
+                .WithMany(c => c.MyRatedRecipes)
+                .HasForeignKey(bc => bc.UserId)
+                .OnDelete(DeleteBehavior.NoAction)
+                .IsRequired(true);
             
             builder.ApplyConfiguration(new ItemConfiguration());
             builder.ApplyConfiguration(new RoleConfiguration());
@@ -44,5 +63,6 @@ namespace FlashOrder.Data
         public DbSet<Step> Steps { get; set; }
 
         public DbSet<Follow> Follows { get; set; }
+        public DbSet<Rating> Ratings { get; set; }
     }
 }

@@ -13,6 +13,9 @@ namespace FlashOrder.Data
         public virtual IList<Follow> ChefFollowers { get; set; }
         public virtual IList<Follow> FollowedChefs { get; set; }
         
+        
+        public virtual IList<Rating> MyRatedRecipes { get; set; }
+        
         // public virtual HashSet<ApiUser> ChefFollowers { get; set; }
         // public virtual HashSet<ApiUser> MyFollowedChefs { get; set; }
     }
