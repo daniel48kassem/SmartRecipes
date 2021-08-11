@@ -16,6 +16,7 @@ namespace FlashOrder.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+ 
     public class ChefController : ControllerBase
     {
         private readonly ILogger<ChefController> _logger;
@@ -52,7 +53,6 @@ namespace FlashOrder.Controllers
                 return Problem($"Something went wrong in the {nameof(GetChefs)}", statusCode: 500);
             }
         }
-        
         
         
         [HttpGet]

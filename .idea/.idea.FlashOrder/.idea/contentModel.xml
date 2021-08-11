@@ -41,6 +41,7 @@
           <e p="ImageDTO.cs" t="Include" />
           <e p="IngredientDTO.cs" t="Include" />
           <e p="ItemDTO.cs" t="Include" />
+          <e p="RateDTO.cs" t="Include" />
           <e p="RecipeDTO.cs" t="Include" />
           <e p="StepDTO.cs" t="Include" />
           <e p="UploadedFileDTO.cs" t="Include" />
@@ -65,6 +66,7 @@
           <e p="log20210807.txt" t="Include" />
           <e p="log20210808.txt" t="Include" />
           <e p="log20210809.txt" t="Include" />
+          <e p="log20210811.txt" t="Include" />
         </e>
         <e p="Middlewares" t="Include">
           <e p="MyHttpContext.cs" t="Include" />
@@ -76,6 +78,8 @@
           <e p="20210808152014_AddDbSetFollow.Designer.cs" t="Include" />
           <e p="20210810152759_RatingRelationAdded.cs" t="Include" />
           <e p="20210810152759_RatingRelationAdded.Designer.cs" t="Include" />
+          <e p="20210811081546_AddedRatingToRecipe.cs" t="Include" />
+          <e p="20210811081546_AddedRatingToRecipe.Designer.cs" t="Include" />
           <e p="DatabaseContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
@@ -111,6 +115,7 @@
             <e p="AuthManager.cs" t="Include" />
             <e p="IAuthManager.cs" t="Include" />
           </e>
+          <e p="RecipeRatingService.cs" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />
         <e p="Utils" t="Include">

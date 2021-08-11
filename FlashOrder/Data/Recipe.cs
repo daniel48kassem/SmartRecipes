@@ -15,7 +15,10 @@ namespace FlashOrder.Data
         
         public string Description { get; set; }
         
-        
+        [Range(0,5)]
+        public float Rating { get; set; }
+
+        public bool IsRatingUpdated { get; set; }
         public virtual IList<Ingredient> Ingredients { get; set; }
         public virtual IList<Step> Steps { get; set; }
 

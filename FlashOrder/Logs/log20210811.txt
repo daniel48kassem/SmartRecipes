@@ -1,0 +1,597 @@
+2021-08-11 14:32:24.088 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-11 14:32:27.294 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-11 14:32:28.805 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-11 14:32:28.805 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-11 14:32:28.806 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-11 14:32:28.806 -05:00 [INF] Hosting environment: Development
+2021-08-11 14:32:28.806 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-11 14:32:28.973 -05:00 [INF] Executed DbCommand (67ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ChefId], [r].[Description], [r].[IsRatingUpdated], [r].[Rating], [r].[Title], [r0].[RecipeId], [r0].[UserId], [r0].[Value]
+FROM [Recipes] AS [r]
+LEFT JOIN [Ratings] AS [r0] ON [r].[Id] = [r0].[RecipeId]
+WHERE [r].[IsRatingUpdated] = CAST(1 AS bit)
+ORDER BY [r].[Id], [r0].[RecipeId], [r0].[UserId]
+2021-08-11 14:32:29.888 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-11 14:32:30.211 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 329.5009ms
+2021-08-11 14:32:30.843 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-11 14:32:31.190 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 346.4180ms
+2021-08-11 14:32:53.919 -05:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/User/RateRecipe application/json 38
+2021-08-11 14:32:54.372 -05:00 [INF] Successfully validated the token.
+2021-08-11 14:32:54.384 -05:00 [INF] Authorization was successful.
+2021-08-11 14:32:54.386 -05:00 [INF] Executing endpoint 'FlashOrder.Controllers.UserController.RateRecipe (FlashOrder)'
+2021-08-11 14:32:54.434 -05:00 [INF] Route matched with {action = "RateRecipe", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RateRecipe(FlashOrder.DTOs.RateDTO) on controller FlashOrder.Controllers.UserController (FlashOrder).
+2021-08-11 14:32:54.760 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-11 14:32:54.852 -05:00 [INF] Executed DbCommand (48ms) [Parameters=[@__rateDto_RecipeId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ChefId], [r].[Description], [r].[IsRatingUpdated], [r].[Rating], [r].[Title]
+FROM [Recipes] AS [r]
+WHERE [r].[Id] = @__rateDto_RecipeId_0
+2021-08-11 14:32:54.944 -05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__email_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[AccessFailedCount], [t].[Bio], [t].[ConcurrencyStamp], [t].[DisplayName], [t].[Email], [t].[EmailConfirmed], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[SecurityStamp], [t].[TwoFactorEnabled], [t].[UserName], [r].[RecipeId], [r].[UserId], [r].[Value]
+FROM (
+    SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Bio], [a].[ConcurrencyStamp], [a].[DisplayName], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+    FROM [AspNetUsers] AS [a]
+    WHERE [a].[Email] = @__email_0
+) AS [t]
+LEFT JOIN [Ratings] AS [r] ON [t].[Id] = [r].[UserId]
+ORDER BY [t].[Id], [r].[RecipeId], [r].[UserId]
+2021-08-11 14:32:55.501 -05:00 [ERR] Failed executing DbCommand (10ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 450), @p2='?' (Size = 4000), @p3='?' (DbType = Boolean), @p4='?' (DbType = Single), @p5='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Recipes] ([Id], [ChefId], [Description], [IsRatingUpdated], [Rating], [Title])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2021-08-11 14:32:55.571 -05:00 [ERR] An exception occurred in the database while saving changes for context type 'FlashOrder.Data.DatabaseContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert explicit value for identity column in table 'Recipes' when IDENTITY_INSERT is set to OFF.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__277_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:bd847baf-4c77-4105-95fd-83395fe6cb7c
+Error Number:544,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert explicit value for identity column in table 'Recipes' when IDENTITY_INSERT is set to OFF.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__277_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:bd847baf-4c77-4105-95fd-83395fe6cb7c
+Error Number:544,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2021-08-11 14:32:55.574 -05:00 [ERR] something went wrong in RateRecipe
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert explicit value for identity column in table 'Recipes' when IDENTITY_INSERT is set to OFF.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__277_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:bd847baf-4c77-4105-95fd-83395fe6cb7c
+Error Number:544,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at FlashOrder.Repository.UnitOfWork.save() in C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder\Repository\UnitOfWork.cs:line 35
+   at FlashOrder.Controllers.UserController.RateRecipe(RateDTO rateDto) in C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder\Controllers\UserController.cs:line 181
+2021-08-11 14:32:55.608 -05:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-08-11 14:32:55.732 -05:00 [INF] Executed action FlashOrder.Controllers.UserController.RateRecipe (FlashOrder) in 1273.3853ms
+2021-08-11 14:32:55.734 -05:00 [INF] Executed endpoint 'FlashOrder.Controllers.UserController.RateRecipe (FlashOrder)'
+2021-08-11 14:32:55.749 -05:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/api/User/RateRecipe application/json 38 - 500 23 application/json;+charset=utf-8 1829.6229ms
+2021-08-11 14:33:29.079 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-11 14:33:29.103 -05:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ChefId], [r].[Description], [r].[IsRatingUpdated], [r].[Rating], [r].[Title], [r0].[RecipeId], [r0].[UserId], [r0].[Value]
+FROM [Recipes] AS [r]
+LEFT JOIN [Ratings] AS [r0] ON [r].[Id] = [r0].[RecipeId]
+WHERE [r].[IsRatingUpdated] = CAST(1 AS bit)
+ORDER BY [r].[Id], [r0].[RecipeId], [r0].[UserId]
+2021-08-11 14:34:29.118 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-11 14:34:29.128 -05:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ChefId], [r].[Description], [r].[IsRatingUpdated], [r].[Rating], [r].[Title], [r0].[RecipeId], [r0].[UserId], [r0].[Value]
+FROM [Recipes] AS [r]
+LEFT JOIN [Ratings] AS [r0] ON [r].[Id] = [r0].[RecipeId]
+WHERE [r].[IsRatingUpdated] = CAST(1 AS bit)
+ORDER BY [r].[Id], [r0].[RecipeId], [r0].[UserId]
+2021-08-11 14:35:29.145 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-11 14:35:29.154 -05:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ChefId], [r].[Description], [r].[IsRatingUpdated], [r].[Rating], [r].[Title], [r0].[RecipeId], [r0].[UserId], [r0].[Value]
+FROM [Recipes] AS [r]
+LEFT JOIN [Ratings] AS [r0] ON [r].[Id] = [r0].[RecipeId]
+WHERE [r].[IsRatingUpdated] = CAST(1 AS bit)
+ORDER BY [r].[Id], [r0].[RecipeId], [r0].[UserId]
+2021-08-11 14:36:29.171 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-11 14:36:29.180 -05:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ChefId], [r].[Description], [r].[IsRatingUpdated], [r].[Rating], [r].[Title], [r0].[RecipeId], [r0].[UserId], [r0].[Value]
+FROM [Recipes] AS [r]
+LEFT JOIN [Ratings] AS [r0] ON [r].[Id] = [r0].[RecipeId]
+WHERE [r].[IsRatingUpdated] = CAST(1 AS bit)
+ORDER BY [r].[Id], [r0].[RecipeId], [r0].[UserId]
+2021-08-11 14:37:29.197 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-11 14:37:29.206 -05:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ChefId], [r].[Description], [r].[IsRatingUpdated], [r].[Rating], [r].[Title], [r0].[RecipeId], [r0].[UserId], [r0].[Value]
+FROM [Recipes] AS [r]
+LEFT JOIN [Ratings] AS [r0] ON [r].[Id] = [r0].[RecipeId]
+WHERE [r].[IsRatingUpdated] = CAST(1 AS bit)
+ORDER BY [r].[Id], [r0].[RecipeId], [r0].[UserId]
+2021-08-11 14:38:29.220 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-11 14:38:29.233 -05:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ChefId], [r].[Description], [r].[IsRatingUpdated], [r].[Rating], [r].[Title], [r0].[RecipeId], [r0].[UserId], [r0].[Value]
+FROM [Recipes] AS [r]
+LEFT JOIN [Ratings] AS [r0] ON [r].[Id] = [r0].[RecipeId]
+WHERE [r].[IsRatingUpdated] = CAST(1 AS bit)
+ORDER BY [r].[Id], [r0].[RecipeId], [r0].[UserId]
+2021-08-11 14:39:29.250 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-11 14:39:29.260 -05:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ChefId], [r].[Description], [r].[IsRatingUpdated], [r].[Rating], [r].[Title], [r0].[RecipeId], [r0].[UserId], [r0].[Value]
+FROM [Recipes] AS [r]
+LEFT JOIN [Ratings] AS [r0] ON [r].[Id] = [r0].[RecipeId]
+WHERE [r].[IsRatingUpdated] = CAST(1 AS bit)
+ORDER BY [r].[Id], [r0].[RecipeId], [r0].[UserId]
+2021-08-11 14:40:29.273 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-11 14:40:29.281 -05:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ChefId], [r].[Description], [r].[IsRatingUpdated], [r].[Rating], [r].[Title], [r0].[RecipeId], [r0].[UserId], [r0].[Value]
+FROM [Recipes] AS [r]
+LEFT JOIN [Ratings] AS [r0] ON [r].[Id] = [r0].[RecipeId]
+WHERE [r].[IsRatingUpdated] = CAST(1 AS bit)
+ORDER BY [r].[Id], [r0].[RecipeId], [r0].[UserId]
+2021-08-11 14:51:09.948 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-11 14:51:09.954 -05:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ChefId], [r].[Description], [r].[IsRatingUpdated], [r].[Rating], [r].[Title], [r0].[RecipeId], [r0].[UserId], [r0].[Value]
+FROM [Recipes] AS [r]
+LEFT JOIN [Ratings] AS [r0] ON [r].[Id] = [r0].[RecipeId]
+WHERE [r].[IsRatingUpdated] = CAST(1 AS bit)
+ORDER BY [r].[Id], [r0].[RecipeId], [r0].[UserId]
+2021-08-11 14:52:09.961 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-11 14:52:09.967 -05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ChefId], [r].[Description], [r].[IsRatingUpdated], [r].[Rating], [r].[Title], [r0].[RecipeId], [r0].[UserId], [r0].[Value]
+FROM [Recipes] AS [r]
+LEFT JOIN [Ratings] AS [r0] ON [r].[Id] = [r0].[RecipeId]
+WHERE [r].[IsRatingUpdated] = CAST(1 AS bit)
+ORDER BY [r].[Id], [r0].[RecipeId], [r0].[UserId]
+2021-08-11 14:53:09.968 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-11 14:53:09.980 -05:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ChefId], [r].[Description], [r].[IsRatingUpdated], [r].[Rating], [r].[Title], [r0].[RecipeId], [r0].[UserId], [r0].[Value]
+FROM [Recipes] AS [r]
+LEFT JOIN [Ratings] AS [r0] ON [r].[Id] = [r0].[RecipeId]
+WHERE [r].[IsRatingUpdated] = CAST(1 AS bit)
+ORDER BY [r].[Id], [r0].[RecipeId], [r0].[UserId]
+2021-08-11 14:54:09.990 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-11 14:54:10.000 -05:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ChefId], [r].[Description], [r].[IsRatingUpdated], [r].[Rating], [r].[Title], [r0].[RecipeId], [r0].[UserId], [r0].[Value]
+FROM [Recipes] AS [r]
+LEFT JOIN [Ratings] AS [r0] ON [r].[Id] = [r0].[RecipeId]
+WHERE [r].[IsRatingUpdated] = CAST(1 AS bit)
+ORDER BY [r].[Id], [r0].[RecipeId], [r0].[UserId]
+2021-08-11 14:55:10.007 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-11 14:55:10.022 -05:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ChefId], [r].[Description], [r].[IsRatingUpdated], [r].[Rating], [r].[Title], [r0].[RecipeId], [r0].[UserId], [r0].[Value]
+FROM [Recipes] AS [r]
+LEFT JOIN [Ratings] AS [r0] ON [r].[Id] = [r0].[RecipeId]
+WHERE [r].[IsRatingUpdated] = CAST(1 AS bit)
+ORDER BY [r].[Id], [r0].[RecipeId], [r0].[UserId]
+2021-08-11 14:56:10.038 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-11 14:56:10.047 -05:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ChefId], [r].[Description], [r].[IsRatingUpdated], [r].[Rating], [r].[Title], [r0].[RecipeId], [r0].[UserId], [r0].[Value]
+FROM [Recipes] AS [r]
+LEFT JOIN [Ratings] AS [r0] ON [r].[Id] = [r0].[RecipeId]
+WHERE [r].[IsRatingUpdated] = CAST(1 AS bit)
+ORDER BY [r].[Id], [r0].[RecipeId], [r0].[UserId]
+2021-08-11 14:56:23.896 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-11 14:56:25.993 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-11 14:56:27.061 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-11 14:56:27.061 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-11 14:56:27.061 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-11 14:56:27.061 -05:00 [INF] Hosting environment: Development
+2021-08-11 14:56:27.061 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-11 14:56:27.200 -05:00 [INF] Executed DbCommand (68ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ChefId], [r].[Description], [r].[IsRatingUpdated], [r].[Rating], [r].[Title], [r0].[RecipeId], [r0].[UserId], [r0].[Value]
+FROM [Recipes] AS [r]
+LEFT JOIN [Ratings] AS [r0] ON [r].[Id] = [r0].[RecipeId]
+WHERE [r].[IsRatingUpdated] = CAST(1 AS bit)
+ORDER BY [r].[Id], [r0].[RecipeId], [r0].[UserId]
+2021-08-11 14:56:28.125 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-11 14:56:28.397 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 276.9581ms
+2021-08-11 14:56:28.919 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-11 14:56:29.306 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 387.5571ms
+2021-08-11 14:56:39.731 -05:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/User/RateRecipe application/json 38
+2021-08-11 14:56:40.160 -05:00 [INF] Successfully validated the token.
+2021-08-11 14:56:40.172 -05:00 [INF] Authorization was successful.
+2021-08-11 14:56:40.174 -05:00 [INF] Executing endpoint 'FlashOrder.Controllers.UserController.RateRecipe (FlashOrder)'
+2021-08-11 14:56:40.220 -05:00 [INF] Route matched with {action = "RateRecipe", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RateRecipe(FlashOrder.DTOs.RateDTO) on controller FlashOrder.Controllers.UserController (FlashOrder).
+2021-08-11 14:56:40.549 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-11 14:56:40.642 -05:00 [INF] Executed DbCommand (47ms) [Parameters=[@__rateDto_RecipeId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ChefId], [r].[Description], [r].[IsRatingUpdated], [r].[Rating], [r].[Title]
+FROM [Recipes] AS [r]
+WHERE [r].[Id] = @__rateDto_RecipeId_0
+2021-08-11 14:56:40.763 -05:00 [INF] Executed DbCommand (6ms) [Parameters=[@__email_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[AccessFailedCount], [t].[Bio], [t].[ConcurrencyStamp], [t].[DisplayName], [t].[Email], [t].[EmailConfirmed], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[SecurityStamp], [t].[TwoFactorEnabled], [t].[UserName], [r].[RecipeId], [r].[UserId], [r].[Value]
+FROM (
+    SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Bio], [a].[ConcurrencyStamp], [a].[DisplayName], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+    FROM [AspNetUsers] AS [a]
+    WHERE [a].[Email] = @__email_0
+) AS [t]
+LEFT JOIN [Ratings] AS [r] ON [t].[Id] = [r].[UserId]
+ORDER BY [t].[Id], [r].[RecipeId], [r].[UserId]
+2021-08-11 14:56:41.338 -05:00 [ERR] Failed executing DbCommand (9ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 450), @p2='?' (Size = 4000), @p3='?' (DbType = Boolean), @p4='?' (DbType = Single), @p5='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Recipes] ([Id], [ChefId], [Description], [IsRatingUpdated], [Rating], [Title])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2021-08-11 14:56:41.418 -05:00 [ERR] An exception occurred in the database while saving changes for context type 'FlashOrder.Data.DatabaseContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert explicit value for identity column in table 'Recipes' when IDENTITY_INSERT is set to OFF.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__277_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:de8e24a1-7fa1-4cce-a698-634ebad821c1
+Error Number:544,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert explicit value for identity column in table 'Recipes' when IDENTITY_INSERT is set to OFF.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__277_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:de8e24a1-7fa1-4cce-a698-634ebad821c1
+Error Number:544,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2021-08-11 14:56:41.423 -05:00 [ERR] something went wrong in RateRecipe
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert explicit value for identity column in table 'Recipes' when IDENTITY_INSERT is set to OFF.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__277_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:de8e24a1-7fa1-4cce-a698-634ebad821c1
+Error Number:544,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at FlashOrder.Repository.UnitOfWork.save() in C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder\Repository\UnitOfWork.cs:line 35
+   at FlashOrder.Controllers.UserController.RateRecipe(RateDTO rateDto) in C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder\Controllers\UserController.cs:line 181
+2021-08-11 14:56:41.471 -05:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-08-11 14:56:41.579 -05:00 [INF] Executed action FlashOrder.Controllers.UserController.RateRecipe (FlashOrder) in 1337.585ms
+2021-08-11 14:56:41.581 -05:00 [INF] Executed endpoint 'FlashOrder.Controllers.UserController.RateRecipe (FlashOrder)'
+2021-08-11 14:56:41.595 -05:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/api/User/RateRecipe application/json 38 - 500 23 application/json;+charset=utf-8 1864.9398ms
+2021-08-11 14:57:27.306 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-11 14:57:27.328 -05:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ChefId], [r].[Description], [r].[IsRatingUpdated], [r].[Rating], [r].[Title], [r0].[RecipeId], [r0].[UserId], [r0].[Value]
+FROM [Recipes] AS [r]
+LEFT JOIN [Ratings] AS [r0] ON [r].[Id] = [r0].[RecipeId]
+WHERE [r].[IsRatingUpdated] = CAST(1 AS bit)
+ORDER BY [r].[Id], [r0].[RecipeId], [r0].[UserId]
+2021-08-11 14:58:27.336 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-11 14:58:27.350 -05:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ChefId], [r].[Description], [r].[IsRatingUpdated], [r].[Rating], [r].[Title], [r0].[RecipeId], [r0].[UserId], [r0].[Value]
+FROM [Recipes] AS [r]
+LEFT JOIN [Ratings] AS [r0] ON [r].[Id] = [r0].[RecipeId]
+WHERE [r].[IsRatingUpdated] = CAST(1 AS bit)
+ORDER BY [r].[Id], [r0].[RecipeId], [r0].[UserId]
+2021-08-11 14:59:04.251 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-11 14:59:06.939 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-11 14:59:08.472 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-11 14:59:08.472 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-11 14:59:08.473 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-11 14:59:08.473 -05:00 [INF] Hosting environment: Development
+2021-08-11 14:59:08.473 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-11 14:59:08.654 -05:00 [INF] Executed DbCommand (72ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ChefId], [r].[Description], [r].[IsRatingUpdated], [r].[Rating], [r].[Title], [r0].[RecipeId], [r0].[UserId], [r0].[Value]
+FROM [Recipes] AS [r]
+LEFT JOIN [Ratings] AS [r0] ON [r].[Id] = [r0].[RecipeId]
+WHERE [r].[IsRatingUpdated] = CAST(1 AS bit)
+ORDER BY [r].[Id], [r0].[RecipeId], [r0].[UserId]
+2021-08-11 14:59:09.074 -05:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/User/RateRecipe application/json 38
+2021-08-11 14:59:09.213 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-11 14:59:09.432 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 217.8270ms
+2021-08-11 14:59:09.899 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-11 14:59:10.161 -05:00 [INF] Successfully validated the token.
+2021-08-11 14:59:10.184 -05:00 [INF] Authorization was successful.
+2021-08-11 14:59:10.186 -05:00 [INF] Executing endpoint 'FlashOrder.Controllers.UserController.RateRecipe (FlashOrder)'
+2021-08-11 14:59:10.267 -05:00 [INF] Route matched with {action = "RateRecipe", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RateRecipe(FlashOrder.DTOs.RateDTO) on controller FlashOrder.Controllers.UserController (FlashOrder).
+2021-08-11 14:59:10.283 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 383.5619ms
+2021-08-11 14:59:10.775 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-11 14:59:10.868 -05:00 [INF] Executed DbCommand (49ms) [Parameters=[@__rateDto_RecipeId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ChefId], [r].[Description], [r].[IsRatingUpdated], [r].[Rating], [r].[Title]
+FROM [Recipes] AS [r]
+WHERE [r].[Id] = @__rateDto_RecipeId_0
+2021-08-11 14:59:10.984 -05:00 [INF] Executed DbCommand (7ms) [Parameters=[@__email_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[AccessFailedCount], [t].[Bio], [t].[ConcurrencyStamp], [t].[DisplayName], [t].[Email], [t].[EmailConfirmed], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[SecurityStamp], [t].[TwoFactorEnabled], [t].[UserName], [r].[RecipeId], [r].[UserId], [r].[Value]
+FROM (
+    SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Bio], [a].[ConcurrencyStamp], [a].[DisplayName], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+    FROM [AspNetUsers] AS [a]
+    WHERE [a].[Email] = @__email_0
+) AS [t]
+LEFT JOIN [Ratings] AS [r] ON [t].[Id] = [r].[UserId]
+ORDER BY [t].[Id], [r].[RecipeId], [r].[UserId]
+2021-08-11 14:59:11.865 -05:00 [INF] Executed DbCommand (8ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 450), @p2='?' (DbType = Single)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Ratings] ([RecipeId], [UserId], [Value])
+VALUES (@p0, @p1, @p2);
+2021-08-11 14:59:11.927 -05:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2021-08-11 14:59:11.937 -05:00 [INF] Executed action FlashOrder.Controllers.UserController.RateRecipe (FlashOrder) in 1660.938ms
+2021-08-11 14:59:11.940 -05:00 [INF] Executed endpoint 'FlashOrder.Controllers.UserController.RateRecipe (FlashOrder)'
+2021-08-11 14:59:11.952 -05:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/api/User/RateRecipe application/json 38 - 200 0 - 2895.1262ms
+2021-08-11 15:00:16.806 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-11 15:00:19.082 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-11 15:00:20.192 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-11 15:00:20.192 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-11 15:00:20.192 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-11 15:00:20.192 -05:00 [INF] Hosting environment: Development
+2021-08-11 15:00:20.192 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-11 15:00:20.328 -05:00 [INF] Executed DbCommand (65ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ChefId], [r].[Description], [r].[IsRatingUpdated], [r].[Rating], [r].[Title], [r0].[RecipeId], [r0].[UserId], [r0].[Value]
+FROM [Recipes] AS [r]
+LEFT JOIN [Ratings] AS [r0] ON [r].[Id] = [r0].[RecipeId]
+WHERE [r].[IsRatingUpdated] = CAST(1 AS bit)
+ORDER BY [r].[Id], [r0].[RecipeId], [r0].[UserId]
+2021-08-11 15:00:21.044 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-11 15:00:21.257 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 216.6670ms
+2021-08-11 15:00:21.617 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-11 15:00:21.980 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 362.8695ms
+2021-08-11 15:04:21.445 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-11 15:04:23.696 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-11 15:04:24.852 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-11 15:04:24.853 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-11 15:04:24.853 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-11 15:04:24.853 -05:00 [INF] Hosting environment: Development
+2021-08-11 15:04:24.853 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-11 15:04:25.005 -05:00 [INF] Executed DbCommand (66ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ChefId], [r].[Description], [r].[IsRatingUpdated], [r].[Rating], [r].[Title], [r0].[RecipeId], [r0].[UserId], [r0].[Value]
+FROM [Recipes] AS [r]
+LEFT JOIN [Ratings] AS [r0] ON [r].[Id] = [r0].[RecipeId]
+WHERE [r].[IsRatingUpdated] = CAST(1 AS bit)
+ORDER BY [r].[Id], [r0].[RecipeId], [r0].[UserId]
+2021-08-11 15:04:25.559 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-11 15:04:25.809 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 252.9454ms
+2021-08-11 15:04:26.193 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-11 15:04:26.611 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 418.1788ms
+2021-08-11 15:04:33.296 -05:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/User/RateRecipe application/json 38
+2021-08-11 15:04:33.703 -05:00 [INF] Successfully validated the token.
+2021-08-11 15:04:33.715 -05:00 [INF] Authorization was successful.
+2021-08-11 15:04:33.717 -05:00 [INF] Executing endpoint 'FlashOrder.Controllers.UserController.RateRecipe (FlashOrder)'
+2021-08-11 15:04:33.762 -05:00 [INF] Route matched with {action = "RateRecipe", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RateRecipe(FlashOrder.DTOs.RateDTO) on controller FlashOrder.Controllers.UserController (FlashOrder).
+2021-08-11 15:04:34.048 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-11 15:04:34.129 -05:00 [INF] Executed DbCommand (42ms) [Parameters=[@__rateDto_RecipeId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ChefId], [r].[Description], [r].[IsRatingUpdated], [r].[Rating], [r].[Title]
+FROM [Recipes] AS [r]
+WHERE [r].[Id] = @__rateDto_RecipeId_0
+2021-08-11 15:04:34.216 -05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__email_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[AccessFailedCount], [t].[Bio], [t].[ConcurrencyStamp], [t].[DisplayName], [t].[Email], [t].[EmailConfirmed], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[SecurityStamp], [t].[TwoFactorEnabled], [t].[UserName], [r].[RecipeId], [r].[UserId], [r].[Value]
+FROM (
+    SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Bio], [a].[ConcurrencyStamp], [a].[DisplayName], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+    FROM [AspNetUsers] AS [a]
+    WHERE [a].[Email] = @__email_0
+) AS [t]
+LEFT JOIN [Ratings] AS [r] ON [t].[Id] = [r].[UserId]
+ORDER BY [t].[Id], [r].[RecipeId], [r].[UserId]
+2021-08-11 15:04:34.719 -05:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 450), @p2='?' (DbType = Single)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Ratings] ([RecipeId], [UserId], [Value])
+VALUES (@p0, @p1, @p2);
+2021-08-11 15:04:34.834 -05:00 [ERR] something went wrong in RateRecipe
+System.InvalidOperationException: The property 'Recipe.Id' has a temporary value while attempting to change the entity's state to 'Modified'. Either set a permanent value explicitly, or ensure that the database is configured to generate values for this property.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntry.set_State(EntityState value)
+   at FlashOrder.Repository.RecipeRepository.Update(Recipe entity) in C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder\Repository\RecipeRepository.cs:line 93
+   at FlashOrder.Controllers.UserController.RateRecipe(RateDTO rateDto) in C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder\Controllers\UserController.cs:line 192
+2021-08-11 15:04:34.882 -05:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-08-11 15:04:34.968 -05:00 [INF] Executed action FlashOrder.Controllers.UserController.RateRecipe (FlashOrder) in 1186.9318ms
+2021-08-11 15:04:34.971 -05:00 [INF] Executed endpoint 'FlashOrder.Controllers.UserController.RateRecipe (FlashOrder)'
+2021-08-11 15:04:34.981 -05:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/api/User/RateRecipe application/json 38 - 500 23 application/json;+charset=utf-8 1684.6022ms
+2021-08-11 15:05:25.140 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-11 15:05:25.159 -05:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ChefId], [r].[Description], [r].[IsRatingUpdated], [r].[Rating], [r].[Title], [r0].[RecipeId], [r0].[UserId], [r0].[Value]
+FROM [Recipes] AS [r]
+LEFT JOIN [Ratings] AS [r0] ON [r].[Id] = [r0].[RecipeId]
+WHERE [r].[IsRatingUpdated] = CAST(1 AS bit)
+ORDER BY [r].[Id], [r0].[RecipeId], [r0].[UserId]
+2021-08-11 15:06:02.292 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-11 15:06:04.398 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-11 15:06:05.563 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-11 15:06:05.563 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-11 15:06:05.563 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-11 15:06:05.563 -05:00 [INF] Hosting environment: Development
+2021-08-11 15:06:05.563 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-11 15:06:05.707 -05:00 [INF] Executed DbCommand (67ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ChefId], [r].[Description], [r].[IsRatingUpdated], [r].[Rating], [r].[Title], [r0].[RecipeId], [r0].[UserId], [r0].[Value]
+FROM [Recipes] AS [r]
+LEFT JOIN [Ratings] AS [r0] ON [r].[Id] = [r0].[RecipeId]
+WHERE [r].[IsRatingUpdated] = CAST(1 AS bit)
+ORDER BY [r].[Id], [r0].[RecipeId], [r0].[UserId]
+2021-08-11 15:06:06.741 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-11 15:06:06.741 -05:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/User/RateRecipe application/json 38
+2021-08-11 15:06:07.002 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 259.4387ms
+2021-08-11 15:06:07.518 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-11 15:06:07.755 -05:00 [INF] Successfully validated the token.
+2021-08-11 15:06:07.775 -05:00 [INF] Authorization was successful.
+2021-08-11 15:06:07.777 -05:00 [INF] Executing endpoint 'FlashOrder.Controllers.UserController.RateRecipe (FlashOrder)'
+2021-08-11 15:06:07.873 -05:00 [INF] Route matched with {action = "RateRecipe", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RateRecipe(FlashOrder.DTOs.RateDTO) on controller FlashOrder.Controllers.UserController (FlashOrder).
+2021-08-11 15:06:07.893 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 374.6765ms
+2021-08-11 15:06:08.461 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-11 15:06:08.568 -05:00 [INF] Executed DbCommand (54ms) [Parameters=[@__rateDto_RecipeId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ChefId], [r].[Description], [r].[IsRatingUpdated], [r].[Rating], [r].[Title]
+FROM [Recipes] AS [r]
+WHERE [r].[Id] = @__rateDto_RecipeId_0
+2021-08-11 15:06:08.669 -05:00 [INF] Executed DbCommand (8ms) [Parameters=[@__email_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[AccessFailedCount], [t].[Bio], [t].[ConcurrencyStamp], [t].[DisplayName], [t].[Email], [t].[EmailConfirmed], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[SecurityStamp], [t].[TwoFactorEnabled], [t].[UserName], [r].[RecipeId], [r].[UserId], [r].[Value]
+FROM (
+    SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Bio], [a].[ConcurrencyStamp], [a].[DisplayName], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+    FROM [AspNetUsers] AS [a]
+    WHERE [a].[Email] = @__email_0
+) AS [t]
+LEFT JOIN [Ratings] AS [r] ON [t].[Id] = [r].[UserId]
+ORDER BY [t].[Id], [r].[RecipeId], [r].[UserId]
+2021-08-11 15:06:08.905 -05:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2021-08-11 15:06:08.999 -05:00 [INF] Executed action FlashOrder.Controllers.UserController.RateRecipe (FlashOrder) in 1101.0747ms
+2021-08-11 15:06:09.003 -05:00 [INF] Executed endpoint 'FlashOrder.Controllers.UserController.RateRecipe (FlashOrder)'
+2021-08-11 15:06:09.017 -05:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/api/User/RateRecipe application/json 38 - 400 6 application/json;+charset=utf-8 2280.9316ms
+2021-08-11 15:07:05.832 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-11 15:07:05.847 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ChefId], [r].[Description], [r].[IsRatingUpdated], [r].[Rating], [r].[Title], [r0].[RecipeId], [r0].[UserId], [r0].[Value]
+FROM [Recipes] AS [r]
+LEFT JOIN [Ratings] AS [r0] ON [r].[Id] = [r0].[RecipeId]
+WHERE [r].[IsRatingUpdated] = CAST(1 AS bit)
+ORDER BY [r].[Id], [r0].[RecipeId], [r0].[UserId]
+2021-08-11 15:07:13.820 -05:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/User/RateRecipe application/json 38
+2021-08-11 15:07:13.826 -05:00 [INF] Successfully validated the token.
+2021-08-11 15:07:13.827 -05:00 [INF] Authorization was successful.
+2021-08-11 15:07:13.827 -05:00 [INF] Executing endpoint 'FlashOrder.Controllers.UserController.RateRecipe (FlashOrder)'
+2021-08-11 15:07:13.828 -05:00 [INF] Route matched with {action = "RateRecipe", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RateRecipe(FlashOrder.DTOs.RateDTO) on controller FlashOrder.Controllers.UserController (FlashOrder).
+2021-08-11 15:07:13.831 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-11 15:07:13.833 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__rateDto_RecipeId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ChefId], [r].[Description], [r].[IsRatingUpdated], [r].[Rating], [r].[Title]
+FROM [Recipes] AS [r]
+WHERE [r].[Id] = @__rateDto_RecipeId_0
+2021-08-11 15:07:13.838 -05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__email_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[AccessFailedCount], [t].[Bio], [t].[ConcurrencyStamp], [t].[DisplayName], [t].[Email], [t].[EmailConfirmed], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[SecurityStamp], [t].[TwoFactorEnabled], [t].[UserName], [r].[RecipeId], [r].[UserId], [r].[Value]
+FROM (
+    SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Bio], [a].[ConcurrencyStamp], [a].[DisplayName], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+    FROM [AspNetUsers] AS [a]
+    WHERE [a].[Email] = @__email_0
+) AS [t]
+LEFT JOIN [Ratings] AS [r] ON [t].[Id] = [r].[UserId]
+ORDER BY [t].[Id], [r].[RecipeId], [r].[UserId]
+2021-08-11 15:07:14.103 -05:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 450), @p2='?' (DbType = Single)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Ratings] ([RecipeId], [UserId], [Value])
+VALUES (@p0, @p1, @p2);
+2021-08-11 15:07:14.208 -05:00 [INF] Executed DbCommand (4ms) [Parameters=[@p5='?' (DbType = Int32), @p0='?' (Size = 450), @p1='?' (Size = 4000), @p2='?' (DbType = Boolean), @p3='?' (DbType = Single), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Recipes] SET [ChefId] = @p0, [Description] = @p1, [IsRatingUpdated] = @p2, [Rating] = @p3, [Title] = @p4
+WHERE [Id] = @p5;
+SELECT @@ROWCOUNT;
+2021-08-11 15:07:14.221 -05:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2021-08-11 15:07:14.222 -05:00 [INF] Executed action FlashOrder.Controllers.UserController.RateRecipe (FlashOrder) in 393.8036ms
+2021-08-11 15:07:14.222 -05:00 [INF] Executed endpoint 'FlashOrder.Controllers.UserController.RateRecipe (FlashOrder)'
+2021-08-11 15:07:14.223 -05:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/api/User/RateRecipe application/json 38 - 200 0 - 403.2428ms
+2021-08-11 15:08:15.787 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-11 15:08:17.936 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-11 15:08:19.110 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-11 15:08:19.110 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-11 15:08:19.110 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-11 15:08:19.111 -05:00 [INF] Hosting environment: Development
+2021-08-11 15:08:19.111 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-11 15:08:19.310 -05:00 [INF] Executed DbCommand (122ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ChefId], [r].[Description], [r].[IsRatingUpdated], [r].[Rating], [r].[Title], [r0].[RecipeId], [r0].[UserId], [r0].[Value]
+FROM [Recipes] AS [r]
+LEFT JOIN [Ratings] AS [r0] ON [r].[Id] = [r0].[RecipeId]
+WHERE [r].[IsRatingUpdated] = CAST(1 AS bit)
+ORDER BY [r].[Id], [r0].[RecipeId], [r0].[UserId]
+2021-08-11 15:08:19.766 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-11 15:08:20.069 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 283.9756ms
+2021-08-11 15:08:20.732 -05:00 [INF] Executed DbCommand (119ms) [Parameters=[@p5='?' (DbType = Int32), @p0='?' (Size = 450), @p1='?' (Size = 4000), @p2='?' (DbType = Boolean), @p3='?' (DbType = Single), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Recipes] SET [ChefId] = @p0, [Description] = @p1, [IsRatingUpdated] = @p2, [Rating] = @p3, [Title] = @p4
+WHERE [Id] = @p5;
+SELECT @@ROWCOUNT;
+2021-08-11 15:08:20.798 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-11 15:08:21.279 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 481.6705ms
+2021-08-11 15:12:19.391 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-11 15:12:19.401 -05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ChefId], [r].[Description], [r].[IsRatingUpdated], [r].[Rating], [r].[Title], [r0].[RecipeId], [r0].[UserId], [r0].[Value]
+FROM [Recipes] AS [r]
+LEFT JOIN [Ratings] AS [r0] ON [r].[Id] = [r0].[RecipeId]
+WHERE [r].[IsRatingUpdated] = CAST(1 AS bit)
+ORDER BY [r].[Id], [r0].[RecipeId], [r0].[UserId]
+2021-08-11 15:13:01.043 -05:00 [INF] User profile is available. Using 'C:\Users\EAGLE\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-08-11 15:13:02.994 -05:00 [INF] Entity Framework Core 5.0.7 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-08-11 15:13:04.079 -05:00 [INF] Now listening on: https://localhost:5001
+2021-08-11 15:13:04.079 -05:00 [INF] Now listening on: http://localhost:5000
+2021-08-11 15:13:04.080 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-11 15:13:04.080 -05:00 [INF] Hosting environment: Development
+2021-08-11 15:13:04.080 -05:00 [INF] Content root path: C:\Users\EAGLE\RiderProjects\FlashOrder\FlashOrder
+2021-08-11 15:13:04.229 -05:00 [INF] Executed DbCommand (76ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[ChefId], [r].[Description], [r].[IsRatingUpdated], [r].[Rating], [r].[Title], [r0].[RecipeId], [r0].[UserId], [r0].[Value]
+FROM [Recipes] AS [r]
+LEFT JOIN [Ratings] AS [r0] ON [r].[Id] = [r0].[RecipeId]
+WHERE [r].[IsRatingUpdated] = CAST(1 AS bit)
+ORDER BY [r].[Id], [r0].[RecipeId], [r0].[UserId]
+2021-08-11 15:13:05.234 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2021-08-11 15:13:05.350 -05:00 [INF] Executed DbCommand (100ms) [Parameters=[@p5='?' (DbType = Int32), @p0='?' (Size = 450), @p1='?' (Size = 4000), @p2='?' (DbType = Boolean), @p3='?' (DbType = Single), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Recipes] SET [ChefId] = @p0, [Description] = @p1, [IsRatingUpdated] = @p2, [Rating] = @p3, [Title] = @p4
+WHERE [Id] = @p5;
+SELECT @@ROWCOUNT;
+2021-08-11 15:13:05.476 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 247.5903ms
+2021-08-11 15:13:06.186 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2021-08-11 15:13:06.550 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 364.3457ms

@@ -4,6 +4,7 @@ using FlashOrder.Data;
 using FlashOrder.IRepository;
 using FlashOrder.Policies;
 using FlashOrder.Repository;
+using FlashOrder.Services;
 using FlashOrder.Services.Auth;
 using FlashOrder.Utils;
 using Microsoft.AspNetCore.Authorization;
@@ -70,11 +71,11 @@ namespace FlashOrder
 
             services.AddControllers().AddNewtonsoftJson(op =>
                 op.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
-            
  
             services.AddSingleton<IAuthorizationHandler, CreatorChefHandler>();
             services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             
+            services.AddTransient<IHostedService, RecipeRatingService>();
             services.AddScoped(typeof(MyUtils));
         }
 

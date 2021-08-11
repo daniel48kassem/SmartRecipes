@@ -11,6 +11,7 @@ namespace FlashOrder.IRepository
         IGenericRepository<Item> Items { get; }
         IGenericRepository<Step> Steps { get; }
         IGenericRepository<Follow> Follows { get; }
+        IGenericRepository<Rating> Ratings { get; }
         Task save();
     }
 }
