@@ -44,12 +44,15 @@ namespace FlashOrder.Services
 
             using (IServiceScope scope = _provider.CreateScope())
             {
+                //get the required services 
                 var unitOfWork = scope.ServiceProvider.GetRequiredService<IUnitOfWork>();
                 var mapper = scope.ServiceProvider.GetRequiredService<IMapper>();
 
+                //get the recipes that should be rated,(the ones those have a new ratings)
                 var shouldRatedRecipes = await unitOfWork.Recipes.GetAll(r => r.IsRatingUpdated == true, null,
                     new List<string> {"Raters"});
 
+                //loop over these recipes 
                 foreach (Recipe recipe in shouldRatedRecipes)
                 {
                     float currentRecipeRating = 0;
@@ -61,6 +64,7 @@ namespace FlashOrder.Services
                         continue;
                     }
 
+                    //get the mean rating
                     float meanRating = ratingSum / ratingCount;
                     // float starRating = meanRating / 20;
 
@@ -75,6 +79,10 @@ namespace FlashOrder.Services
                     // tmp.IsRatingUpdated = false;
                     
                     recipe.Rating = meanRating;
+                    /*
+                     * indicate that these recipe no longer needs rating
+                     * to insure these recipe do not enter rating process again
+                     */
                     recipe.IsRatingUpdated = false;
                     
                     unitOfWork.Recipes.Update(recipe);
