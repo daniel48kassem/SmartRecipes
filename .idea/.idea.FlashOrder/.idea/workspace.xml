@@ -5,19 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f789b059-6e4e-4152-a1e5-962adab9c142" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/FlashOrder/DTOs/RateDTO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlashOrder/Logs/log20210811.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlashOrder/Migrations/20210811081546_AddedRatingToRecipe.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlashOrder/Migrations/20210811081546_AddedRatingToRecipe.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FlashOrder/Services/RecipeRatingService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FlashOrder/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FlashOrder/.idea/contentModel.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FlashOrder/Filters/ActionFilters/EnsureRatingRelationNotExists.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FlashOrder/.idea/contentModel.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FlashOrder/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FlashOrder/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FlashOrder/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FlashOrder/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FlashOrder/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FlashOrder/Controllers/ChefController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FlashOrder/Controllers/ChefController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FlashOrder/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FlashOrder/Controllers/UserController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FlashOrder/Data/Recipe.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FlashOrder/Data/Recipe.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FlashOrder/IRepository/IUnitOfWork.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FlashOrder/IRepository/IUnitOfWork.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FlashOrder/Migrations/DatabaseContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FlashOrder/Migrations/DatabaseContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FlashOrder/Repository/UnitOfWork.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FlashOrder/Repository/UnitOfWork.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FlashOrder/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FlashOrder/Startup.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,12 +22,12 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/FlashOrder/WeatherForecast.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/FlashOrder/Data/Recipe.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/FlashOrder/Data/Item.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/FlashOrder/Data/Ingredient.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/FlashOrder/Data/DatabaseContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/FlashOrder/Startup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/FlashOrder/Data/DatabaseContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/FlashOrder/WeatherForecast.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/FlashOrder/Data/Ingredient.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/FlashOrder/Data/Recipe.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -180,12 +173,14 @@
       <workItem from="1628606859082" duration="2551000" />
       <workItem from="1628621049473" duration="10627000" />
       <workItem from="1628704404962" duration="7462000" />
+      <workItem from="1629394532205" duration="5635000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="Vcs.Log.Tabs.Properties">

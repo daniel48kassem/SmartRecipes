@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using FlashOrder.Data;
 using FlashOrder.DTOs;
+using FlashOrder.Filters.ActionFilters;
 using FlashOrder.IRepository;
 using FlashOrder.Services.Auth;
 using Microsoft.AspNetCore.Authorization;
@@ -137,55 +138,31 @@ namespace FlashOrder.Controllers
         }
 
         [HttpPost]
-        [Route("RateRecipe")]
+        [Route("RateRecipe/{id:int}")]
+        //Validate if The Recipe exist using filter
+        [ServiceFilter(typeof(EnsureRecipeExists))]
+        //check if there is a rating relation before
+        [ServiceFilter(typeof(EnsureRatingRelationNotExists))]
         [Authorize]
-        public async Task<IActionResult> RateRecipe([FromBody] RateDTO rateDto)
+
+        public async Task<IActionResult> RateRecipe(int id,[FromBody] RateDTO rateDto)
         {
             try
             {
-                //Validate if The Recipe exist
-                var recipe = await _unitOfWork.Recipes.Get(r=>r.Id==rateDto.RecipeId);
-                if (recipe == null)
-                {
-                    _logger.LogError($"something went wrong in {nameof(RateRecipe)}");
-                    return BadRequest($"This Recipe is not exist");
-                }
-
+                //get recipe from parameters,(this came from our filter)
+                var recipe = HttpContext.Items["recipe"] as Recipe;
+                
                 //get the current user
-                var email = User.FindFirstValue(ClaimTypes.Email);
-                var currentUser = await _userManager.Users.Where(u => u.Email == email)
-                    .Include(u => u.MyRatedRecipes)
-                    .FirstOrDefaultAsync();
-
-                if (currentUser == null)
-                {
-                    return Unauthorized();
-                }
-
-                //check if there is a rating relation before
-                Rating ratingRelation = currentUser.MyRatedRecipes
-                    .FirstOrDefault(f => f.RecipeId == rateDto.RecipeId);
-
-                if (ratingRelation!=null)
-                {
-                    return BadRequest($"You ");
-                }
-
+                var currentUserId = User.Claims.FirstOrDefault(c=>c.Type==ClaimTypes.NameIdentifier).Value;
+                
                 //create the Rating relation
-                 ratingRelation = new Rating
-                    { RecipeId = recipe.Id, UserId = currentUser.Id,Value = rateDto.Value};
+                 var ratingRelation = new Rating
+                    { RecipeId = recipe.Id, UserId = currentUserId,Value = rateDto.Value};
 
                 //insert to database
                 await _unitOfWork.Ratings.Insert(ratingRelation);
                 await _unitOfWork.save();
 
-                // Recipe tmpRecipe = new Recipe()
-                // {
-                //     Chef = recipe.Chef, Description = recipe.Description,
-                //     ChefId = recipe.ChefId, Ingredients = recipe.Ingredients, Raters = recipe.Raters,
-                //     Steps = recipe.Steps, Title = recipe.Title,Rating = recipe.Rating
-                // };
-                // tmpRecipe.IsRatingUpdated = true;
                 recipe.IsRatingUpdated = true;
                 
                 //update the recipe to indicate that it should be  rerated later by the background service

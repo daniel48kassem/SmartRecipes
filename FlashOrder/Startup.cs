@@ -1,6 +1,7 @@
 using AutoMapper;
 using FlashOrder.Configurations;
 using FlashOrder.Data;
+using FlashOrder.Filters.ActionFilters;
 using FlashOrder.IRepository;
 using FlashOrder.Policies;
 using FlashOrder.Repository;
@@ -74,6 +75,8 @@ namespace FlashOrder
  
             services.AddSingleton<IAuthorizationHandler, CreatorChefHandler>();
             services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddScoped<EnsureRecipeExists>();
+            services.AddScoped<EnsureRatingRelationNotExists>();
             
             services.AddTransient<IHostedService, RecipeRatingService>();
             services.AddScoped(typeof(MyUtils));
