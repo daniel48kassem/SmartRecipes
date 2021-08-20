@@ -5,12 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f789b059-6e4e-4152-a1e5-962adab9c142" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/FlashOrder/Filters/ActionFilters/EnsureRatingRelationNotExists.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FlashOrder/.idea/contentModel.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FlashOrder/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FlashOrder/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FlashOrder/.idea/modules.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/FlashOrder/Filters/ActionFilters/EnsureChefExists.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FlashOrder/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FlashOrder/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FlashOrder/Controllers/ChefController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FlashOrder/Controllers/ChefController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FlashOrder/Controllers/ItemController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FlashOrder/Controllers/ItemController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FlashOrder/Controllers/RecipeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FlashOrder/Controllers/RecipeController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FlashOrder/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FlashOrder/Controllers/UserController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FlashOrder/Services/Auth/AuthManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FlashOrder/Services/Auth/AuthManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FlashOrder/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FlashOrder/Startup.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -173,7 +174,10 @@
       <workItem from="1628606859082" duration="2551000" />
       <workItem from="1628621049473" duration="10627000" />
       <workItem from="1628704404962" duration="7462000" />
-      <workItem from="1629394532205" duration="5635000" />
+      <workItem from="1629394532205" duration="6224000" />
+      <workItem from="1629405661139" duration="2050000" />
+      <workItem from="1629440182646" duration="3851000" />
+      <workItem from="1629457778794" duration="2027000" />
     </task>
     <servers />
   </component>

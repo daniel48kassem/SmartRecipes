@@ -25,7 +25,6 @@ namespace FlashOrder.Controllers
 
         private readonly UserManager<ApiUser> _userManager;
 
-        // private readonly SignInManager<ApiUser> _signInManager;
         private readonly IMapper _mapper;
         private readonly IAuthManager _authManager;
 
@@ -34,7 +33,6 @@ namespace FlashOrder.Controllers
             UserManager<ApiUser> userManager, IAuthManager authManager, IMapper mapper)
         {
             _logger = logger;
-            // _signInManager = signInManager;
             _userManager = userManager;
             _mapper = mapper;
             _authManager = authManager;

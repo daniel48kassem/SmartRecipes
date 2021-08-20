@@ -58,27 +58,31 @@ namespace FlashOrder
                 // options.AddPolicy("OnlyChefOfRecipe", policy => policy.RequireClaim("Recipe"));
                 // options.AddPolicy("OnlyChefOfRecipe",
                 //     policy => policy.Requirements.Add(new OnlyChefOfRecipeRequirement()));
-                
+
+                //Resource based Policy 
                 options.AddPolicy("CreatorChefPolicy",
                     policy => policy.Requirements.Add(new CreatorChefRequirement()));
             });
             
             services.AddAutoMapper(typeof(MapperInitializer));
-
             
-            //every time is needed ,a new instance is created ,it is similar to service provider in laravel
             services.AddTransient<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IAuthManager, AuthManager>();
 
             services.AddControllers().AddNewtonsoftJson(op =>
                 op.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
  
+            //resource based policy
             services.AddSingleton<IAuthorizationHandler, CreatorChefHandler>();
             services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            
+            //Action Filters
             services.AddScoped<EnsureRecipeExists>();
             services.AddScoped<EnsureRatingRelationNotExists>();
             
+            //The Rating service
             services.AddTransient<IHostedService, RecipeRatingService>();
+            //this Utils class
             services.AddScoped(typeof(MyUtils));
         }
 

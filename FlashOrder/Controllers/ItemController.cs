@@ -126,11 +126,6 @@ namespace FlashOrder.Controllers
                 return StatusCode(500, "Internal Server Error");
             }
         }
-
-        // [HttpDelete("{id:int}", Name = "DeleteItem")]
-        // public async Task<IActionResult> DeleteItem(int id)
-        // {
-        //     
-        // }
+        
     }
 }

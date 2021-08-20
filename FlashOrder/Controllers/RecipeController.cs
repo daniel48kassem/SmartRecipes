@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using FlashOrder.Data;
 using FlashOrder.DTOs;
+using FlashOrder.Filters.ActionFilters;
 using FlashOrder.IRepository;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -24,9 +25,10 @@ namespace FlashOrder.Controllers
         private readonly ILogger<RecipeController> _logger;
         private readonly UserManager<ApiUser> _userManager;
         private readonly IAuthorizationService _authorizationService;
-        
-        
-        public RecipeController(ILogger<RecipeController> logger, IMapper mapper, IUnitOfWork unitOfWork,UserManager<ApiUser> userManager,IAuthorizationService authorizationService)
+
+
+        public RecipeController(ILogger<RecipeController> logger, IMapper mapper, IUnitOfWork unitOfWork,
+            UserManager<ApiUser> userManager, IAuthorizationService authorizationService)
         {
             _logger = logger;
             _unitOfWork = unitOfWork;
@@ -35,14 +37,14 @@ namespace FlashOrder.Controllers
             _authorizationService = authorizationService;
         }
 
-        
+
         [HttpGet]
-        public async Task<IActionResult> GetRecipes([FromQuery]RecipeParameters recipeParameters)
+        public async Task<IActionResult> GetRecipes([FromQuery] RecipeParameters recipeParameters)
         {
             try
             {
-                var recipes=await _unitOfWork.Recipes.GetAllWithFilters(null
-                    ,null,new List<string> {"Ingredients.Item","Chef"},recipeParameters);
+                var recipes = await _unitOfWork.Recipes.GetAllWithFilters(null
+                    , null, new List<string> {"Ingredients.Item", "Chef"}, recipeParameters);
 
                 var results = _mapper.Map<List<RecipeDTO>>(recipes);
                 return Ok(results);
@@ -60,7 +62,6 @@ namespace FlashOrder.Controllers
         [Authorize]
         public async Task<IActionResult> CreateRecipe([FromBody] CreateRecipeDTO recipeDTO)
         {
-            
             if (!ModelState.IsValid)
             {
                 _logger.LogError($"invalid post attempt{nameof(CreateRecipe)}");
@@ -69,15 +70,14 @@ namespace FlashOrder.Controllers
 
             try
             {
-
                 //get the authenticated user
                 var email = User.FindFirstValue(ClaimTypes.Email);
                 var user = await _userManager.FindByEmailAsync(email);
-                
+
                 //set the chef of this recipe to be the current user
                 var recipe = _mapper.Map<Recipe>(recipeDTO);
                 recipe.ChefId = user.Id;
-                
+
                 //we are altering the database so we have to commit changes
                 await _unitOfWork.Recipes.Insert(recipe);
                 await _unitOfWork.save();
@@ -104,12 +104,12 @@ namespace FlashOrder.Controllers
             try
             {
                 var recipe = await _unitOfWork.Recipes.Get(q => q.Id == id,
-                    new List<string> {"Ingredients.Item","Chef","Steps"});
-                
+                    new List<string> {"Ingredients.Item", "Chef", "Steps"});
+
                 //sort the steps according to the order property
-                recipe.Steps=recipe.Steps.OrderBy(s => s.Order).ToList();
-                
-                
+                recipe.Steps = recipe.Steps.OrderBy(s => s.Order).ToList();
+
+
                 var res = _mapper.Map<RecipeDTO>(recipe);
                 return Ok(res);
             }
@@ -120,42 +120,46 @@ namespace FlashOrder.Controllers
                 return StatusCode(500, "Internal Server Error");
             }
         }
-        
+
         [HttpPut("{id:int}", Name = "UpdateRecipe")]
         [Authorize]
-        public async Task<IActionResult> UpdateRecipe(int id,[FromBody] UpdateRecipeDTO recipeDto)
+        //Validate if The Recipe exist using filter
+        [ServiceFilter(typeof(EnsureRecipeExists))]
+        public async Task<IActionResult> UpdateRecipe(int id, [FromBody] UpdateRecipeDTO recipeDto)
         {
-            if (id<1||!ModelState.IsValid)
+            if (id < 1 || !ModelState.IsValid)
             {
                 _logger.LogError($"invalid post attempt{nameof(UpdateRecipe)}");
                 return BadRequest("your data is invalid");
             }
-           
-            
+
+
             try
             {
-                var recipe=await _unitOfWork.Recipes.Get(q=>q.Id==id);
-
+                // var recipe=await _unitOfWork.Recipes.Get(q=>q.Id==id);
+                //get recipe from parameters,(this came from our filter)
+                var recipe = HttpContext.Items["recipe"] as Recipe;
+                
                 // resource based authorization to check if the current user is the owner of recipe
-                if (!  _authorizationService.AuthorizeAsync(User, recipe, "CreatorChefPolicy").Result.Succeeded)
+                if (!_authorizationService.AuthorizeAsync(User, recipe, "CreatorChefPolicy").Result.Succeeded)
                 {
                     return Unauthorized("You are Not Allowed To Perform This Action");
                 }
 
-                if (recipe == null)
-                {
-                    _logger.LogError($"invalid Update attempt in {nameof(UpdateRecipe)}");
-                    return BadRequest("Submitted Data s not valid");
-                }
+                // if (recipe == null)
+                // {
+                //     _logger.LogError($"invalid Update attempt in {nameof(UpdateRecipe)}");
+                //     return BadRequest("Submitted Data s not valid");
+                // }
 
                 //mapping (source: object,destination: object)
-                _mapper.Map(recipeDto,recipe);
+                _mapper.Map(recipeDto, recipe);
                 _unitOfWork.Recipes.Update(recipe);
                 await _unitOfWork.save();
-                
+
                 return NoContent();
             }
-        
+
             catch (Exception e)
             {
                 _logger.LogError(e, $"something went wrong in {nameof(UpdateRecipe)}");

@@ -40,17 +40,19 @@ namespace FlashOrder.Controllers
         [HttpPost]
         [Route("Follow-Chef")]
         [Authorize]
+        [ServiceFilter(typeof(EnsureChefExists))]
         public async Task<IActionResult> FollowChef([FromBody] FollowDTO followDto)
         {
             try
             {
-                //Validate if The Chef exist
-                var chef = await _userManager.FindByIdAsync(followDto.ChefId);
-                if (chef == null)
-                {
-                    _logger.LogError($"something went wrong in {nameof(FollowChef)}");
-                    return BadRequest($"This Chef is not exist");
-                }
+                // var chef = await _userManager.FindByIdAsync(followDto.ChefId);
+                var chef = HttpContext.Items["chef"] as ApiUser;
+
+                // if (chef == null)
+                // {
+                //     _logger.LogError($"something went wrong in {nameof(FollowChef)}");
+                //     return BadRequest($"This Chef is not exist");
+                // }
 
                 //get the current user
                 var email = User.FindFirstValue(ClaimTypes.Email);
@@ -92,6 +94,7 @@ namespace FlashOrder.Controllers
         [HttpPost]
         [Route("UnFollow-Chef")]
         [Authorize]
+        [ServiceFilter(typeof(EnsureChefExists))]
         public async Task<IActionResult> UnFollowChef([FromBody] FollowDTO followDto)
         {
             try
@@ -107,12 +110,13 @@ namespace FlashOrder.Controllers
                     return Unauthorized();
                 }
 
-                var chef = await _userManager.FindByIdAsync(followDto.ChefId);
-                if (chef == null)
-                {
-                    _logger.LogError($"something went wrong in {nameof(FollowChef)}");
-                    return BadRequest($"This Chef is not exist");
-                }
+                var chef = HttpContext.Items["chef"] as ApiUser;
+                // var chef = await _userManager.FindByIdAsync(followDto.ChefId);
+                // if (chef == null)
+                // {
+                //     _logger.LogError($"something went wrong in {nameof(FollowChef)}");
+                //     return BadRequest($"This Chef is not exist");
+                // }
 
                 //get the relation if exist
                 var followRelation = currentUser.FollowedChefs
@@ -144,28 +148,27 @@ namespace FlashOrder.Controllers
         //check if there is a rating relation before
         [ServiceFilter(typeof(EnsureRatingRelationNotExists))]
         [Authorize]
-
-        public async Task<IActionResult> RateRecipe(int id,[FromBody] RateDTO rateDto)
+        public async Task<IActionResult> RateRecipe(int id, [FromBody] RateDTO rateDto)
         {
             try
             {
                 //get recipe from parameters,(this came from our filter)
                 var recipe = HttpContext.Items["recipe"] as Recipe;
-                
+
                 //get the current user
-                var currentUserId = User.Claims.FirstOrDefault(c=>c.Type==ClaimTypes.NameIdentifier).Value;
-                
+                var currentUserId = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier).Value;
+
                 //create the Rating relation
-                 var ratingRelation = new Rating
-                    { RecipeId = recipe.Id, UserId = currentUserId,Value = rateDto.Value};
+                var ratingRelation = new Rating
+                    {RecipeId = recipe.Id, UserId = currentUserId, Value = rateDto.Value};
 
                 //insert to database
                 await _unitOfWork.Ratings.Insert(ratingRelation);
                 await _unitOfWork.save();
 
                 recipe.IsRatingUpdated = true;
-                
-                //update the recipe to indicate that it should be  rerated later by the background service
+
+                //update the recipe to indicate that it should be rerated later by the background service
                 _unitOfWork.Recipes.Update(recipe);
                 await _unitOfWork.save();
             }

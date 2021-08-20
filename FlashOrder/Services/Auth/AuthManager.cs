@@ -54,9 +54,7 @@ namespace FlashOrder.Services.Auth
             
             
             var jwtSettings = _configuration.GetSection("JWT");
-            
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings.GetSection("Key").Value));
-            
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256Signature);
 
             // var lifeTime =DateTime.Now.AddMinutes(Convert.ToDouble(jwtSettings.GetSection("TokenExpirationDuration").Value)) ;

@@ -24,6 +24,7 @@ namespace FlashOrder.Controllers
         private readonly IMapper _mapper;
         private readonly IAuthManager _authManager;
         private readonly IUnitOfWork _unitOfWork;
+        
         public ChefController(ILogger<ChefController> logger,
             UserManager<ApiUser> userManager, IAuthManager authManager, IMapper mapper
             ,IUnitOfWork unitOfWork)
